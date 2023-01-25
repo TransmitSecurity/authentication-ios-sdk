@@ -12,7 +12,7 @@ let package = Package(
     products: [
         .library(
             name: "TSAuthenticationSDK",
-            targets: ["TSAuthenticationSDK"])
+            targets: ["TSAuthenticationSDK", "TSAuthenticationSDK-Dependencies"])
     ],
     dependencies: [
         .package(url: "https://github.com/TransmitSecurity/core-ios-sdk.git", from: "1.0.6")
