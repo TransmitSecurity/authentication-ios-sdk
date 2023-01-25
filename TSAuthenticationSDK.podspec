@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
     #
   
     spec.name         = "TSAuthenticationSDK"
-    spec.version      = "1.0.0"
+    spec.version      = "0.0.1"
     spec.summary      = "The WebAuthn SDK is a client-side SDK that allows you to easily login users with biometrics based on the Transmit WebAuthn APIs."
     spec.homepage     = "https://github.com/TransmitSecurity/authentication-ios-sdk"
   
