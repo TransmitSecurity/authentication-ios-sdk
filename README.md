@@ -101,7 +101,7 @@ If you prefer not to use any of the aforementioned dependency managers, you can 
 
 let config = TSConfiguration()
     config.domain = "YOUR_DOMAIN"
-    TSAuthentication.shared.initialize(serverUrl: "https://webauthn.identity.security/v1",
+    TSAuthentication.shared.initialize(baseUrl: "https://webauthn.identity.security/v1",
 clientId: "CLIENT_ID", configuration: config) { response, error in
         if let error {
             print("SDK initialization failed \(String(describing: error.code))

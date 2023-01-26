@@ -86,7 +86,7 @@ final public class TSConfiguration: NSObject {
 
 
 protocol TSBaseAuthenticationSdkProtocol: TSWebAuthnSdkProtocol {
-    func initialize(serverUrl: String, clientId: String, configuration: TSConfiguration?, completion: TSAuthenticationInitCompletion)
+    func initialize(baseUrl: String, clientId: String, configuration: TSConfiguration?, completion: TSAuthenticationInitCompletion)
 }
 
 final private class TSAuthenticationSDK: NSObject {
@@ -106,8 +106,8 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     /**
      Creates a new WebAuthn SDK instance with your client context.
      */
-    public func initialize(serverUrl: String, clientId: String, configuration: TSConfiguration? = nil, completion: TSAuthenticationInitCompletion = nil) {
-        TSAuthenticationImpl.shared.initialize(serverUrl: serverUrl, clientId: clientId, configuration: configuration, completion: completion)
+    public func initialize(baseUrl: String, clientId: String, configuration: TSConfiguration? = nil, completion: TSAuthenticationInitCompletion = nil) {
+        TSAuthenticationImpl.shared.initialize(baseUrl: baseUrl, clientId: clientId, configuration: configuration, completion: completion)
     }
     
     

@@ -68,7 +68,7 @@ public protocol TSAuthenticationInitResponse : Swift.Decodable, Swift.Encodable 
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class TSAuthentication : ObjectiveC.NSObject {
   public static let shared: TSAuthenticationSDK.TSAuthentication
-  final public func initialize(serverUrl: Swift.String, clientId: Swift.String, configuration: TSAuthenticationSDK.TSConfiguration? = nil, completion: TSAuthenticationSDK.TSAuthenticationInitCompletion = nil)
+  final public func initialize(baseUrl: Swift.String, clientId: Swift.String, configuration: TSAuthenticationSDK.TSConfiguration? = nil, completion: TSAuthenticationSDK.TSAuthenticationInitCompletion = nil)
   final public func prepareWebauthnRegistration(username: Swift.String, authSessionId: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion)
   final public func executeWebauthnRegistration(completion: TSAuthenticationSDK.TSAuthenticationResponseCompletion = nil)
   final public func prepareWebauthnAuthentication(username: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion = nil)
