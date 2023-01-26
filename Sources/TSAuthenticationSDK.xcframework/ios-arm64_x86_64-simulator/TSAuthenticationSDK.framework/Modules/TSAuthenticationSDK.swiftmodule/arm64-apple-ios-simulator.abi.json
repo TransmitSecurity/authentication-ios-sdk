@@ -2585,20 +2585,20 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "TSCoreSDK",
+        "printedName": "TSCoreSDK",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "TSAuthenticationSDK",
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "TSCoreSDK",
-        "printedName": "TSCoreSDK",
-        "declKind": "Import",
-        "moduleName": "TSAuthenticationSDK"
       }
     ],
     "json_format_version": 8

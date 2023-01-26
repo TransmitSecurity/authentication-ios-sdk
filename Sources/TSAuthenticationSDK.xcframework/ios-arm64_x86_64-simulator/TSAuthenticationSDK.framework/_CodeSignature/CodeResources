@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		aKMuOyW860X5+GDPAmHKVN54kMg=
+		lDxdUQJ++0BivkyNd3Bfk2G+pX0=
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		mbjngsUPDBuPg2VrjHxXal5H+RE=
+		sP8Mq2/xfrxHao0FPtfk3CPtuUc=
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		aKMuOyW860X5+GDPAmHKVN54kMg=
+		lDxdUQJ++0BivkyNd3Bfk2G+pX0=
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iOpbfDYTJafHNj8ilYFEsy0nFs4=
+		pjwA/Ll0N2aOlpX6o7h30HGrbQ4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>version</key>
 		<data>
-		bjHqQpzK0E/C8XCRICEa64QniLg=
+		H1JHMs+/nUvNSQ0CMWTwFkq42YU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -96,7 +96,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W4ir/U/F12rHv2kG+LHDVjbTtAUUYaP31YLH9hAGjvA=
+			d+5gn18jyvx8Gbu0cyEeRJNc73OJe44trmAymCQX+XE=
 			</data>
 		</dict>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -124,14 +124,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MVyyuWDKCTpQ0Q/l8IFQyH104Jm4Hj9VwqE5tuas2No=
+			XWOVzb+HBPSyptJhAVqjyOsxgjgVzjVTZSb+AcFM8U8=
 			</data>
 		</dict>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			W4ir/U/F12rHv2kG+LHDVjbTtAUUYaP31YLH9hAGjvA=
+			d+5gn18jyvx8Gbu0cyEeRJNc73OJe44trmAymCQX+XE=
 			</data>
 		</dict>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -159,7 +159,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			u4mLxOIkvDdyrt0FGVXI/hOsNjHnr9w0dolkEk9yUYE=
+			rCmXwWkbPdZ8Q1KICj6e8eflBh07kCVhuexVnlQ5ZJ0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -173,7 +173,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ctxrSUGswDUv7vyvehlfBTdwvhmsaLWWCfUq3JtNMJI=
+			yTSxMTTPiws6wIz1qbXi7lyiRKzhBn4hv151PrqUMiE=
 			</data>
 		</dict>
 	</dict>
