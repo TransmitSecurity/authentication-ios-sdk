@@ -6,6 +6,11 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
+require "json"
+
+package = JSON.parse(File.read(File.join(__dir__, "package.json")))
+
+
 Pod::Spec.new do |spec|
 
     # -------- Spec Metadata ------------------------------------------------ #
@@ -15,10 +20,10 @@ Pod::Spec.new do |spec|
     #  summary should be tweet-length, and the description more in depth.
     #
   
-    spec.name         = "TSAuthenticationSDK"
-    spec.version      = "0.0.1"
-    spec.summary      = "The WebAuthn SDK is a client-side SDK that allows you to easily login users with biometrics based on the Transmit WebAuthn APIs."
-    spec.homepage     = "https://github.com/TransmitSecurity/authentication-ios-sdk"
+    spec.name         = package["name"]
+    spec.version      = package["version"]
+    spec.summary      = package["summary"]
+    spec.homepage     = package["homepage"]
   
     # This description is used to generate tags and improve search results.
     #   * Think: What does it do? Why did you write it? What is the focus?
@@ -64,8 +69,8 @@ Pod::Spec.new do |spec|
     #
   
     # spec.platform     = :ios
-      spec.platform     = :ios, "15.0"
-      spec.ios.deployment_target  = '15.0'
+      spec.platform     = :ios, package["deployment_target"]
+      spec.ios.deployment_target  = package["deployment_target"]
       spec.swift_versions = "5.3"
     #  When using multiple platforms
     # spec.ios.deployment_target = "5.0"
@@ -80,7 +85,7 @@ Pod::Spec.new do |spec|
     #  Supports git, hg, bzr, svn and HTTP.
     #
   
-    spec.source       = { :git => "https://github.com/TransmitSecurity/authentication-ios-sdk.git", :tag => "#{spec.version}" }
+    spec.source       = { :git => "#{package["source"]}", :tag => "#{spec.version}" }
   
   
     # ----- Source Code ------------------------------------------------ #
@@ -135,7 +140,7 @@ Pod::Spec.new do |spec|
   
     # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
     # spec.dependency "JSONKit", "~> 1.4"
-    spec.dependency "TSCoreSDK", "~> 1.0.7"
+    spec.dependency "TSCoreSDK", "~> #{package["core_sdk_version"]}"
 
     spec.pod_target_xcconfig = {
       'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
