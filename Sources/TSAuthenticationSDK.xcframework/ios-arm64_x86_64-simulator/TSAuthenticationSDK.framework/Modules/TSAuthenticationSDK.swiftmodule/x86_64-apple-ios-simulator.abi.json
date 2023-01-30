@@ -2486,6 +2486,13 @@
       },
       {
         "kind": "Import",
+        "name": "TSCoreSDK",
+        "printedName": "TSCoreSDK",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -2999,84 +3006,84 @@
     {
       "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 1661,
+      "offset": 1742,
       "length": 41,
       "value": "\"TSAuthenticationSDK.TSWebAuthnStartUnAuthorizedSessionRequest\""
     },
     {
       "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 1661,
+      "offset": 1742,
       "length": 41,
       "value": "\"TSAuthenticationSDK.TSWebAuthnStartUnAuthorizedSessionRequest\""
     },
     {
       "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 2376,
+      "offset": 2457,
       "length": 39,
       "value": "\"TSAuthenticationSDK.TSWebAuthnStartAuthorizedSessionRequest\""
     },
     {
       "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 2376,
+      "offset": 2457,
       "length": 39,
       "value": "\"TSAuthenticationSDK.TSWebAuthnStartAuthorizedSessionRequest\""
     },
     {
       "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 2867,
+      "offset": 2898,
       "length": 42,
       "value": "\"TSAuthenticationSDK.TSWebAuthnStartWebauthnRegistrationRequest\""
     },
     {
       "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 2867,
+      "offset": 2898,
       "length": 42,
       "value": "\"TSAuthenticationSDK.TSWebAuthnStartWebauthnRegistrationRequest\""
     },
     {
       "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 3302,
+      "offset": 3333,
       "length": 37,
       "value": "\"TSAuthenticationSDK.TSWebAuthnCompleteRegistrationRequest\""
     },
     {
       "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 3302,
+      "offset": 3333,
       "length": 37,
       "value": "\"TSAuthenticationSDK.TSWebAuthnCompleteRegistrationRequest\""
     },
     {
       "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 3598,
+      "offset": 3629,
       "length": 44,
       "value": "\"TSAuthenticationSDK.TSWebAuthnStartWebauthnAuthenticationRequest\""
     },
     {
       "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 3598,
+      "offset": 3629,
       "length": 44,
       "value": "\"TSAuthenticationSDK.TSWebAuthnStartWebauthnAuthenticationRequest\""
     },
     {
       "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 3981,
+      "offset": 4012,
       "length": 39,
       "value": "\"TSAuthenticationSDK.TSWebAuthnCompleteAuthenticationRequest\""
     },
     {
       "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 3981,
+      "offset": 4012,
       "length": 39,
       "value": "\"TSAuthenticationSDK.TSWebAuthnCompleteAuthenticationRequest\""
     },
