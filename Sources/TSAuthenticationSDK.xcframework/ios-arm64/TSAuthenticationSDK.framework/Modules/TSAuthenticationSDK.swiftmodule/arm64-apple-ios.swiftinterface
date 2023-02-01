@@ -1,0 +1,88 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TSAuthenticationSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AuthenticationServices
+import Foundation
+import Swift
+import SystemConfiguration
+@_exported import TSAuthenticationSDK
+import TSCoreSDK
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+public typealias TSAuthenticationInitCompletion = ((TSAuthenticationSDK.TSAuthenticationInitResponse?, TSAuthenticationSDK.TSAuthenticationError?) -> ())?
+public typealias TSAuthenticationCompletion = ((Swift.Bool, TSAuthenticationSDK.TSAuthenticationError?) -> ())?
+public typealias TSAuthenticationResponseCompletion = ((TSAuthenticationSDK.TSAuthenticationResponse?, TSAuthenticationSDK.TSAuthenticationError?) -> ())?
+public enum TSAuthenticationErrorCode : Swift.String, Swift.CaseIterable, Swift.Equatable, Swift.Hashable, Swift.Codable {
+  case notInitialized
+  case userNotFound
+  case userMismatch
+  case missingPrepareStep
+  case registrationFailed
+  case authenticationFailed
+  case invalidAuthSession
+  case internetConnection
+  case invalidConfig
+  case invalidSignTransactionData
+  case unknown
+  case canceled
+  case invalidResponse
+  case notHandled
+  case failed
+  case notInteractive
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [TSAuthenticationSDK.TSAuthenticationErrorCode]
+  public typealias RawValue = Swift.String
+  public static var allCases: [TSAuthenticationSDK.TSAuthenticationErrorCode] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers final public class TSAuthenticationError : ObjectiveC.NSObject {
+  final public var code: TSAuthenticationSDK.TSAuthenticationErrorCode! {
+    get
+  }
+  final public var message: Swift.String! {
+    get
+  }
+  final public var errorUri: Swift.String? {
+    get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol TSAuthenticationResponse : Swift.Decodable, Swift.Encodable {
+  var authCode: Swift.String! { get }
+}
+public protocol TSAuthenticationInitResponse : Swift.Decodable, Swift.Encodable {
+  var publicKey: Swift.String! { get }
+}
+@objc @_inheritsConvenienceInitializers final public class TSConfiguration : ObjectiveC.NSObject {
+  final public var domain: Swift.String!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class TSAuthentication : ObjectiveC.NSObject {
+  public static let shared: TSAuthenticationSDK.TSAuthentication
+  final public func initialize(baseUrl: Swift.String, clientId: Swift.String, configuration: TSAuthenticationSDK.TSConfiguration? = nil, completion: TSAuthenticationSDK.TSAuthenticationInitCompletion = nil)
+  final public func prepareWebauthnRegistration(username: Swift.String, authSessionId: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion)
+  final public func executeWebauthnRegistration(completion: TSAuthenticationSDK.TSAuthenticationResponseCompletion = nil)
+  final public func prepareWebauthnAuthentication(username: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion = nil)
+  final public func executeWebauthnAuthentication(completion: TSAuthenticationSDK.TSAuthenticationResponseCompletion = nil)
+  final public func prepareWebauthnSignTransaction(username: Swift.String, approvalData: [Swift.String : Swift.String], completion: TSAuthenticationSDK.TSAuthenticationCompletion = nil)
+  final public func executeWebauthnSignTransaction(completion: TSAuthenticationSDK.TSAuthenticationResponseCompletion = nil)
+  @objc deinit
+}
+extension TSAuthenticationSDK.TSAuthentication {
+  final public var version: Swift.String? {
+    get
+  }
+  final public var buildNumber: Swift.String? {
+    get
+  }
+}
+extension TSAuthenticationSDK.TSAuthenticationErrorCode : Swift.RawRepresentable {}
