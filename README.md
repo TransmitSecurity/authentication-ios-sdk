@@ -6,8 +6,9 @@ Add strong authentication with Passkeys to your native iOS application, while pr
 
 ### How it works
 
-Our WebAuthn iOS SDK implements Apple's [public-private key authentication](https://developer.apple.com/documentation/authenticationservices/public-private_key_authentication) for [passkeys](https://developer.apple.com/documentation/authenticationservices/public-private_key_authentication/supporting_passkeys). It allows you to add FIDO2-based biometric authentication to your iOS app, while providing your users a native experience instead of a browser-based one.
-With passkeys, credentials are securely stored by the device in the iCloud keychain. These credentials must be associated with your domain, so they can be shared between your mobile app and your website (if you have one). Our SDK also cryptographically binds the credentials to the device itself, which ensures that they can only be used by the device that registered it.
+This SDK implements Apple's [public-private key authentication](https://developer.apple.com/documentation/authenticationservices/public-private_key_authentication) for [passkeys](https://developer.apple.com/documentation/authenticationservices/public-private_key_authentication/supporting_passkeys). It allows you to add FIDO2-based biometric authentication to your iOS app, while providing your users a native experience instead of a browser-based one.
+
+With passkeys, credentials are securely stored by the device in the iCloud keychain. These credentials must be associated with your domain, so they can be shared between your mobile app and your website (if you have one). The Transmit iOS SDK also cryptographically binds the credentials to the device itself, which ensures that it can only be used by the device that registered it.
 
 ### Benefits
 
