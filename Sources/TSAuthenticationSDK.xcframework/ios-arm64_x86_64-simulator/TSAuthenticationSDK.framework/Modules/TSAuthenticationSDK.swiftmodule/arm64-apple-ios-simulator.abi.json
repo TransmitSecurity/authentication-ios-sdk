@@ -33,379 +33,9 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "TSAuthenticationErrorCode",
-        "printedName": "TSAuthenticationErrorCode",
+        "name": "TSPasscodeError",
+        "printedName": "TSPasscodeError",
         "children": [
-          {
-            "kind": "Var",
-            "name": "notInitialized",
-            "printedName": "notInitialized",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO14notInitializedyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO14notInitializedyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "userNotFound",
-            "printedName": "userNotFound",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO12userNotFoundyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO12userNotFoundyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "userMismatch",
-            "printedName": "userMismatch",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO12userMismatchyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO12userMismatchyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "missingPrepareStep",
-            "printedName": "missingPrepareStep",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO18missingPrepareStepyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO18missingPrepareStepyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "registrationFailed",
-            "printedName": "registrationFailed",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO18registrationFailedyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO18registrationFailedyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "authenticationFailed",
-            "printedName": "authenticationFailed",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO20authenticationFailedyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO20authenticationFailedyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "invalidAuthSession",
-            "printedName": "invalidAuthSession",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO18invalidAuthSessionyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO18invalidAuthSessionyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "internetConnection",
-            "printedName": "internetConnection",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO18internetConnectionyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO18internetConnectionyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "invalidConfig",
-            "printedName": "invalidConfig",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO13invalidConfigyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO13invalidConfigyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "invalidSignTransactionData",
-            "printedName": "invalidSignTransactionData",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO26invalidSignTransactionDatayA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO26invalidSignTransactionDatayA2CmF",
-            "moduleName": "TSAuthenticationSDK"
-          },
           {
             "kind": "Var",
             "name": "unknown",
@@ -414,24 +44,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
+                "printedName": "(TSAuthenticationSDK.TSPasscodeError.Type) -> TSAuthenticationSDK.TSPasscodeError",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                    "name": "TSPasscodeError",
+                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
+                    "printedName": "TSAuthenticationSDK.TSPasscodeError.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                        "name": "TSPasscodeError",
+                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
                       }
                     ]
                   }
@@ -439,8 +69,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO7unknownyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO7unknownyA2CmF",
+            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO7unknownyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO7unknownyA2CmF",
             "moduleName": "TSAuthenticationSDK",
             "declAttributes": [
               "RawDocComment"
@@ -454,24 +84,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
+                "printedName": "(TSAuthenticationSDK.TSPasscodeError.Type) -> TSAuthenticationSDK.TSPasscodeError",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                    "name": "TSPasscodeError",
+                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
+                    "printedName": "TSAuthenticationSDK.TSPasscodeError.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                        "name": "TSPasscodeError",
+                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
                       }
                     ]
                   }
@@ -479,9 +109,12 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO8canceledyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO8canceledyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
+            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO8canceledyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO8canceledyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -491,24 +124,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
+                "printedName": "(TSAuthenticationSDK.TSPasscodeError.Type) -> TSAuthenticationSDK.TSPasscodeError",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                    "name": "TSPasscodeError",
+                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
+                    "printedName": "TSAuthenticationSDK.TSPasscodeError.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                        "name": "TSPasscodeError",
+                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
                       }
                     ]
                   }
@@ -516,9 +149,12 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO15invalidResponseyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO15invalidResponseyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
+            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO15invalidResponseyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO15invalidResponseyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -528,24 +164,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
+                "printedName": "(TSAuthenticationSDK.TSPasscodeError.Type) -> TSAuthenticationSDK.TSPasscodeError",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                    "name": "TSPasscodeError",
+                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
+                    "printedName": "TSAuthenticationSDK.TSPasscodeError.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                        "name": "TSPasscodeError",
+                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
                       }
                     ]
                   }
@@ -553,9 +189,12 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO10notHandledyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO10notHandledyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
+            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO10notHandledyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO10notHandledyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -565,24 +204,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
+                "printedName": "(TSAuthenticationSDK.TSPasscodeError.Type) -> TSAuthenticationSDK.TSPasscodeError",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                    "name": "TSPasscodeError",
+                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
+                    "printedName": "TSAuthenticationSDK.TSPasscodeError.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                        "name": "TSPasscodeError",
+                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
                       }
                     ]
                   }
@@ -590,9 +229,12 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO6failedyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO6failedyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
+            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO6failedyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO6failedyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -602,24 +244,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationErrorCode.Type) -> TSAuthenticationSDK.TSAuthenticationErrorCode",
+                "printedName": "(TSAuthenticationSDK.TSPasscodeError.Type) -> TSAuthenticationSDK.TSPasscodeError",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                    "name": "TSPasscodeError",
+                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode.Type",
+                    "printedName": "TSAuthenticationSDK.TSPasscodeError.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                        "name": "TSPasscodeError",
+                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
                       }
                     ]
                   }
@@ -627,9 +269,12 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO14notInteractiveyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO14notInteractiveyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
+            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO14notInteractiveyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO14notInteractiveyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Constructor",
@@ -639,13 +284,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode?",
+                "printedName": "TSAuthenticationSDK.TSPasscodeError?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                    "name": "TSPasscodeError",
+                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
                   }
                 ],
                 "usr": "s:Sq"
@@ -658,8 +303,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO8rawValueACSgSS_tcfc",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO8rawValueACSgSS_tcfc",
+            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO8rawValueACSgSS_tcfc",
+            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO8rawValueACSgSS_tcfc",
             "moduleName": "TSAuthenticationSDK",
             "implicit": true,
             "init_kind": "Designated"
@@ -677,8 +322,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO8rawValueSSvp",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO8rawValueSSvp",
+            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO8rawValueSSvp",
+            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO8rawValueSSvp",
             "moduleName": "TSAuthenticationSDK",
             "implicit": true,
             "accessors": [
@@ -695,66 +340,9 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO8rawValueSSvg",
-                "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO8rawValueSSvg",
+                "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO8rawValueSSvg",
+                "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO8rawValueSSvg",
                 "moduleName": "TSAuthenticationSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "allCases",
-            "printedName": "allCases",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[TSAuthenticationSDK.TSAuthenticationErrorCode]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO8allCasesSayACGvpZ",
-            "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO8allCasesSayACGvpZ",
-            "moduleName": "TSAuthenticationSDK",
-            "static": true,
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[TSAuthenticationSDK.TSAuthenticationErrorCode]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO8allCasesSayACGvgZ",
-                "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO8allCasesSayACGvgZ",
-                "moduleName": "TSAuthenticationSDK",
-                "static": true,
                 "implicit": true,
                 "accessorKind": "get"
               }
@@ -762,14 +350,28 @@
           }
         ],
         "declKind": "Enum",
-        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO",
-        "mangledName": "$s19TSAuthenticationSDK0A9ErrorCodeO",
+        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO",
+        "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO",
         "moduleName": "TSAuthenticationSDK",
         "declAttributes": [
           "AccessControl"
         ],
         "enumRawTypeName": "String",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
           {
             "kind": "Conformance",
             "name": "RawRepresentable",
@@ -791,64 +393,6 @@
             ],
             "usr": "s:SY",
             "mangledName": "$sSY"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CaseIterable",
-            "printedName": "CaseIterable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "AllCases",
-                "printedName": "AllCases",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[TSAuthenticationSDK.TSAuthenticationErrorCode]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s12CaseIterableP",
-            "mangledName": "$ss12CaseIterableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
           }
         ]
       },
@@ -859,244 +403,459 @@
         "children": [
           {
             "kind": "Var",
-            "name": "code",
-            "printedName": "code",
+            "name": "notInitialized",
+            "printedName": "notInitialized",
             "children": [
               {
-                "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode?",
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TSAuthenticationErrorCode",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                    "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorC4codeAA0aC4CodeOSgvp",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorC4codeAA0aC4CodeOSgvp",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "SetterAccess",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
                   {
                     "kind": "TypeNominal",
-                    "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode?",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TSAuthenticationErrorCode",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationErrorCode",
-                        "usr": "s:19TSAuthenticationSDK0A9ErrorCodeO"
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
                       }
-                    ],
-                    "usr": "s:Sq"
+                    ]
                   }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:19TSAuthenticationSDK0A5ErrorC4codeAA0aC4CodeOSgvg",
-                "mangledName": "$s19TSAuthenticationSDK0A5ErrorC4codeAA0aC4CodeOSgvg",
-                "moduleName": "TSAuthenticationSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
+                ]
               }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO14notInitializedyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO14notInitializedyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
             ]
           },
           {
             "kind": "Var",
-            "name": "message",
-            "printedName": "message",
+            "name": "userNotFound",
+            "printedName": "userNotFound",
             "children": [
               {
-                "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "Swift.String?",
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorC7messageSSSgvp",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorC7messageSSSgvp",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "SetterAccess",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
                   {
                     "kind": "TypeNominal",
-                    "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "Swift.String?",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
                       }
-                    ],
-                    "usr": "s:Sq"
+                    ]
                   }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:19TSAuthenticationSDK0A5ErrorC7messageSSSgvg",
-                "mangledName": "$s19TSAuthenticationSDK0A5ErrorC7messageSSSgvg",
-                "moduleName": "TSAuthenticationSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
+                ]
               }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO12userNotFoundyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO12userNotFoundyA2CmF",
+            "moduleName": "TSAuthenticationSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "requestIsRunning",
+            "printedName": "requestIsRunning",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO16requestIsRunningyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO16requestIsRunningyA2CmF",
+            "moduleName": "TSAuthenticationSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "registrationFailed",
+            "printedName": "registrationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO18registrationFailedyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO18registrationFailedyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
             ]
           },
           {
             "kind": "Var",
-            "name": "errorUri",
-            "printedName": "errorUri",
+            "name": "authenticationFailed",
+            "printedName": "authenticationFailed",
             "children": [
               {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorC8errorUriSSSgvp",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorC8errorUriSSSgvp",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "SetterAccess",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
                       }
-                    ],
-                    "usr": "s:Sq"
+                    ]
                   }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:19TSAuthenticationSDK0A5ErrorC8errorUriSSSgvg",
-                "mangledName": "$s19TSAuthenticationSDK0A5ErrorC8errorUriSSSgvg",
-                "moduleName": "TSAuthenticationSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
+                ]
               }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO20authenticationFailedyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO20authenticationFailedyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
             ]
           },
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
+            "kind": "Var",
+            "name": "invalidWebAuthnSession",
+            "printedName": "invalidWebAuthnSession",
             "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO22invalidWebAuthnSessionyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO22invalidWebAuthnSessionyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "genericServerError",
+            "printedName": "genericServerError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO013genericServerC0yA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO013genericServerC0yA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "networkError",
+            "printedName": "networkError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO07networkC0yA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO07networkC0yA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "passkeyError",
+            "printedName": "passkeyError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> (TSAuthenticationSDK.TSPasscodeError) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(TSAuthenticationSDK.TSPasscodeError) -> TSAuthenticationSDK.TSAuthenticationError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSPasscodeError",
+                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
+                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO07passkeyC0yAcA010TSPasscodeC0OcACmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO07passkeyC0yAcA010TSPasscodeC0OcACmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO7unknownyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO7unknownyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
               {
                 "kind": "TypeNominal",
                 "name": "TSAuthenticationError",
                 "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSAuthenticationError"
+                "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TSAuthenticationError",
+                "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                "usr": "s:19TSAuthenticationSDK0A5ErrorO"
               }
             ],
-            "declKind": "Constructor",
-            "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSAuthenticationError(im)init",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorCACycfc",
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO2eeoiySbAC_ACtFZ",
             "moduleName": "TSAuthenticationSDK",
-            "overriding": true,
+            "static": true,
             "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
+            "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Class",
-        "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSAuthenticationError",
-        "mangledName": "$s19TSAuthenticationSDK0A5ErrorC",
+        "declKind": "Enum",
+        "usr": "s:19TSAuthenticationSDK0A5ErrorO",
+        "mangledName": "$s19TSAuthenticationSDK0A5ErrorO",
         "moduleName": "TSAuthenticationSDK",
         "declAttributes": [
-          "AccessControl",
-          "Final",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
+          "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1106,231 +865,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "TSAuthenticationResponse",
-        "printedName": "TSAuthenticationResponse",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "authCode",
-            "printedName": "authCode",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:19TSAuthenticationSDK0A8ResponseP8authCodeSSSgvp",
-            "mangledName": "$s19TSAuthenticationSDK0A8ResponseP8authCodeSSSgvp",
-            "moduleName": "TSAuthenticationSDK",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:19TSAuthenticationSDK0A8ResponseP8authCodeSSSgvg",
-                "mangledName": "$s19TSAuthenticationSDK0A8ResponseP8authCodeSSSgvg",
-                "moduleName": "TSAuthenticationSDK",
-                "genericSig": "<τ_0_0 where τ_0_0 : TSAuthenticationSDK.TSAuthenticationResponse>",
-                "sugared_genericSig": "<Self where Self : TSAuthenticationSDK.TSAuthenticationResponse>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:19TSAuthenticationSDK0A8ResponseP",
-        "mangledName": "$s19TSAuthenticationSDK0A8ResponseP",
-        "moduleName": "TSAuthenticationSDK",
-        "genericSig": "<τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
-        "sugared_genericSig": "<Self : Swift.Decodable, Self : Swift.Encodable>",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "TSAuthenticationInitResponse",
-        "printedName": "TSAuthenticationInitResponse",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "publicKey",
-            "printedName": "publicKey",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:19TSAuthenticationSDK0A12InitResponseP9publicKeySSSgvp",
-            "mangledName": "$s19TSAuthenticationSDK0A12InitResponseP9publicKeySSSgvp",
-            "moduleName": "TSAuthenticationSDK",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:19TSAuthenticationSDK0A12InitResponseP9publicKeySSSgvg",
-                "mangledName": "$s19TSAuthenticationSDK0A12InitResponseP9publicKeySSSgvg",
-                "moduleName": "TSAuthenticationSDK",
-                "genericSig": "<τ_0_0 where τ_0_0 : TSAuthenticationSDK.TSAuthenticationInitResponse>",
-                "sugared_genericSig": "<Self where Self : TSAuthenticationSDK.TSAuthenticationInitResponse>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:19TSAuthenticationSDK0A12InitResponseP",
-        "mangledName": "$s19TSAuthenticationSDK0A12InitResponseP",
-        "moduleName": "TSAuthenticationSDK",
-        "genericSig": "<τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
-        "sugared_genericSig": "<Self : Swift.Decodable, Self : Swift.Encodable>",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -1346,27 +884,19 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Var",
-            "usr": "s:19TSAuthenticationSDK15TSConfigurationC6domainSSSgvp",
-            "mangledName": "$s19TSAuthenticationSDK15TSConfigurationC6domainSSSgvp",
+            "usr": "s:19TSAuthenticationSDK15TSConfigurationC6domainSSvp",
+            "mangledName": "$s19TSAuthenticationSDK15TSConfigurationC6domainSSvp",
             "moduleName": "TSAuthenticationSDK",
             "declAttributes": [
-              "HasInitialValue",
               "Final",
               "HasStorage",
+              "SetterAccess",
               "AccessControl",
               "RawDocComment"
             ],
@@ -1379,86 +909,49 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:19TSAuthenticationSDK15TSConfigurationC6domainSSSgvg",
-                "mangledName": "$s19TSAuthenticationSDK15TSConfigurationC6domainSSSgvg",
+                "usr": "s:19TSAuthenticationSDK15TSConfigurationC6domainSSvg",
+                "mangledName": "$s19TSAuthenticationSDK15TSConfigurationC6domainSSvg",
                 "moduleName": "TSAuthenticationSDK",
                 "implicit": true,
                 "declAttributes": [
                   "Final"
                 ],
                 "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:19TSAuthenticationSDK15TSConfigurationC6domainSSSgvs",
-                "mangledName": "$s19TSAuthenticationSDK15TSConfigurationC6domainSSSgvs",
-                "moduleName": "TSAuthenticationSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:19TSAuthenticationSDK15TSConfigurationC6domainSSSgvM",
-                "mangledName": "$s19TSAuthenticationSDK15TSConfigurationC6domainSSSgvM",
-                "moduleName": "TSAuthenticationSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "_modify"
               }
             ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(domain:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TSConfiguration",
+                "printedName": "TSAuthenticationSDK.TSConfiguration",
+                "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSConfiguration"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19TSAuthenticationSDK15TSConfigurationC6domainACSS_tcfc",
+            "mangledName": "$s19TSAuthenticationSDK15TSConfigurationC6domainACSS_tcfc",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
           },
           {
             "kind": "Constructor",
@@ -1497,7 +990,6 @@
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
-        "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
         ],
@@ -1612,7 +1104,7 @@
           {
             "kind": "Function",
             "name": "initialize",
-            "printedName": "initialize(baseUrl:clientId:configuration:completion:)",
+            "printedName": "initialize(baseUrl:clientId:configuration:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1645,67 +1137,11 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((TSAuthenticationSDK.TSAuthenticationInitResponse?, TSAuthenticationSDK.TSAuthenticationError?) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(TSAuthenticationSDK.TSAuthenticationInitResponse?, TSAuthenticationSDK.TSAuthenticationError?) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(TSAuthenticationSDK.TSAuthenticationInitResponse?, TSAuthenticationSDK.TSAuthenticationError?)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "TSAuthenticationSDK.TSAuthenticationInitResponse?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "TSAuthenticationInitResponse",
-                                "printedName": "TSAuthenticationSDK.TSAuthenticationInitResponse",
-                                "usr": "s:19TSAuthenticationSDK0A12InitResponseP"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "TSAuthenticationSDK.TSAuthenticationError?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "TSAuthenticationError",
-                                "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                                "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSAuthenticationError"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:19TSAuthenticationSDK0A0C10initialize7baseUrl8clientId13configuration10completionySS_SSAA15TSConfigurationCSgyAA0A12InitResponse_pSg_AA0A5ErrorCSgtcSgtF",
-            "mangledName": "$s19TSAuthenticationSDK0A0C10initialize7baseUrl8clientId13configuration10completionySS_SSAA15TSConfigurationCSgyAA0A12InitResponse_pSg_AA0A5ErrorCSgtcSgtF",
+            "usr": "s:19TSAuthenticationSDK0A0C10initialize7baseUrl8clientId13configurationySS_SSAA15TSConfigurationCSgtF",
+            "mangledName": "$s19TSAuthenticationSDK0A0C10initialize7baseUrl8clientId13configurationySS_SSAA15TSConfigurationCSgtF",
             "moduleName": "TSAuthenticationSDK",
             "declAttributes": [
               "Final",
@@ -1716,167 +1152,8 @@
           },
           {
             "kind": "Function",
-            "name": "prepareWebauthnRegistration",
-            "printedName": "prepareWebauthnRegistration(username:authSessionId:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((Swift.Bool, TSAuthenticationSDK.TSAuthenticationError?) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.Bool, TSAuthenticationSDK.TSAuthenticationError?) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Swift.Bool, TSAuthenticationSDK.TSAuthenticationError?)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Bool",
-                            "printedName": "Swift.Bool",
-                            "usr": "s:Sb"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "TSAuthenticationSDK.TSAuthenticationError?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "TSAuthenticationError",
-                                "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                                "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSAuthenticationError"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:19TSAuthenticationSDK0A0C27prepareWebauthnRegistration8username13authSessionId10completionySS_SSySb_AA0A5ErrorCSgtcSgtF",
-            "mangledName": "$s19TSAuthenticationSDK0A0C27prepareWebauthnRegistration8username13authSessionId10completionySS_SSySb_AA0A5ErrorCSgtcSgtF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "executeWebauthnRegistration",
-            "printedName": "executeWebauthnRegistration(completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((TSAuthenticationSDK.TSAuthenticationResponse?, TSAuthenticationSDK.TSAuthenticationError?) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(TSAuthenticationSDK.TSAuthenticationResponse?, TSAuthenticationSDK.TSAuthenticationError?) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(TSAuthenticationSDK.TSAuthenticationResponse?, TSAuthenticationSDK.TSAuthenticationError?)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "TSAuthenticationSDK.TSAuthenticationResponse?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "TSAuthenticationResponse",
-                                "printedName": "TSAuthenticationSDK.TSAuthenticationResponse",
-                                "usr": "s:19TSAuthenticationSDK0A8ResponseP"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "TSAuthenticationSDK.TSAuthenticationError?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "TSAuthenticationError",
-                                "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                                "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSAuthenticationError"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:19TSAuthenticationSDK0A0C27executeWebauthnRegistration10completionyyAA0A8Response_pSg_AA0A5ErrorCSgtcSg_tF",
-            "mangledName": "$s19TSAuthenticationSDK0A0C27executeWebauthnRegistration10completionyyAA0A8Response_pSg_AA0A5ErrorCSgtcSg_tF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "prepareWebauthnAuthentication",
-            "printedName": "prepareWebauthnAuthentication(username:completion:)",
+            "name": "register",
+            "printedName": "register(username:displayName:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1892,168 +1169,8 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Bool, TSAuthenticationSDK.TSAuthenticationError?) -> ())?",
+                "printedName": "Swift.String?",
                 "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.Bool, TSAuthenticationSDK.TSAuthenticationError?) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Swift.Bool, TSAuthenticationSDK.TSAuthenticationError?)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Bool",
-                            "printedName": "Swift.Bool",
-                            "usr": "s:Sb"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "TSAuthenticationSDK.TSAuthenticationError?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "TSAuthenticationError",
-                                "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                                "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSAuthenticationError"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:19TSAuthenticationSDK0A0C29prepareWebauthnAuthentication8username10completionySS_ySb_AA0A5ErrorCSgtcSgtF",
-            "mangledName": "$s19TSAuthenticationSDK0A0C29prepareWebauthnAuthentication8username10completionySS_ySb_AA0A5ErrorCSgtcSgtF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "executeWebauthnAuthentication",
-            "printedName": "executeWebauthnAuthentication(completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((TSAuthenticationSDK.TSAuthenticationResponse?, TSAuthenticationSDK.TSAuthenticationError?) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(TSAuthenticationSDK.TSAuthenticationResponse?, TSAuthenticationSDK.TSAuthenticationError?) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(TSAuthenticationSDK.TSAuthenticationResponse?, TSAuthenticationSDK.TSAuthenticationError?)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "TSAuthenticationSDK.TSAuthenticationResponse?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "TSAuthenticationResponse",
-                                "printedName": "TSAuthenticationSDK.TSAuthenticationResponse",
-                                "usr": "s:19TSAuthenticationSDK0A8ResponseP"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "TSAuthenticationSDK.TSAuthenticationError?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "TSAuthenticationError",
-                                "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                                "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSAuthenticationError"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:19TSAuthenticationSDK0A0C29executeWebauthnAuthentication10completionyyAA0A8Response_pSg_AA0A5ErrorCSgtcSg_tF",
-            "mangledName": "$s19TSAuthenticationSDK0A0C29executeWebauthnAuthentication10completionyyAA0A8Response_pSg_AA0A5ErrorCSgtcSg_tF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "prepareWebauthnSignTransaction",
-            "printedName": "prepareWebauthnSignTransaction(username:approvalData:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
                   {
                     "kind": "TypeNominal",
                     "name": "String",
@@ -2061,17 +1178,17 @@
                     "usr": "s:SS"
                   }
                 ],
-                "usr": "s:SD"
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Bool, TSAuthenticationSDK.TSAuthenticationError?) -> ())?",
+                "printedName": "((Swift.Result<TSAuthenticationSDK.RegistrationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Bool, TSAuthenticationSDK.TSAuthenticationError?) -> ()",
+                    "printedName": "(Swift.Result<TSAuthenticationSDK.RegistrationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -2080,41 +1197,33 @@
                       },
                       {
                         "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Swift.Bool, TSAuthenticationSDK.TSAuthenticationError?)",
+                        "name": "Result",
+                        "printedName": "Swift.Result<TSAuthenticationSDK.RegistrationResult, TSAuthenticationSDK.TSAuthenticationError>",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "Bool",
-                            "printedName": "Swift.Bool",
-                            "usr": "s:Sb"
+                            "name": "RegistrationResult",
+                            "printedName": "TSAuthenticationSDK.RegistrationResult",
+                            "usr": "s:19TSAuthenticationSDK18RegistrationResultC"
                           },
                           {
                             "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "TSAuthenticationSDK.TSAuthenticationError?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "TSAuthenticationError",
-                                "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                                "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSAuthenticationError"
-                              }
-                            ],
-                            "usr": "s:Sq"
+                            "name": "TSAuthenticationError",
+                            "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                            "usr": "s:19TSAuthenticationSDK0A5ErrorO"
                           }
-                        ]
+                        ],
+                        "usr": "s:s6ResultO"
                       }
                     ]
                   }
                 ],
-                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:19TSAuthenticationSDK0A0C30prepareWebauthnSignTransaction8username12approvalData10completionySS_SDyS2SGySb_AA0A5ErrorCSgtcSgtF",
-            "mangledName": "$s19TSAuthenticationSDK0A0C30prepareWebauthnSignTransaction8username12approvalData10completionySS_SDyS2SGySb_AA0A5ErrorCSgtcSgtF",
+            "usr": "s:19TSAuthenticationSDK0A0C8register8username11displayName10completionySS_SSSgys6ResultOyAA012RegistrationH0CAA0A5ErrorOGcSgtF",
+            "mangledName": "$s19TSAuthenticationSDK0A0C8register8username11displayName10completionySS_SSSgys6ResultOyAA012RegistrationH0CAA0A5ErrorOGcSgtF",
             "moduleName": "TSAuthenticationSDK",
             "declAttributes": [
               "Final",
@@ -2125,8 +1234,8 @@
           },
           {
             "kind": "Function",
-            "name": "executeWebauthnSignTransaction",
-            "printedName": "executeWebauthnSignTransaction(completion:)",
+            "name": "authenticate",
+            "printedName": "authenticate(username:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2135,13 +1244,19 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((TSAuthenticationSDK.TSAuthenticationResponse?, TSAuthenticationSDK.TSAuthenticationError?) -> ())?",
+                "printedName": "((Swift.Result<TSAuthenticationSDK.AuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(TSAuthenticationSDK.TSAuthenticationResponse?, TSAuthenticationSDK.TSAuthenticationError?) -> ()",
+                    "printedName": "(Swift.Result<TSAuthenticationSDK.AuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -2150,38 +1265,23 @@
                       },
                       {
                         "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(TSAuthenticationSDK.TSAuthenticationResponse?, TSAuthenticationSDK.TSAuthenticationError?)",
+                        "name": "Result",
+                        "printedName": "Swift.Result<TSAuthenticationSDK.AuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "TSAuthenticationSDK.TSAuthenticationResponse?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "TSAuthenticationResponse",
-                                "printedName": "TSAuthenticationSDK.TSAuthenticationResponse",
-                                "usr": "s:19TSAuthenticationSDK0A8ResponseP"
-                              }
-                            ],
-                            "usr": "s:Sq"
+                            "name": "AuthenticationResult",
+                            "printedName": "TSAuthenticationSDK.AuthenticationResult",
+                            "usr": "s:19TSAuthenticationSDK20AuthenticationResultC"
                           },
                           {
                             "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "TSAuthenticationSDK.TSAuthenticationError?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "TSAuthenticationError",
-                                "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                                "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSAuthenticationError"
-                              }
-                            ],
-                            "usr": "s:Sq"
+                            "name": "TSAuthenticationError",
+                            "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                            "usr": "s:19TSAuthenticationSDK0A5ErrorO"
                           }
-                        ]
+                        ],
+                        "usr": "s:s6ResultO"
                       }
                     ]
                   }
@@ -2191,8 +1291,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:19TSAuthenticationSDK0A0C30executeWebauthnSignTransaction10completionyyAA0A8Response_pSg_AA0A5ErrorCSgtcSg_tF",
-            "mangledName": "$s19TSAuthenticationSDK0A0C30executeWebauthnSignTransaction10completionyyAA0A8Response_pSg_AA0A5ErrorCSgtcSg_tF",
+            "usr": "s:19TSAuthenticationSDK0A0C12authenticate8username10completionySS_ys6ResultOyAA014AuthenticationF0CAA0A5ErrorOGcSgtF",
+            "mangledName": "$s19TSAuthenticationSDK0A0C12authenticate8username10completionySS_ys6ResultOyAA014AuthenticationF0CAA0A5ErrorOGcSgtF",
             "moduleName": "TSAuthenticationSDK",
             "declAttributes": [
               "Final",
@@ -2439,28 +1539,8 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "TSAuthenticationSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "TSAuthenticationSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "TSCoreSDK",
-        "printedName": "TSCoreSDK",
+        "name": "WebKit",
+        "printedName": "WebKit",
         "declKind": "Import",
         "moduleName": "TSAuthenticationSDK"
       },
@@ -2495,6 +1575,124 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TSCoreSDK",
+        "printedName": "TSCoreSDK",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RegistrationResult",
+        "printedName": "RegistrationResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "result",
+            "printedName": "result",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19TSAuthenticationSDK18RegistrationResultC6resultSSvp",
+            "mangledName": "$s19TSAuthenticationSDK18RegistrationResultC6resultSSvp",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19TSAuthenticationSDK18RegistrationResultC6resultSSvg",
+                "mangledName": "$s19TSAuthenticationSDK18RegistrationResultC6resultSSvg",
+                "moduleName": "TSAuthenticationSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19TSAuthenticationSDK18RegistrationResultC",
+        "mangledName": "$s19TSAuthenticationSDK18RegistrationResultC",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TSCoreSDK",
+        "printedName": "TSCoreSDK",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "TSAuthenticationSDK",
         "declAttributes": [
@@ -2565,6 +1763,23 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TSCoreSDK",
+        "printedName": "TSCoreSDK",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -2579,6 +1794,107 @@
         "printedName": "AuthenticationServices",
         "declKind": "Import",
         "moduleName": "TSAuthenticationSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AuthenticationResult",
+        "printedName": "AuthenticationResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "result",
+            "printedName": "result",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19TSAuthenticationSDK20AuthenticationResultC6resultSSvp",
+            "mangledName": "$s19TSAuthenticationSDK20AuthenticationResultC6resultSSvp",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19TSAuthenticationSDK20AuthenticationResultC6resultSSvg",
+                "mangledName": "$s19TSAuthenticationSDK20AuthenticationResultC6resultSSvg",
+                "moduleName": "TSAuthenticationSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19TSAuthenticationSDK20AuthenticationResultC",
+        "mangledName": "$s19TSAuthenticationSDK20AuthenticationResultC",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TSCoreSDK",
+        "printedName": "TSCoreSDK",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -2612,494 +1928,1117 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
       "kind": "StringLiteral",
       "offset": 260,
       "length": 91,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
       "kind": "StringLiteral",
       "offset": 282,
       "length": 1,
       "value": "\".private.com.tarnsmitsecurity.authentication.kApplicationTagName.Key\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 608,
+      "length": 2,
+      "value": "64"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
       "kind": "StringLiteral",
-      "offset": 1601,
+      "offset": 642,
+      "length": 55,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
+      "kind": "StringLiteral",
+      "offset": 664,
+      "length": 1,
+      "value": "\".\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
+      "kind": "StringLiteral",
+      "offset": 696,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 1545,
+      "length": 15,
+      "value": "\"TSAuthenticationSDK.TSConfiguration\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 333,
+      "length": 30,
+      "value": "\"auth\/webauthn\/register\/start\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 418,
+      "length": 34,
+      "value": "\"auth\/webauthn\/authenticate\/start\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 492,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "kind": "BooleanLiteral",
+      "offset": 655,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "kind": "BooleanLiteral",
+      "offset": 696,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 784,
       "length": 10,
       "value": "\"username\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1632,
+      "offset": 815,
       "length": 11,
       "value": "\"client_id\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1669,
-      "length": 17,
-      "value": "\"auth_session_id\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 1710,
+      "offset": 850,
       "length": 14,
       "value": "\"display_name\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1751,
+      "offset": 891,
       "length": 12,
       "value": "\"User-Agent\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1789,
+      "offset": 929,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1834,
+      "offset": 974,
       "length": 15,
       "value": "\"approval_data\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1601,
+      "offset": 784,
       "length": 10,
       "value": "\"username\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1632,
+      "offset": 815,
       "length": 11,
       "value": "\"client_id\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1669,
-      "length": 17,
-      "value": "\"auth_session_id\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 1710,
+      "offset": 850,
       "length": 14,
       "value": "\"display_name\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1751,
+      "offset": 891,
       "length": 12,
       "value": "\"User-Agent\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1789,
+      "offset": 929,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1834,
+      "offset": 974,
       "length": 15,
       "value": "\"approval_data\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1912,
+      "offset": 1052,
       "length": 11,
       "value": "\"userAgent\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1912,
+      "offset": 1052,
       "length": 11,
       "value": "\"userAgent\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Models\/TSAuthenticationSessionData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Models\/TSAuthenticationSessionData.swift",
       "kind": "StringLiteral",
       "offset": 137,
       "length": 27,
       "value": "\"TSAuthenticationSDK.TSAuthenticationSessionData\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 489,
+      "offset": 562,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1469,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1538,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2170,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2352,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3327,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3444,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5084,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5266,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6227,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6344,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "StringLiteral",
-      "offset": 257,
+      "offset": 326,
       "length": 17,
       "value": "\"TSAuthenticationSDK.TSWebAuthnManager\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "StringLiteral",
-      "offset": 418,
-      "length": 17,
-      "value": "\"auth_session_id\""
+      "offset": 8720,
+      "length": 12,
+      "value": "\"public-key\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "StringLiteral",
-      "offset": 469,
-      "length": 21,
-      "value": "\"webauthn_session_id\""
+      "offset": 10177,
+      "length": 12,
+      "value": "\"public-key\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 526,
-      "length": 23,
-      "value": "\"public_key_credential\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 587,
-      "length": 25,
-      "value": "\"double_signed_challenge\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 418,
-      "length": 17,
-      "value": "\"auth_session_id\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 469,
-      "length": 21,
-      "value": "\"webauthn_session_id\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 526,
-      "length": 23,
-      "value": "\"public_key_credential\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 587,
-      "length": 25,
-      "value": "\"double_signed_challenge\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 937,
-      "length": 17,
-      "value": "\"auth_session_id\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 988,
-      "length": 21,
-      "value": "\"webauthn_session_id\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 1045,
-      "length": 23,
-      "value": "\"public_key_credential\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 1106,
-      "length": 25,
-      "value": "\"double_signed_challenge\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 937,
-      "length": 17,
-      "value": "\"auth_session_id\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 988,
-      "length": 21,
-      "value": "\"webauthn_session_id\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 1045,
-      "length": 23,
-      "value": "\"public_key_credential\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 1106,
-      "length": 25,
-      "value": "\"double_signed_challenge\""
-    },
-    {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 1383,
+      "offset": 348,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1409,
+      "offset": 374,
       "length": 7,
       "value": "\"rawId\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1437,
+      "offset": 402,
       "length": 6,
       "value": "\"type\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1468,
+      "offset": 433,
       "length": 10,
       "value": "\"response\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1383,
+      "offset": 348,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1409,
+      "offset": 374,
       "length": 7,
       "value": "\"rawId\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1437,
+      "offset": 402,
       "length": 6,
       "value": "\"type\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1468,
+      "offset": 433,
       "length": 10,
       "value": "\"response\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1782,
+      "offset": 746,
       "length": 16,
       "value": "\"clientDataJSON\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1832,
+      "offset": 796,
       "length": 19,
       "value": "\"authenticatorData\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1878,
+      "offset": 842,
       "length": 12,
       "value": "\"userHandle\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1916,
+      "offset": 880,
       "length": 11,
       "value": "\"signature\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1961,
+      "offset": 925,
       "length": 19,
       "value": "\"attestationObject\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1782,
+      "offset": 746,
       "length": 16,
       "value": "\"clientDataJSON\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1832,
+      "offset": 796,
       "length": 19,
       "value": "\"authenticatorData\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1878,
+      "offset": 842,
       "length": 12,
       "value": "\"userHandle\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1916,
+      "offset": 880,
       "length": 11,
       "value": "\"signature\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
-      "offset": 1961,
+      "offset": 925,
       "length": 19,
       "value": "\"attestationObject\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Impl\/TSWebAuthnImpl.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Impl\/TSWebAuthnImpl.swift",
       "kind": "StringLiteral",
-      "offset": 798,
+      "offset": 359,
       "length": 14,
       "value": "\"TSAuthenticationSDK.TSWebAuthnImpl\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/Requests\/TSWebauthnStartRegistrationRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1742,
-      "length": 41,
-      "value": "\"TSAuthenticationSDK.TSWebAuthnStartUnAuthorizedSessionRequest\""
+      "offset": 164,
+      "length": 34,
+      "value": "\"TSAuthenticationSDK.TSWebauthnStartRegistrationRequest\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/Requests\/TSWebauthnStartRegistrationRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1742,
-      "length": 41,
-      "value": "\"TSAuthenticationSDK.TSWebAuthnStartUnAuthorizedSessionRequest\""
+      "offset": 164,
+      "length": 34,
+      "value": "\"TSAuthenticationSDK.TSWebauthnStartRegistrationRequest\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 2457,
-      "length": 39,
-      "value": "\"TSAuthenticationSDK.TSWebAuthnStartAuthorizedSessionRequest\""
+      "offset": 213,
+      "length": 27,
+      "value": "\"x-ts-device-binding-token\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 2457,
-      "length": 39,
-      "value": "\"TSAuthenticationSDK.TSWebAuthnStartAuthorizedSessionRequest\""
+      "offset": 270,
+      "length": 14,
+      "value": "\"content-type\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 2898,
+      "offset": 882,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "kind": "StringLiteral",
+      "offset": 1294,
+      "length": 18,
+      "value": "\"application\/json\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "kind": "StringLiteral",
+      "offset": 1422,
+      "length": 28,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "kind": "StringLiteral",
+      "offset": 1433,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "kind": "StringLiteral",
+      "offset": 1449,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "kind": "StringLiteral",
+      "offset": 1518,
+      "length": 18,
+      "value": "\"application\/json\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "kind": "StringLiteral",
+      "offset": 1703,
+      "length": 26,
+      "value": "\"set-device-binding-token\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "kind": "StringLiteral",
+      "offset": 1883,
+      "length": 56,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "kind": "StringLiteral",
+      "offset": 1927,
+      "length": 2,
+      "value": "\" is missing\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 237,
+      "length": 9,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 245,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 339,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 407,
+      "length": 15,
+      "value": "\"BID_\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 421,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 703,
+      "length": 83,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 725,
+      "length": 1,
+      "value": "\".com.tarnsmitsecurity.WebAuthn.Key.HasBeenLaunchedBeforeFlag\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 819,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 833,
+      "length": 83,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 855,
+      "length": 1,
+      "value": "\".com.tarnsmitsecurity.WebAuthn.Key.HasBeenLaunchedBeforeFlag\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 976,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1015,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "Array",
+      "offset": 1581,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "Array",
+      "offset": 1952,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "Array",
+      "offset": 2327,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 2754,
+      "length": 3,
+      "value": "\"_\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 2779,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2991,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 3019,
+      "length": 51,
+      "value": "\"((https|http):\/\/)((\\w|-)+)(([.]|[\/])((\\w|-)+))+\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 3114,
+      "length": 17,
+      "value": "\"SELF MATCHES %@\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 3257,
+      "length": 34,
+      "value": "\"((\\w|-)+)(([.]|[\/])((\\w|-)+))+\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 3336,
+      "length": 17,
+      "value": "\"SELF MATCHES %@\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 3991,
+      "length": 3,
+      "value": "\"+\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 4002,
+      "length": 3,
+      "value": "\"-\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 4045,
+      "length": 3,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 4056,
+      "length": 3,
+      "value": "\"_\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 4099,
+      "length": 3,
+      "value": "\"=\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 4110,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "Array",
+      "offset": 4415,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4893,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5116,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5275,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5311,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 6206,
       "length": 42,
-      "value": "\"TSAuthenticationSDK.TSWebAuthnStartWebauthnRegistrationRequest\""
+      "value": "\"com.TransmitSecurity.TSAuthenticationSDK\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
-      "offset": 2898,
-      "length": 42,
-      "value": "\"TSAuthenticationSDK.TSWebAuthnStartWebauthnRegistrationRequest\""
+      "offset": 6416,
+      "length": 21,
+      "value": "\"TSAuthenticationSDK\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
-      "offset": 3333,
-      "length": 37,
-      "value": "\"TSAuthenticationSDK.TSWebAuthnCompleteRegistrationRequest\""
+      "offset": 6447,
+      "length": 8,
+      "value": "\"bundle\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
-      "offset": 3333,
-      "length": 37,
-      "value": "\"TSAuthenticationSDK.TSWebAuthnCompleteRegistrationRequest\""
+      "offset": 6517,
+      "length": 83,
+      "value": "\"TSAuthenticationSDK.bundle isn't found! Did you forget to add it to your project?\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
-      "offset": 3629,
-      "length": 44,
-      "value": "\"TSAuthenticationSDK.TSWebAuthnStartWebauthnAuthenticationRequest\""
+      "offset": 6726,
+      "length": 4,
+      "value": "\"%@\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
-      "offset": 3629,
-      "length": 44,
-      "value": "\"TSAuthenticationSDK.TSWebAuthnStartWebauthnAuthenticationRequest\""
+      "offset": 6757,
+      "length": 2,
+      "value": "\"\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
-      "offset": 4012,
-      "length": 39,
-      "value": "\"TSAuthenticationSDK.TSWebAuthnCompleteAuthenticationRequest\""
+      "offset": 6912,
+      "length": 15,
+      "value": "\"\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/APIs\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
-      "offset": 4012,
-      "length": 39,
-      "value": "\"TSAuthenticationSDK.TSWebAuthnCompleteAuthenticationRequest\""
+      "offset": 6926,
+      "length": 1,
+      "value": "\"\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSPassKeysService.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7139,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7941,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 8062,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 8133,
+      "length": 6,
+      "value": "\"%02X\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 8261,
+      "length": 6,
+      "value": "\"%02x\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8468,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 8842,
+      "length": 6,
+      "value": "\"%02x\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 9513,
+      "length": 27,
+      "value": "\"hasBeenLaunchedBeforeFlag\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9673,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 10305,
+      "length": 3,
+      "value": "\"+\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 10316,
+      "length": 5,
+      "value": "\"%2B\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 10628,
+      "length": 3,
+      "value": "\"-\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 10639,
+      "length": 3,
+      "value": "\"+\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 10682,
+      "length": 3,
+      "value": "\"_\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 10693,
+      "length": 3,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10724,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10729,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 10777,
+      "length": 3,
+      "value": "\"=\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10789,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10808,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 11006,
+      "length": 3,
+      "value": "\"+\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 11017,
+      "length": 3,
+      "value": "\"-\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 11060,
+      "length": 3,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 11071,
+      "length": 3,
+      "value": "\"_\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 11114,
+      "length": 3,
+      "value": "\"=\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 11125,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/Requests\/TSWebauthnStartAuthenticationRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 166,
+      "length": 36,
+      "value": "\"TSAuthenticationSDK.TSWebauthnStartAuthenticationRequest\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/Requests\/TSWebauthnStartAuthenticationRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 166,
+      "length": 36,
+      "value": "\"TSAuthenticationSDK.TSWebauthnStartAuthenticationRequest\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSPassKeysService.swift",
       "kind": "StringLiteral",
       "offset": 516,
       "length": 17,
       "value": "\"TSAuthenticationSDK.TSPassKeysService\""
     },
     {
-      "filePath": "\/Users\/omarayed\/Documents\/Projects\/iOS\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSTimerHelper.swift",
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 419,
+      "length": 16,
+      "value": "\"authentication\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 566,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 776,
+      "length": 10,
+      "value": "\"transmit\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 886,
+      "length": 7,
+      "value": "\"1.0.1\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1008,
+      "length": 4,
+      "value": "1000"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1055,
+      "length": 4,
+      "value": "1001"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1103,
+      "length": 4,
+      "value": "1002"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1158,
+      "length": 4,
+      "value": "1003"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1208,
+      "length": 4,
+      "value": "1004"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1254,
+      "length": 4,
+      "value": "1005"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1477,
+      "length": 28,
+      "value": "\"CFBundleShortVersionString\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1616,
+      "length": 17,
+      "value": "\"CFBundleVersion\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSTimerHelper.swift",
       "kind": "IntegerLiteral",
       "offset": 188,
       "length": 2,
       "value": "15"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSTimerHelper.swift",
+      "kind": "StringLiteral",
+      "offset": 330,
+      "length": 42,
+      "value": "\"com.TransmitSecurity.TSWebAuthnSdk.timer\""
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSTimerHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 513,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSTimerHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 564,
+      "length": 2,
+      "value": "60"
     }
   ]
 }

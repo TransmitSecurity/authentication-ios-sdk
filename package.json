@@ -1,9 +1,9 @@
 {
     "name": "TSAuthenticationSDK",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "https://github.com/TransmitSecurity/authentication-ios-sdk",
     "summary": "The WebAuthn SDK is a client-side SDK that allows you to easily login users with biometrics based on the Transmit WebAuthn APIs.",
     "source": "https://github.com/TransmitSecurity/authentication-ios-sdk.git",
     "deployment_target": "15.0",
-    "core_sdk_version": "1.0.7"
+    "core_sdk_version": "1.0.12"
 }

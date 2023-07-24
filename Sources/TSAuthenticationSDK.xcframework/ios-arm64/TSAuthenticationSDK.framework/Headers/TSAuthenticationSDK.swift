@@ -8,70 +8,43 @@
 import UIKit
 
 
-public typealias TSAuthenticationInitCompletion = ((TSAuthenticationInitResponse?, TSAuthenticationError?) -> ())?
-public typealias TSAuthenticationCompletion = ((Bool, TSAuthenticationError?) -> ())?
-public typealias TSAuthenticationResponseCompletion = ((TSAuthenticationResponse?, TSAuthenticationError?) -> ())?
+public typealias TSAuthenticationCompletion = ((Result<AuthenticationResult, TSAuthenticationError>) -> ())?
+public typealias TSRegistrationCompletion = ((Result<RegistrationResult, TSAuthenticationError>) -> ())?
 
-
-public enum TSAuthenticationErrorCode : String, CaseIterable, Equatable, Hashable, Codable {
-   case notInitialized
-   case userNotFound
-   case userMismatch
-   case missingPrepareStep
-   case registrationFailed
-   case authenticationFailed
-   case invalidAuthSession
-   case internetConnection
-   case invalidConfig
-   case invalidSignTransactionData
-
-   //PassKeys error codes
-   case unknown
-   case canceled
-   case invalidResponse
-   case notHandled
-   case failed
-   case notInteractive
+public enum TSPasscodeError: String {
+    /// The authorization attempt failed for an unknown reason
+    case unknown
+    /// The user canceled the authorization attempt
+    case canceled
+    /// The authorization request received an invalid response
+    case invalidResponse
+    /// The authorization request wasn’t handled
+    case notHandled
+    /// The authorization attempt failed
+    case failed
+    /// The authorization request isn’t interactive
+    case notInteractive
 }
 
-
-final public class TSAuthenticationError: NSObject {
-
-    /**
-     Error code representing what happened
-     */
-    public internal (set) var code: TSAuthenticationErrorCode!
-
-    /**
-     Error description
-     */
-    public internal (set) var message: String!
-
-    /**
-     A URI identifying a human-readable web page containing information about the error, if available.
-     */
-    public internal (set) var errorUri: String?
-}
-
-
-public protocol TSAuthenticationResponse: Codable {
-
-    /**
-     Authorization code. This can be used to obtain
-     the resulting ID Token and Access Token
-     This value is typically sent to the application backend where it is
-     exchanged for the sensitive Access Token.
-     */
-    var authCode: String! {get}
-}
-
-
-public protocol TSAuthenticationInitResponse: Codable {
-
-    /**
-     A crypto public key. Send it to the server to continue using it.
-     */
-    var publicKey: String! {get}
+public enum TSAuthenticationError: Error, Equatable {
+    /// SDK is not Initialized
+    case notInitialized
+    case userNotFound
+    case requestIsRunning
+    /// Something went wrong during the registration process
+    case registrationFailed
+    /// Something went wrong during the authentication process
+    case authenticationFailed
+    /// WebAuthn session id is invalid
+    case invalidWebAuthnSession
+    /// Generic server error
+    case genericServerError
+    /// The internet connection is unavailable
+    case networkError
+    /// The authorization failed for a passcode error
+    case passkeyError(TSPasscodeError)
+    /// The authorization attempt failed for an unknown reason
+    case unknown
 }
 
 
@@ -81,12 +54,16 @@ final public class TSConfiguration: NSObject {
      An associated domain with the web credentials service type when making a registration or assertion request; otherwise, the request returns an error. See Supporting associated domains for more information.
      (https://developer.apple.com/documentation/xcode/supporting-associated-domains)
      */
-    public var domain: String!
+    public private(set) var domain: String
+    
+    public init(domain: String) {
+        self.domain = domain
+    }
 }
 
 
 protocol TSBaseAuthenticationSdkProtocol: TSWebAuthnSdkProtocol {
-    func initialize(baseUrl: String, clientId: String, configuration: TSConfiguration?, completion: TSAuthenticationInitCompletion)
+    func initialize(baseUrl: String, clientId: String, configuration: TSConfiguration?)
 }
 
 final private class TSAuthenticationSDK: NSObject {
@@ -97,73 +74,35 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
 
     public static let shared: TSAuthentication = TSAuthentication()
 
-
     private override init() {
         super.init()
     }
 
-
     /**
      Creates a new WebAuthn SDK instance with your client context.
      */
-    public func initialize(baseUrl: String, clientId: String, configuration: TSConfiguration? = nil, completion: TSAuthenticationInitCompletion = nil) {
-        TSAuthenticationImpl.shared.initialize(baseUrl: baseUrl, clientId: clientId, configuration: configuration, completion: completion)
+    public func initialize(baseUrl: String, clientId: String, configuration: TSConfiguration? = nil) {
+        TSAuthenticationImpl.shared.initialize(baseUrl: baseUrl, clientId: clientId, configuration: configuration)
     }
 
-
     /**
-     Obtains the registration challenge from the Transmit Service, and stores the response locally to be used by `executeWebauthnRegistration`. This allows reducing latency when registration is requested. To provide the best experience, this should be called as soon as the username is known. If the registration does not occur in a cross-device flow, a secure context should be established using an authentication session which is obtained from a backend API call to the Transmit Service.
+     Invokes a WebAuthn credential registration, including prompting the user for biometrics.
+     Upon successful completion of the registration process, this function will return a callback containing a WebAuthnEncodedResult.
+     The WebAuthnEncodedResult should be used to make a completion request using your backend API which will communicate with Transmit's Service
      */
-    public func prepareWebauthnRegistration(username: String, authSessionId: String, completion: TSAuthenticationCompletion) {
-        TSAuthenticationImpl.shared.prepareWebauthnRegistration(username: username, authSessionId: authSessionId, completion: completion)
+    public func register(username: String, displayName: String?, completion: TSRegistrationCompletion) {
+        TSAuthenticationImpl.shared.register(username: username, displayName: displayName, completion: completion)
     }
 
-
     /**
-     Invokes a WebAuthn credential registration, including prompting the user for biometrics. This must be called only after calling `prepareWebauthnRegistration` to obtain the server challenge.
-
-     If registration is completed successfully, this call will return a promise that resolves to an authorization code, which can be used to obtain user tokens. If it fails, SdkRejection will be returned instead.
+     Invokes a WebAuthn credential authentication, including prompting the user for biometrics.
+     If authentication is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
+     The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
      */
-    public func executeWebauthnRegistration(completion: TSAuthenticationResponseCompletion = nil) {
-        TSAuthenticationImpl.shared.executeWebauthnRegistration(completion: completion)
-    }
-
-
-    /**
-     Obtains the authentication challenge from the Transmit Service, and stores the response locally to be used by `executeWebauthnAuthentication`. This allows reducing latency when authentication is requested. To provide the best experience, this should be called as soon as possible.
-
-     This call must be invoked for a registered user. It is invoked on the last user that logged in or registered unless you specify a different user in the request (for example, when explicitly switching to a different user). If the target user is not registered or in case of any other failure, an error will be returned.
-    */
-    public func prepareWebauthnAuthentication(username: String, completion: TSAuthenticationCompletion = nil) {
-        TSAuthenticationImpl.shared.prepareWebauthnAuthentication(username: username, completion: completion)
-    }
-
-
-    /**
-     Invokes a WebAuthn authentication, including prompting the user for biometrics. This must be called only after calling `prepareWebauthnAuthentication` to obtain the server challenge.
-
-     If authentication is completed successfully, this call will return a promise that resolves to an authorization code, which can be used to obtain user tokens. If it fails, an error will be returned instead.
-     */
-    public func executeWebauthnAuthentication(completion: TSAuthenticationResponseCompletion = nil) {
-        TSAuthenticationImpl.shared.executeWebauthnAuthentication(completion: completion)
-    }
-
-    /**
-     Obtains the transaction signing challenge from the Transmit Service, and stores the response locally to be used by `executeWebauthnSignTransaction`. This allows reducing latency when authentication is requested. To provide the best experience, this should be called as soon as possible.
-
-     This call must be invoked for a registered user. It is invoked on the last user that logged in or registered unless you specify a different user in the request (for example, when explicitly switching to a different user). If the target user is not registered or in case of any other failure, an error will be returned.
-    */
-    public func prepareWebauthnSignTransaction(username: String, approvalData: [String : String], completion: TSAuthenticationCompletion = nil) {
-        TSAuthenticationImpl.shared.prepareWebauthnSignTransaction(username: username, approvalData: approvalData, completion: completion)
-    }
-
-    /**
-     Invokes a WebAuthn transaction signing, including prompting the user for biometrics. This must be called only after calling `prepareWebauthnSignTransaction` to obtain the server challenge.
-
-     If authentication is completed successfully, this call will return a promise that resolves to an authorization code, which can be used to obtain user tokens. If it fails, an error will be returned instead.
-     */
-    public func executeWebauthnSignTransaction(completion: TSAuthenticationResponseCompletion = nil) {
-        TSAuthenticationImpl.shared.executeWebauthnSignTransaction(completion: completion)
+    public func authenticate(username: String, completion: TSAuthenticationCompletion = nil) {
+        TSAuthenticationImpl.shared.authenticate(username: username, completion: completion)
     }
 
 }
+
+
