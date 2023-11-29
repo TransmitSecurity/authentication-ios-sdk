@@ -1302,6 +1302,75 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "signTransaction",
+            "printedName": "signTransaction(username:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<TSAuthenticationSDK.AuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<TSAuthenticationSDK.AuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<TSAuthenticationSDK.AuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AuthenticationResult",
+                            "printedName": "TSAuthenticationSDK.AuthenticationResult",
+                            "usr": "s:19TSAuthenticationSDK20AuthenticationResultC"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TSAuthenticationError",
+                            "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                            "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK0A0C15signTransaction8username10completionySS_ys6ResultOyAA014AuthenticationG0CAA0A5ErrorOGcSgtF",
+            "mangledName": "$s19TSAuthenticationSDK0A0C15signTransaction8username10completionySS_ys6ResultOyAA014AuthenticationG0CAA0A5ErrorOGcSgtF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Var",
             "name": "version",
             "printedName": "version",
@@ -1928,1113 +1997,1113 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
       "kind": "StringLiteral",
       "offset": 260,
       "length": 91,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
       "kind": "StringLiteral",
       "offset": 282,
       "length": 1,
       "value": "\".private.com.tarnsmitsecurity.authentication.kApplicationTagName.Key\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
       "kind": "IntegerLiteral",
       "offset": 608,
       "length": 2,
       "value": "64"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
       "kind": "StringLiteral",
       "offset": 642,
       "length": 55,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
       "kind": "StringLiteral",
       "offset": 664,
       "length": 1,
       "value": "\".\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Security\/TSSecurityManager.swift",
       "kind": "StringLiteral",
       "offset": 696,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
       "kind": "StringLiteral",
       "offset": 1545,
       "length": 15,
       "value": "\"TSAuthenticationSDK.TSConfiguration\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 333,
       "length": 30,
       "value": "\"auth\/webauthn\/register\/start\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 418,
       "length": 34,
       "value": "\"auth\/webauthn\/authenticate\/start\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 492,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "BooleanLiteral",
       "offset": 655,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "BooleanLiteral",
       "offset": 696,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 784,
       "length": 10,
       "value": "\"username\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 815,
       "length": 11,
       "value": "\"client_id\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 850,
       "length": 14,
       "value": "\"display_name\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 891,
       "length": 12,
       "value": "\"User-Agent\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 929,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 974,
       "length": 15,
       "value": "\"approval_data\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 784,
       "length": 10,
       "value": "\"username\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 815,
       "length": 11,
       "value": "\"client_id\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 850,
       "length": 14,
       "value": "\"display_name\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 891,
       "length": 12,
       "value": "\"User-Agent\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 929,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 974,
       "length": 15,
       "value": "\"approval_data\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 1052,
       "length": 11,
       "value": "\"userAgent\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
       "offset": 1052,
       "length": 11,
       "value": "\"userAgent\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Models\/TSAuthenticationSessionData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Models\/TSAuthenticationSessionData.swift",
       "kind": "StringLiteral",
       "offset": 137,
       "length": 27,
       "value": "\"TSAuthenticationSDK.TSAuthenticationSessionData\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "BooleanLiteral",
       "offset": 562,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "BooleanLiteral",
       "offset": 1469,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "BooleanLiteral",
       "offset": 1538,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "BooleanLiteral",
       "offset": 2170,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "BooleanLiteral",
       "offset": 2352,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "BooleanLiteral",
       "offset": 3327,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "BooleanLiteral",
       "offset": 3444,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "BooleanLiteral",
       "offset": 5084,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "BooleanLiteral",
       "offset": 5266,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "BooleanLiteral",
       "offset": 6227,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "BooleanLiteral",
       "offset": 6344,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "StringLiteral",
       "offset": 326,
       "length": 17,
       "value": "\"TSAuthenticationSDK.TSWebAuthnManager\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "StringLiteral",
       "offset": 8720,
       "length": 12,
       "value": "\"public-key\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSWebAuthnManager.swift",
       "kind": "StringLiteral",
       "offset": 10177,
       "length": 12,
       "value": "\"public-key\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 348,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 374,
       "length": 7,
       "value": "\"rawId\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
       "value": "\"type\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 433,
       "length": 10,
       "value": "\"response\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 348,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 374,
       "length": 7,
       "value": "\"rawId\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
       "value": "\"type\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 433,
       "length": 10,
       "value": "\"response\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 746,
       "length": 16,
       "value": "\"clientDataJSON\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 796,
       "length": 19,
       "value": "\"authenticatorData\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 842,
       "length": 12,
       "value": "\"userHandle\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 880,
       "length": 11,
       "value": "\"signature\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 925,
       "length": 19,
       "value": "\"attestationObject\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 746,
       "length": 16,
       "value": "\"clientDataJSON\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 796,
       "length": 19,
       "value": "\"authenticatorData\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 842,
       "length": 12,
       "value": "\"userHandle\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 880,
       "length": 11,
       "value": "\"signature\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 925,
       "length": 19,
       "value": "\"attestationObject\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Impl\/TSWebAuthnImpl.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Impl\/TSWebAuthnImpl.swift",
       "kind": "StringLiteral",
       "offset": 359,
       "length": 14,
       "value": "\"TSAuthenticationSDK.TSWebAuthnImpl\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/Requests\/TSWebauthnStartRegistrationRequest.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/Requests\/TSWebauthnStartRegistrationRequest.swift",
       "kind": "StringLiteral",
       "offset": 164,
       "length": 34,
       "value": "\"TSAuthenticationSDK.TSWebauthnStartRegistrationRequest\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/Requests\/TSWebauthnStartRegistrationRequest.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/Requests\/TSWebauthnStartRegistrationRequest.swift",
       "kind": "StringLiteral",
       "offset": 164,
       "length": 34,
       "value": "\"TSAuthenticationSDK.TSWebauthnStartRegistrationRequest\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
       "offset": 213,
       "length": 27,
       "value": "\"x-ts-device-binding-token\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
       "offset": 270,
       "length": 14,
       "value": "\"content-type\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
       "offset": 882,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
       "offset": 1294,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
       "offset": 1422,
       "length": 28,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
       "offset": 1433,
       "length": 1,
       "value": "\"\/\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
       "offset": 1449,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
       "offset": 1518,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
       "offset": 1703,
       "length": 26,
       "value": "\"set-device-binding-token\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
       "offset": 1883,
       "length": 56,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
       "offset": 1927,
       "length": 2,
       "value": "\" is missing\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 237,
       "length": 9,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 245,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "IntegerLiteral",
       "offset": 339,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 407,
       "length": 15,
       "value": "\"BID_\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 421,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 703,
       "length": 83,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 725,
       "length": 1,
       "value": "\".com.tarnsmitsecurity.WebAuthn.Key.HasBeenLaunchedBeforeFlag\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "BooleanLiteral",
       "offset": 819,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 833,
       "length": 83,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 855,
       "length": 1,
       "value": "\".com.tarnsmitsecurity.WebAuthn.Key.HasBeenLaunchedBeforeFlag\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "BooleanLiteral",
       "offset": 976,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "BooleanLiteral",
       "offset": 1015,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "Array",
       "offset": 1581,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "Array",
       "offset": 1952,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "Array",
       "offset": 2327,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 2754,
       "length": 3,
       "value": "\"_\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 2779,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "BooleanLiteral",
       "offset": 2991,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 3019,
       "length": 51,
       "value": "\"((https|http):\/\/)((\\w|-)+)(([.]|[\/])((\\w|-)+))+\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 3114,
       "length": 17,
       "value": "\"SELF MATCHES %@\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 3257,
       "length": 34,
       "value": "\"((\\w|-)+)(([.]|[\/])((\\w|-)+))+\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 3336,
       "length": 17,
       "value": "\"SELF MATCHES %@\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 3991,
       "length": 3,
       "value": "\"+\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 4002,
       "length": 3,
       "value": "\"-\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 4045,
       "length": 3,
       "value": "\"\/\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 4056,
       "length": 3,
       "value": "\"_\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 4099,
       "length": 3,
       "value": "\"=\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 4110,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "Array",
       "offset": 4415,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "BooleanLiteral",
       "offset": 4893,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "BooleanLiteral",
       "offset": 5116,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "IntegerLiteral",
       "offset": 5275,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "BooleanLiteral",
       "offset": 5311,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 6206,
       "length": 42,
       "value": "\"com.TransmitSecurity.TSAuthenticationSDK\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 6416,
       "length": 21,
       "value": "\"TSAuthenticationSDK\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 6447,
       "length": 8,
       "value": "\"bundle\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 6517,
       "length": 83,
       "value": "\"TSAuthenticationSDK.bundle isn't found! Did you forget to add it to your project?\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 6726,
       "length": 4,
       "value": "\"%@\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 6757,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 6912,
       "length": 15,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 6926,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "BooleanLiteral",
       "offset": 7139,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "IntegerLiteral",
       "offset": 7941,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 8062,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 8133,
       "length": 6,
       "value": "\"%02X\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 8261,
       "length": 6,
       "value": "\"%02x\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "IntegerLiteral",
       "offset": 8468,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 8842,
       "length": 6,
       "value": "\"%02x\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 9513,
       "length": 27,
       "value": "\"hasBeenLaunchedBeforeFlag\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "BooleanLiteral",
       "offset": 9673,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 10305,
       "length": 3,
       "value": "\"+\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 10316,
       "length": 5,
       "value": "\"%2B\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 10628,
       "length": 3,
       "value": "\"-\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 10639,
       "length": 3,
       "value": "\"+\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 10682,
       "length": 3,
       "value": "\"_\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 10693,
       "length": 3,
       "value": "\"\/\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "IntegerLiteral",
       "offset": 10724,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "IntegerLiteral",
       "offset": 10729,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 10777,
       "length": 3,
       "value": "\"=\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "IntegerLiteral",
       "offset": 10789,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "IntegerLiteral",
       "offset": 10808,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 11006,
       "length": 3,
       "value": "\"+\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 11017,
       "length": 3,
       "value": "\"-\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 11060,
       "length": 3,
       "value": "\"\/\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 11071,
       "length": 3,
       "value": "\"_\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 11114,
       "length": 3,
       "value": "\"=\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Utils\/TSUtils.swift",
       "kind": "StringLiteral",
       "offset": 11125,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/Requests\/TSWebauthnStartAuthenticationRequest.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/Requests\/TSWebauthnStartAuthenticationRequest.swift",
       "kind": "StringLiteral",
       "offset": 166,
       "length": 36,
       "value": "\"TSAuthenticationSDK.TSWebauthnStartAuthenticationRequest\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/Requests\/TSWebauthnStartAuthenticationRequest.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Network\/Requests\/TSWebauthnStartAuthenticationRequest.swift",
       "kind": "StringLiteral",
       "offset": 166,
       "length": 36,
       "value": "\"TSAuthenticationSDK.TSWebauthnStartAuthenticationRequest\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSPassKeysService.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Providers\/TSPassKeysService.swift",
       "kind": "StringLiteral",
       "offset": 516,
       "length": 17,
       "value": "\"TSAuthenticationSDK.TSPassKeysService\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "StringLiteral",
       "offset": 419,
       "length": 16,
       "value": "\"authentication\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "BooleanLiteral",
       "offset": 566,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "StringLiteral",
       "offset": 776,
       "length": 10,
       "value": "\"transmit\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "StringLiteral",
       "offset": 886,
       "length": 7,
-      "value": "\"1.0.1\""
+      "value": "\"1.0.2\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "IntegerLiteral",
       "offset": 1008,
       "length": 4,
       "value": "1000"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "IntegerLiteral",
       "offset": 1055,
       "length": 4,
       "value": "1001"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "IntegerLiteral",
       "offset": 1103,
       "length": 4,
       "value": "1002"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "IntegerLiteral",
       "offset": 1158,
       "length": 4,
       "value": "1003"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "IntegerLiteral",
       "offset": 1208,
       "length": 4,
       "value": "1004"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "IntegerLiteral",
       "offset": 1254,
       "length": 4,
       "value": "1005"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "StringLiteral",
       "offset": 1477,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "StringLiteral",
       "offset": 1616,
       "length": 17,
       "value": "\"CFBundleVersion\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSTimerHelper.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSTimerHelper.swift",
       "kind": "IntegerLiteral",
       "offset": 188,
       "length": 2,
       "value": "15"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSTimerHelper.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSTimerHelper.swift",
       "kind": "StringLiteral",
       "offset": 330,
       "length": 42,
       "value": "\"com.TransmitSecurity.TSWebAuthnSdk.timer\""
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSTimerHelper.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSTimerHelper.swift",
       "kind": "IntegerLiteral",
       "offset": 513,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/tomerpicker\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSTimerHelper.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/WebAuthn\/Utils\/TSTimerHelper.swift",
       "kind": "IntegerLiteral",
       "offset": 564,
       "length": 2,

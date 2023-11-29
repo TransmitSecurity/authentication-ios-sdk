@@ -71,20 +71,20 @@ final private class TSAuthenticationSDK: NSObject {
 }
 
 final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
-
+    
     public static let shared: TSAuthentication = TSAuthentication()
-
+    
     private override init() {
         super.init()
     }
-
+    
     /**
      Creates a new WebAuthn SDK instance with your client context.
      */
     public func initialize(baseUrl: String, clientId: String, configuration: TSConfiguration? = nil) {
         TSAuthenticationImpl.shared.initialize(baseUrl: baseUrl, clientId: clientId, configuration: configuration)
     }
-
+    
     /**
      Invokes a WebAuthn credential registration, including prompting the user for biometrics.
      Upon successful completion of the registration process, this function will return a callback containing a WebAuthnEncodedResult.
@@ -93,7 +93,7 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     public func register(username: String, displayName: String?, completion: TSRegistrationCompletion) {
         TSAuthenticationImpl.shared.register(username: username, displayName: displayName, completion: completion)
     }
-
+    
     /**
      Invokes a WebAuthn credential authentication, including prompting the user for biometrics.
      If authentication is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
@@ -102,7 +102,15 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     public func authenticate(username: String, completion: TSAuthenticationCompletion = nil) {
         TSAuthenticationImpl.shared.authenticate(username: username, completion: completion)
     }
-
+    
+    /**
+     Invokes a WebAuthn credential sign transaction, including prompting the user for biometrics.
+     If transaction signing is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
+     The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
+     */
+    public func signTransaction(username: String, completion: TSAuthenticationCompletion = nil) {
+        TSAuthenticationImpl.shared.authenticate(username: username, completion: completion)
+    }
 }
 
 
