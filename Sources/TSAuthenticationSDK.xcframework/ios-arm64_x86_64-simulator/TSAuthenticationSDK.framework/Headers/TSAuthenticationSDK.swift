@@ -8,8 +8,12 @@
 import UIKit
 
 
-public typealias TSAuthenticationCompletion = ((Result<AuthenticationResult, TSAuthenticationError>) -> ())?
-public typealias TSRegistrationCompletion = ((Result<RegistrationResult, TSAuthenticationError>) -> ())?
+public typealias TSAuthenticationCompletion = ((Result<TSAuthenticationResult, TSAuthenticationError>) -> ())?
+public typealias TSRegistrationCompletion = ((Result<TSRegistrationResult, TSAuthenticationError>) -> ())?
+public typealias TSNativeBiometricsRegistrationCompletion = (Result<TSNativeBiometricsRegistrationResult, TSAuthenticationError>) -> ()
+public typealias TSNativeBiometricsAuthenticationCompletion = (Result<TSNativeBiometricsAuthenticationResult, TSAuthenticationError>) -> ()
+public typealias DeviceInfoCompletion = (Result<TSDeviceInfo, TSAuthenticationError>) -> Void
+
 
 public enum TSPasscodeError: String {
     /// The authorization attempt failed for an unknown reason
@@ -29,6 +33,9 @@ public enum TSPasscodeError: String {
 public enum TSAuthenticationError: Error, Equatable {
     /// SDK is not Initialized
     case notInitialized
+    /// The domain name is invalid
+    case invalidDomain
+    
     case userNotFound
     case requestIsRunning
     /// Something went wrong during the registration process
@@ -47,6 +54,11 @@ public enum TSAuthenticationError: Error, Equatable {
     case unknown
 }
 
+public struct TSDeviceInfo: Codable {
+    public let publicKeyId: String
+    
+    public let publicKey: String
+}
 
 final public class TSConfiguration: NSObject {
 
@@ -81,7 +93,7 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     /**
      Creates a new WebAuthn SDK instance with your client context.
      */
-    public func initialize(baseUrl: String, clientId: String, configuration: TSConfiguration? = nil) {
+    public func initialize(baseUrl: String = "https://api.transmitsecurity.io/", clientId: String, configuration: TSConfiguration? = nil) {
         TSAuthenticationImpl.shared.initialize(baseUrl: baseUrl, clientId: clientId, configuration: configuration)
     }
     
@@ -94,6 +106,7 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
         TSAuthenticationImpl.shared.register(username: username, displayName: displayName, completion: completion)
     }
     
+
     /**
      Invokes a WebAuthn credential authentication, including prompting the user for biometrics.
      If authentication is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
@@ -103,6 +116,19 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
         TSAuthenticationImpl.shared.authenticate(username: username, completion: completion)
     }
     
+    
+    private func registerNativeBiometrics(username: String, completion: @escaping TSNativeBiometricsRegistrationCompletion) {
+        Task {
+            await TSAuthenticationImpl.shared.registerNativeBiometrics(username: username, completion: completion)
+        }
+    }
+    
+    private func authenticateNativeBiometrics(username: String, challenge: String, completion: @escaping TSNativeBiometricsAuthenticationCompletion) {
+        Task {
+            await TSAuthenticationImpl.shared.authenticateNativeBiometrics(username: username, challenge: challenge, completion: completion)
+        }
+    }
+    
     /**
      Invokes a WebAuthn credential sign transaction, including prompting the user for biometrics.
      If transaction signing is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
@@ -110,6 +136,19 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
      */
     public func signTransaction(username: String, completion: TSAuthenticationCompletion = nil) {
         TSAuthenticationImpl.shared.authenticate(username: username, completion: completion)
+    }
+    
+    public func getDeviceInfo(_ completion: @escaping DeviceInfoCompletion) {
+        Task {
+            do {
+                let deviceInfo = try await TSAuthenticationImpl.shared.deviceInfo()
+                completion(.success(deviceInfo))
+            } catch let error as TSAuthenticationError {
+                completion(.failure(error))
+            } catch {
+                completion(.failure(.unknown))
+            }
+        }
     }
 }
 

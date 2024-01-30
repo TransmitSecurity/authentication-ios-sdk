@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TSAuthenticationSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AuthenticationServices
@@ -13,8 +13,11 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-public typealias TSAuthenticationCompletion = ((Swift.Result<TSAuthenticationSDK.AuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ())?
-public typealias TSRegistrationCompletion = ((Swift.Result<TSAuthenticationSDK.RegistrationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ())?
+public typealias TSAuthenticationCompletion = ((Swift.Result<TSAuthenticationSDK.TSAuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ())?
+public typealias TSRegistrationCompletion = ((Swift.Result<TSAuthenticationSDK.TSRegistrationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ())?
+public typealias TSNativeBiometricsRegistrationCompletion = (Swift.Result<TSAuthenticationSDK.TSNativeBiometricsRegistrationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
+public typealias TSNativeBiometricsAuthenticationCompletion = (Swift.Result<TSAuthenticationSDK.TSNativeBiometricsAuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
+public typealias DeviceInfoCompletion = (Swift.Result<TSAuthenticationSDK.TSDeviceInfo, TSAuthenticationSDK.TSAuthenticationError>) -> Swift.Void
 public enum TSPasscodeError : Swift.String {
   case unknown
   case canceled
@@ -30,6 +33,7 @@ public enum TSPasscodeError : Swift.String {
 }
 public enum TSAuthenticationError : Swift.Error, Swift.Equatable {
   case notInitialized
+  case invalidDomain
   case userNotFound
   case requestIsRunning
   case registrationFailed
@@ -41,6 +45,12 @@ public enum TSAuthenticationError : Swift.Error, Swift.Equatable {
   case unknown
   public static func == (a: TSAuthenticationSDK.TSAuthenticationError, b: TSAuthenticationSDK.TSAuthenticationError) -> Swift.Bool
 }
+public struct TSDeviceInfo : Swift.Codable {
+  public let publicKeyId: Swift.String
+  public let publicKey: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 @objc final public class TSConfiguration : ObjectiveC.NSObject {
   final public var domain: Swift.String {
     get
@@ -50,22 +60,34 @@ public enum TSAuthenticationError : Swift.Error, Swift.Equatable {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class TSAuthentication : ObjectiveC.NSObject {
   public static let shared: TSAuthenticationSDK.TSAuthentication
-  final public func initialize(baseUrl: Swift.String, clientId: Swift.String, configuration: TSAuthenticationSDK.TSConfiguration? = nil)
+  final public func initialize(baseUrl: Swift.String = "https://api.transmitsecurity.io/", clientId: Swift.String, configuration: TSAuthenticationSDK.TSConfiguration? = nil)
   final public func register(username: Swift.String, displayName: Swift.String?, completion: TSAuthenticationSDK.TSRegistrationCompletion)
   final public func authenticate(username: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion = nil)
   final public func signTransaction(username: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion = nil)
+  final public func getDeviceInfo(_ completion: @escaping TSAuthenticationSDK.DeviceInfoCompletion)
   @objc deinit
 }
-@_hasMissingDesignatedInitializers final public class RegistrationResult {
+@_hasMissingDesignatedInitializers final public class TSRegistrationResult {
   final public var result: Swift.String {
     get
   }
   @objc deinit
 }
-@_hasMissingDesignatedInitializers final public class AuthenticationResult {
+@_hasMissingDesignatedInitializers final public class TSNativeBiometricsRegistrationResult {
+  final public let publicKey: Swift.String
+  final public let publicKeyId: Swift.String
+  final public let attestation: Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class TSAuthenticationResult {
   final public var result: Swift.String {
     get
   }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class TSNativeBiometricsAuthenticationResult {
+  final public let publicKeyId: Swift.String
+  final public let signature: Swift.String
   @objc deinit
 }
 extension TSAuthenticationSDK.TSAuthentication {
