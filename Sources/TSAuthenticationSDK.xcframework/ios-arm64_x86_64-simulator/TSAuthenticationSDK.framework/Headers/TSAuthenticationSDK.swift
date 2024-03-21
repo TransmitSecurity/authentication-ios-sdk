@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TSCoreSDK
 
 
 public typealias TSAuthenticationCompletion = (Result<TSAuthenticationResult, TSAuthenticationError>) -> ()
@@ -16,118 +17,6 @@ public typealias DeviceInfoCompletion = (Result<TSDeviceInfo, TSAuthenticationEr
 public typealias TSTOTPRegistrationCompletion = (Result<TSTOTPRegistrationResult, TSAuthenticationError>) -> ()
 public typealias TSTOTPGenerateCodeCompletion = (Result<TSTOTPGenerateCodeResult, TSAuthenticationError>) -> ()
 
-
-public enum TSPasscodeError: String {
-    /// The authorization attempt failed for an unknown reason
-    case unknown
-    /// The user canceled the authorization attempt
-    case canceled
-    /// The authorization request received an invalid response
-    case invalidResponse
-    /// The authorization request wasn’t handled
-    case notHandled
-    /// The authorization attempt failed
-    case failed
-    /// The authorization request isn’t interactive
-    case notInteractive
-}
-
-extension TSTOTPError: Equatable {
-    public static func == (lhs: TSTOTPError, rhs: TSTOTPError) -> Bool {
-        switch (lhs, rhs) {
-        case (.notRegistered, .notRegistered):
-            return true
-        case (.invalidSecret, .invalidSecret):
-            return true
-        case (.invalidAlgorithm, .invalidAlgorithm):
-            return true
-        case (.invalidPeriod, .invalidPeriod):
-            return true
-        case (.invalidDigits, .invalidDigits):
-            return true
-        case (.nativeBiometricsNotAvailable, .nativeBiometricsNotAvailable):
-            return true
-        case (.internal, .internal):
-            return true
-        default:
-            return false
-        }
-    }
-}
-
-public enum TSTOTPError: Error {
-    /// The native biometrics is unavailable or not enrolled
-    case nativeBiometricsNotAvailable
-    /// The TOTP URI format is incorrect
-    case incorrectURIFormat
-    /// TOTP wasn't registered
-    case notRegistered
-    /// The secret key in the TOTP URI is either missing or has an incorrect format.
-    case invalidSecret
-    /// The algorithm in the TOTP URI is either missing or has an incorrect format.
-    case invalidAlgorithm
-    /// The period in the TOTP URI is either missing or has an incorrect format.
-    case invalidPeriod
-    /// The digits in the TOTP URI is either missing or has an incorrect format.
-    case invalidDigits
-    /// Internal error
-    case `internal`(Error?)
-}
-
-public enum TSNativeBiometricsError: Error {
-    /// The native biometrics is unavailable or not enrolled
-    case nativeBiometricsNotAvailable
-    /// Native biometrics wasn't registered
-    case notRegistered
-    /// Internal keychain error
-    case `internal`(Error?)
-}
-
-extension TSNativeBiometricsError: Equatable {
-    public static func == (lhs: TSNativeBiometricsError, rhs: TSNativeBiometricsError) -> Bool {
-        switch (lhs, rhs) {
-        case (.nativeBiometricsNotAvailable, .nativeBiometricsNotAvailable):
-            return true
-        case (.notRegistered, .notRegistered):
-            return true
-        case (.internal, .internal):
-            return true
-        default:
-            return false
-        }
-    }
-}
-
-public enum TSAuthenticationError: Error, Equatable {
-    /// SDK is not Initialized
-    case notInitialized
-    /// The functionality is not supported in the current iOS version.
-    case unsupportedOSVersion
-    /// The domain name is invalid
-    case invalidDomain
-    
-    case userNotFound
-    case requestIsRunning
-    /// Something went wrong during the registration process
-    case registrationFailed
-    /// Something went wrong during the authentication process
-    case authenticationFailed
-    /// WebAuthn session id is invalid
-    case invalidWebAuthnSession
-    /// Generic server error
-    case genericServerError
-    /// The internet connection is unavailable
-    case networkError
-    /// The authorization failed for a passcode error
-    case passkeyError(TSPasscodeError)
-    /// TOTP errors
-    case totpError(TSTOTPError)
-    /// Native Biometrics errors
-    case nativeBiometricsError(TSNativeBiometricsError)
-    
-    /// The authorization attempt failed for an unknown reason
-    case unknown
-}
 
 public enum TSTOTPSecurityType: Codable {
     case biometric
@@ -174,6 +63,12 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
         super.init()
     }
     
+    private struct Constants {
+        struct Plist {
+            static let fileName = "TransmitSecurity"
+        }
+    }
+    
     /**
      Creates a new WebAuthn SDK instance with your client context.
      */
@@ -185,6 +80,29 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
         controller.initialize(baseUrl: baseUrl, clientId: clientId, configuration: configuration)
         
         self.controller = controller
+    }
+    
+    /**
+     Creates a new WebAuthn SDK instance with your client context.
+     Credentials are configured from TransmitSecurity.plist file
+     */
+    public func initializeSDK() throws {
+        guard controller == nil else { return }
+        
+        let controller = TSAuthenticationController()
+        
+        do {
+            let fileData = try TSFile.readFromAppPlist(named: Constants.Plist.fileName, as: PlistRoot.self)
+            var configuration : TSConfiguration? = nil
+            if let domain = fileData.credentials.domain {
+                configuration = TSConfiguration(domain: domain)
+            }
+            controller.initialize(baseUrl: fileData.credentials.baseUrl, clientId: fileData.credentials.clientId, configuration: configuration)
+            self.controller = controller
+        } catch {
+            throw TSAuthenticationError.initializationError
+        }
+     
     }
     
     /**
@@ -220,7 +138,10 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
         controller.authenticate(username: username, completion: completion)
     }
     
-    private func registerNativeBiometrics(username: String, completion: @escaping TSNativeBiometricsRegistrationCompletion) {
+    /**
+     Registers a user using the device's native biometric authentication system (e.g., Touch ID, Face ID).
+     */
+    public func registerNativeBiometrics(username: String, completion: @escaping TSNativeBiometricsRegistrationCompletion) {
         guard let controller else { completion(.failure(.notInitialized)); return }
         
         Task {
@@ -228,7 +149,10 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
         }
     }
     
-    private func authenticateNativeBiometrics(username: String, challenge: String, completion: @escaping TSNativeBiometricsAuthenticationCompletion) {
+    /**
+     Authenticates a user using the device's native biometric authentication system (e.g., Touch ID, Face ID).
+     */
+    public func authenticateNativeBiometrics(username: String, challenge: String, completion: @escaping TSNativeBiometricsAuthenticationCompletion) {
         guard let controller else { completion(.failure(.notInitialized)); return }
         
         Task {
@@ -268,7 +192,9 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
         controller.generateTOTPCode(UUID: UUID, completion: completion)
     }
 
-    
+    /**
+     Retrieves device-specific information, such as public key and its associated ID, which are unique to the application installed on the device.
+     */
     public func getDeviceInfo(_ completion: @escaping DeviceInfoCompletion) {
         guard let controller else { completion(.failure(.notInitialized)); return }
         
@@ -286,3 +212,15 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
 }
 
 
+private extension TSAuthentication {
+    
+    private struct PlistRoot: Codable {
+        let credentials : Credentials
+    }
+
+    private struct Credentials: Codable {
+        let baseUrl, clientId : String
+        let domain : String?
+    }
+
+}

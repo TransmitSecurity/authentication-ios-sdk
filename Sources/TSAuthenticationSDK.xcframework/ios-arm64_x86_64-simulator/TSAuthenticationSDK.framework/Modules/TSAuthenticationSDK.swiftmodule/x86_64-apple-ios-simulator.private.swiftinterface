@@ -22,57 +22,6 @@ public typealias TSNativeBiometricsAuthenticationCompletion = (Swift.Result<TSAu
 public typealias DeviceInfoCompletion = (Swift.Result<TSAuthenticationSDK.TSDeviceInfo, TSAuthenticationSDK.TSAuthenticationError>) -> Swift.Void
 public typealias TSTOTPRegistrationCompletion = (Swift.Result<TSAuthenticationSDK.TSTOTPRegistrationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
 public typealias TSTOTPGenerateCodeCompletion = (Swift.Result<TSAuthenticationSDK.TSTOTPGenerateCodeResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
-public enum TSPasscodeError : Swift.String {
-  case unknown
-  case canceled
-  case invalidResponse
-  case notHandled
-  case failed
-  case notInteractive
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-extension TSAuthenticationSDK.TSTOTPError : Swift.Equatable {
-  public static func == (lhs: TSAuthenticationSDK.TSTOTPError, rhs: TSAuthenticationSDK.TSTOTPError) -> Swift.Bool
-}
-public enum TSTOTPError : Swift.Error {
-  case nativeBiometricsNotAvailable
-  case incorrectURIFormat
-  case notRegistered
-  case invalidSecret
-  case invalidAlgorithm
-  case invalidPeriod
-  case invalidDigits
-  case `internal`((any Swift.Error)?)
-}
-public enum TSNativeBiometricsError : Swift.Error {
-  case nativeBiometricsNotAvailable
-  case notRegistered
-  case `internal`((any Swift.Error)?)
-}
-extension TSAuthenticationSDK.TSNativeBiometricsError : Swift.Equatable {
-  public static func == (lhs: TSAuthenticationSDK.TSNativeBiometricsError, rhs: TSAuthenticationSDK.TSNativeBiometricsError) -> Swift.Bool
-}
-public enum TSAuthenticationError : Swift.Error, Swift.Equatable {
-  case notInitialized
-  case unsupportedOSVersion
-  case invalidDomain
-  case userNotFound
-  case requestIsRunning
-  case registrationFailed
-  case authenticationFailed
-  case invalidWebAuthnSession
-  case genericServerError
-  case networkError
-  case passkeyError(TSAuthenticationSDK.TSPasscodeError)
-  case totpError(TSAuthenticationSDK.TSTOTPError)
-  case nativeBiometricsError(TSAuthenticationSDK.TSNativeBiometricsError)
-  case unknown
-  public static func == (a: TSAuthenticationSDK.TSAuthenticationError, b: TSAuthenticationSDK.TSAuthenticationError) -> Swift.Bool
-}
 public enum TSTOTPSecurityType : Swift.Codable {
   case biometric
   case none
@@ -100,14 +49,63 @@ public struct TSDeviceInfo : Swift.Codable {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class TSAuthentication : ObjectiveC.NSObject {
   public static let shared: TSAuthenticationSDK.TSAuthentication
   final public func initialize(baseUrl: Swift.String = "https://api.transmitsecurity.io/", clientId: Swift.String, configuration: TSAuthenticationSDK.TSConfiguration? = nil)
+  final public func initializeSDK() throws
   final public func registerWebAuthn(username: Swift.String, displayName: Swift.String?, completion: TSAuthenticationSDK.TSRegistrationCompletion?)
   final public func authenticateWebAuthn(username: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)
   final public func signWebauthnTransaction(username: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)
+  final public func registerNativeBiometrics(username: Swift.String, completion: @escaping TSAuthenticationSDK.TSNativeBiometricsRegistrationCompletion)
+  final public func authenticateNativeBiometrics(username: Swift.String, challenge: Swift.String, completion: @escaping TSAuthenticationSDK.TSNativeBiometricsAuthenticationCompletion)
   final public func registerTOTP(URI: Swift.String, securityType: TSAuthenticationSDK.TSTOTPSecurityType, completion: @escaping TSAuthenticationSDK.TSTOTPRegistrationCompletion)
   final public func generateTOTPCode(UUID: Swift.String, completion: @escaping TSAuthenticationSDK.TSTOTPGenerateCodeCompletion)
   final public func getDeviceInfo(_ completion: @escaping TSAuthenticationSDK.DeviceInfoCompletion)
   public static func isWebAuthnSupported() -> Swift.Bool
   @objc deinit
+}
+public enum TSAuthenticationError : Swift.Error {
+  case notInitialized
+  case unsupportedOSVersion
+  case requestIsRunning
+  case networkError
+  case webAuthnError(TSAuthenticationSDK.TSWebAuthnError)
+  case totpError(TSAuthenticationSDK.TSTOTPError)
+  case nativeBiometricsError(TSAuthenticationSDK.TSNativeBiometricsError)
+  case `internal`((any Swift.Error)?)
+  case initializationError
+}
+extension TSAuthenticationSDK.TSAuthenticationError : Swift.Equatable {
+  public static func == (lhs: TSAuthenticationSDK.TSAuthenticationError, rhs: TSAuthenticationSDK.TSAuthenticationError) -> Swift.Bool
+}
+public enum TSWebAuthnError {
+  case canceled
+  case invalidResponse
+  case notHandled
+  case failed
+  case notInteractive
+  case invalidDomain
+  case invalidWebAuthnSession
+  case userNotFound
+  case `internal`((any Swift.Error)?)
+}
+public enum TSTOTPError : Swift.Error {
+  case nativeBiometricsNotAvailable
+  case incorrectURIFormat
+  case notRegistered
+  case invalidSecret
+  case invalidAlgorithm
+  case invalidPeriod
+  case invalidDigits
+  case `internal`((any Swift.Error)?)
+}
+extension TSAuthenticationSDK.TSTOTPError : Swift.Equatable {
+  public static func == (lhs: TSAuthenticationSDK.TSTOTPError, rhs: TSAuthenticationSDK.TSTOTPError) -> Swift.Bool
+}
+public enum TSNativeBiometricsError : Swift.Error {
+  case nativeBiometricsNotAvailable
+  case notRegistered
+  case `internal`((any Swift.Error)?)
+}
+extension TSAuthenticationSDK.TSNativeBiometricsError : Swift.Equatable {
+  public static func == (lhs: TSAuthenticationSDK.TSNativeBiometricsError, rhs: TSAuthenticationSDK.TSNativeBiometricsError) -> Swift.Bool
 }
 @_hasMissingDesignatedInitializers final public class TSRegistrationResult {
   final public var result: Swift.String {
@@ -185,9 +183,6 @@ public struct TOTPCodeGenerator : Swift.Equatable {
   }
   public static func == (a: TSAuthenticationSDK.TOTPCodeGenerator, b: TSAuthenticationSDK.TOTPCodeGenerator) -> Swift.Bool
 }
-extension TSAuthenticationSDK.TSPasscodeError : Swift.Equatable {}
-extension TSAuthenticationSDK.TSPasscodeError : Swift.Hashable {}
-extension TSAuthenticationSDK.TSPasscodeError : Swift.RawRepresentable {}
 extension TSAuthenticationSDK.TSTOTPSecurityType : Swift.Equatable {}
 extension TSAuthenticationSDK.TSTOTPSecurityType : Swift.Hashable {}
 extension TSAuthenticationSDK.TOTPCodeGenerator.Error : Swift.Equatable {}

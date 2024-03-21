@@ -32,1657 +32,11 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "TSPasscodeError",
-        "printedName": "TSPasscodeError",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "unknown",
-            "printedName": "unknown",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSPasscodeError.Type) -> TSAuthenticationSDK.TSPasscodeError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSPasscodeError",
-                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSPasscodeError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSPasscodeError",
-                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO7unknownyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO7unknownyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "canceled",
-            "printedName": "canceled",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSPasscodeError.Type) -> TSAuthenticationSDK.TSPasscodeError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSPasscodeError",
-                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSPasscodeError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSPasscodeError",
-                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO8canceledyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO8canceledyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "invalidResponse",
-            "printedName": "invalidResponse",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSPasscodeError.Type) -> TSAuthenticationSDK.TSPasscodeError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSPasscodeError",
-                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSPasscodeError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSPasscodeError",
-                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO15invalidResponseyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO15invalidResponseyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "notHandled",
-            "printedName": "notHandled",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSPasscodeError.Type) -> TSAuthenticationSDK.TSPasscodeError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSPasscodeError",
-                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSPasscodeError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSPasscodeError",
-                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO10notHandledyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO10notHandledyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "failed",
-            "printedName": "failed",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSPasscodeError.Type) -> TSAuthenticationSDK.TSPasscodeError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSPasscodeError",
-                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSPasscodeError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSPasscodeError",
-                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO6failedyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO6failedyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "notInteractive",
-            "printedName": "notInteractive",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSPasscodeError.Type) -> TSAuthenticationSDK.TSPasscodeError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSPasscodeError",
-                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSPasscodeError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSPasscodeError",
-                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO14notInteractiveyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO14notInteractiveyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "TSAuthenticationSDK.TSPasscodeError?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSPasscodeError",
-                    "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                    "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO8rawValueACSgSS_tcfc",
-            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO8rawValueACSgSS_tcfc",
-            "moduleName": "TSAuthenticationSDK",
-            "implicit": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "rawValue",
-            "printedName": "rawValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO8rawValueSSvp",
-            "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO8rawValueSSvp",
-            "moduleName": "TSAuthenticationSDK",
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO8rawValueSSvg",
-                "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO8rawValueSSvg",
-                "moduleName": "TSAuthenticationSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO",
-        "mangledName": "$s19TSAuthenticationSDK15TSPasscodeErrorO",
-        "moduleName": "TSAuthenticationSDK",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "enumRawTypeName": "String",
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "TSTOTPError",
-        "printedName": "TSTOTPError",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "nativeBiometricsNotAvailable",
-            "printedName": "nativeBiometricsNotAvailable",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSTOTPError",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError",
-                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSTOTPError",
-                        "printedName": "TSAuthenticationSDK.TSTOTPError",
-                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO28nativeBiometricsNotAvailableyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO28nativeBiometricsNotAvailableyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "incorrectURIFormat",
-            "printedName": "incorrectURIFormat",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSTOTPError",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError",
-                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSTOTPError",
-                        "printedName": "TSAuthenticationSDK.TSTOTPError",
-                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO18incorrectURIFormatyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO18incorrectURIFormatyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "notRegistered",
-            "printedName": "notRegistered",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSTOTPError",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError",
-                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSTOTPError",
-                        "printedName": "TSAuthenticationSDK.TSTOTPError",
-                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO13notRegisteredyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO13notRegisteredyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "invalidSecret",
-            "printedName": "invalidSecret",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSTOTPError",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError",
-                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSTOTPError",
-                        "printedName": "TSAuthenticationSDK.TSTOTPError",
-                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO13invalidSecretyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO13invalidSecretyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "invalidAlgorithm",
-            "printedName": "invalidAlgorithm",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSTOTPError",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError",
-                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSTOTPError",
-                        "printedName": "TSAuthenticationSDK.TSTOTPError",
-                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO16invalidAlgorithmyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO16invalidAlgorithmyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "invalidPeriod",
-            "printedName": "invalidPeriod",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSTOTPError",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError",
-                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSTOTPError",
-                        "printedName": "TSAuthenticationSDK.TSTOTPError",
-                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO13invalidPeriodyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO13invalidPeriodyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "invalidDigits",
-            "printedName": "invalidDigits",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSTOTPError",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError",
-                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSTOTPError",
-                        "printedName": "TSAuthenticationSDK.TSTOTPError",
-                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO13invalidDigitsyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO13invalidDigitsyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "internal",
-            "printedName": "internal",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> (Swift.Error?) -> TSAuthenticationSDK.TSTOTPError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.Error?) -> TSAuthenticationSDK.TSTOTPError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSTOTPError",
-                        "printedName": "TSAuthenticationSDK.TSTOTPError",
-                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Swift.Error?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Error",
-                            "printedName": "Swift.Error",
-                            "usr": "s:s5ErrorP"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSTOTPError",
-                        "printedName": "TSAuthenticationSDK.TSTOTPError",
-                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO8internalyACs5Error_pSgcACmF",
-            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO8internalyACs5Error_pSgcACmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "TSTOTPError",
-                "printedName": "TSAuthenticationSDK.TSTOTPError",
-                "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "TSTOTPError",
-                "printedName": "TSAuthenticationSDK.TSTOTPError",
-                "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO2eeoiySbAC_ACtFZ",
-            "moduleName": "TSAuthenticationSDK",
-            "static": true,
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO",
-        "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO",
-        "moduleName": "TSAuthenticationSDK",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Error",
-            "printedName": "Error",
-            "usr": "s:s5ErrorP",
-            "mangledName": "$ss5ErrorP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "TSNativeBiometricsError",
-        "printedName": "TSNativeBiometricsError",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "nativeBiometricsNotAvailable",
-            "printedName": "nativeBiometricsNotAvailable",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError.Type) -> TSAuthenticationSDK.TSNativeBiometricsError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSNativeBiometricsError",
-                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
-                    "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSNativeBiometricsError",
-                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
-                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO06nativeD12NotAvailableyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO06nativeD12NotAvailableyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "notRegistered",
-            "printedName": "notRegistered",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError.Type) -> TSAuthenticationSDK.TSNativeBiometricsError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSNativeBiometricsError",
-                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
-                    "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSNativeBiometricsError",
-                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
-                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO13notRegisteredyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO13notRegisteredyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "internal",
-            "printedName": "internal",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError.Type) -> (Swift.Error?) -> TSAuthenticationSDK.TSNativeBiometricsError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.Error?) -> TSAuthenticationSDK.TSNativeBiometricsError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSNativeBiometricsError",
-                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
-                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Swift.Error?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Error",
-                            "printedName": "Swift.Error",
-                            "usr": "s:s5ErrorP"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSNativeBiometricsError",
-                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
-                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO8internalyACs0E0_pSgcACmF",
-            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO8internalyACs0E0_pSgcACmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "TSNativeBiometricsError",
-                "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
-                "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "TSNativeBiometricsError",
-                "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
-                "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO2eeoiySbAC_ACtFZ",
-            "moduleName": "TSAuthenticationSDK",
-            "static": true,
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO",
-        "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO",
-        "moduleName": "TSAuthenticationSDK",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Error",
-            "printedName": "Error",
-            "usr": "s:s5ErrorP",
-            "mangledName": "$ss5ErrorP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "TSAuthenticationError",
-        "printedName": "TSAuthenticationError",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "notInitialized",
-            "printedName": "notInitialized",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationError",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO14notInitializedyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO14notInitializedyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "unsupportedOSVersion",
-            "printedName": "unsupportedOSVersion",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationError",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO20unsupportedOSVersionyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO20unsupportedOSVersionyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "invalidDomain",
-            "printedName": "invalidDomain",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationError",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO13invalidDomainyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO13invalidDomainyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "userNotFound",
-            "printedName": "userNotFound",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationError",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO12userNotFoundyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO12userNotFoundyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "requestIsRunning",
-            "printedName": "requestIsRunning",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationError",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO16requestIsRunningyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO16requestIsRunningyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
-          },
-          {
-            "kind": "Var",
-            "name": "registrationFailed",
-            "printedName": "registrationFailed",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationError",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO18registrationFailedyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO18registrationFailedyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "authenticationFailed",
-            "printedName": "authenticationFailed",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationError",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO20authenticationFailedyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO20authenticationFailedyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "invalidWebAuthnSession",
-            "printedName": "invalidWebAuthnSession",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationError",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO22invalidWebAuthnSessionyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO22invalidWebAuthnSessionyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "genericServerError",
-            "printedName": "genericServerError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationError",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO013genericServerC0yA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO013genericServerC0yA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "networkError",
-            "printedName": "networkError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationError",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO07networkC0yA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO07networkC0yA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "passkeyError",
-            "printedName": "passkeyError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> (TSAuthenticationSDK.TSPasscodeError) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(TSAuthenticationSDK.TSPasscodeError) -> TSAuthenticationSDK.TSAuthenticationError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSPasscodeError",
-                        "printedName": "TSAuthenticationSDK.TSPasscodeError",
-                        "usr": "s:19TSAuthenticationSDK15TSPasscodeErrorO"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO07passkeyC0yAcA010TSPasscodeC0OcACmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO07passkeyC0yAcA010TSPasscodeC0OcACmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "totpError",
-            "printedName": "totpError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> (TSAuthenticationSDK.TSTOTPError) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(TSAuthenticationSDK.TSTOTPError) -> TSAuthenticationSDK.TSAuthenticationError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSTOTPError",
-                        "printedName": "TSAuthenticationSDK.TSTOTPError",
-                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO04totpC0yAcA11TSTOTPErrorOcACmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO04totpC0yAcA11TSTOTPErrorOcACmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "nativeBiometricsError",
-            "printedName": "nativeBiometricsError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> (TSAuthenticationSDK.TSNativeBiometricsError) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError) -> TSAuthenticationSDK.TSAuthenticationError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSNativeBiometricsError",
-                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
-                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO016nativeBiometricsC0yAcA08TSNativeeC0OcACmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO016nativeBiometricsC0yAcA08TSNativeeC0OcACmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "unknown",
-            "printedName": "unknown",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSAuthenticationError",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TSAuthenticationError",
-                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO7unknownyA2CmF",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO7unknownyA2CmF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "TSAuthenticationError",
-                "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "TSAuthenticationError",
-                "printedName": "TSAuthenticationSDK.TSAuthenticationError",
-                "usr": "s:19TSAuthenticationSDK0A5ErrorO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:19TSAuthenticationSDK0A5ErrorO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO2eeoiySbAC_ACtFZ",
-            "moduleName": "TSAuthenticationSDK",
-            "static": true,
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:19TSAuthenticationSDK0A5ErrorO",
-        "mangledName": "$s19TSAuthenticationSDK0A5ErrorO",
-        "moduleName": "TSAuthenticationSDK",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Error",
-            "printedName": "Error",
-            "usr": "s:s5ErrorP",
-            "mangledName": "$ss5ErrorP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          }
-        ]
+        "kind": "Import",
+        "name": "TSCoreSDK",
+        "printedName": "TSCoreSDK",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK"
       },
       {
         "kind": "TypeDecl",
@@ -2399,6 +753,29 @@
           },
           {
             "kind": "Function",
+            "name": "initializeSDK",
+            "printedName": "initializeSDK()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK0A0C010initializeB0yyKF",
+            "mangledName": "$s19TSAuthenticationSDK0A0C010initializeB0yyKF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "registerWebAuthn",
             "printedName": "registerWebAuthn(username:displayName:completion:)",
             "children": [
@@ -2619,6 +996,132 @@
           },
           {
             "kind": "Function",
+            "name": "registerNativeBiometrics",
+            "printedName": "registerNativeBiometrics(username:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<TSAuthenticationSDK.TSNativeBiometricsRegistrationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<TSAuthenticationSDK.TSNativeBiometricsRegistrationResult, TSAuthenticationSDK.TSAuthenticationError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSNativeBiometricsRegistrationResult",
+                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsRegistrationResult",
+                        "usr": "s:19TSAuthenticationSDK36TSNativeBiometricsRegistrationResultC"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK0A0C24registerNativeBiometrics8username10completionySS_ys6ResultOyAA08TSNativee12RegistrationH0CAA0A5ErrorOGctF",
+            "mangledName": "$s19TSAuthenticationSDK0A0C24registerNativeBiometrics8username10completionySS_ys6ResultOyAA08TSNativee12RegistrationH0CAA0A5ErrorOGctF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "authenticateNativeBiometrics",
+            "printedName": "authenticateNativeBiometrics(username:challenge:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<TSAuthenticationSDK.TSNativeBiometricsAuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<TSAuthenticationSDK.TSNativeBiometricsAuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSNativeBiometricsAuthenticationResult",
+                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsAuthenticationResult",
+                        "usr": "s:19TSAuthenticationSDK38TSNativeBiometricsAuthenticationResultC"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK0A0C28authenticateNativeBiometrics8username9challenge10completionySS_SSys6ResultOyAA08TSNativee14AuthenticationI0CAA0A5ErrorOGctF",
+            "mangledName": "$s19TSAuthenticationSDK0A0C28authenticateNativeBiometrics8username9challenge10completionySS_SSys6ResultOyAA08TSNativee14AuthenticationI0CAA0A5ErrorOGctF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "registerTOTP",
             "printedName": "registerTOTP(URI:securityType:completion:)",
             "children": [
@@ -2792,7 +1295,8 @@
             "moduleName": "TSAuthenticationSDK",
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -3133,6 +1637,1533 @@
         "printedName": "TSCoreSDK",
         "declKind": "Import",
         "moduleName": "TSAuthenticationSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TSAuthenticationError",
+        "printedName": "TSAuthenticationError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "notInitialized",
+            "printedName": "notInitialized",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO14notInitializedyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO14notInitializedyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unsupportedOSVersion",
+            "printedName": "unsupportedOSVersion",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO20unsupportedOSVersionyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO20unsupportedOSVersionyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "requestIsRunning",
+            "printedName": "requestIsRunning",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO16requestIsRunningyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO16requestIsRunningyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "networkError",
+            "printedName": "networkError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO07networkC0yA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO07networkC0yA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "webAuthnError",
+            "printedName": "webAuthnError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> (TSAuthenticationSDK.TSWebAuthnError) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(TSAuthenticationSDK.TSWebAuthnError) -> TSAuthenticationSDK.TSAuthenticationError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSWebAuthnError",
+                        "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                        "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO08webAuthnC0yAcA05TSWebeC0OcACmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO08webAuthnC0yAcA05TSWebeC0OcACmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "totpError",
+            "printedName": "totpError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> (TSAuthenticationSDK.TSTOTPError) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(TSAuthenticationSDK.TSTOTPError) -> TSAuthenticationSDK.TSAuthenticationError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO04totpC0yAcA11TSTOTPErrorOcACmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO04totpC0yAcA11TSTOTPErrorOcACmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nativeBiometricsError",
+            "printedName": "nativeBiometricsError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> (TSAuthenticationSDK.TSNativeBiometricsError) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError) -> TSAuthenticationSDK.TSAuthenticationError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSNativeBiometricsError",
+                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO016nativeBiometricsC0yAcA08TSNativeeC0OcACmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO016nativeBiometricsC0yAcA08TSNativeeC0OcACmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "internal",
+            "printedName": "internal",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> (Swift.Error?) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Error?) -> TSAuthenticationSDK.TSAuthenticationError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO8internalyACs0C0_pSgcACmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO8internalyACs0C0_pSgcACmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "initializationError",
+            "printedName": "initializationError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSAuthenticationError.Type) -> TSAuthenticationSDK.TSAuthenticationError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSAuthenticationError",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                    "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO014initializationC0yA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO014initializationC0yA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TSAuthenticationError",
+                "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TSAuthenticationError",
+                "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK0A5ErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s19TSAuthenticationSDK0A5ErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "TSAuthenticationSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:19TSAuthenticationSDK0A5ErrorO",
+        "mangledName": "$s19TSAuthenticationSDK0A5ErrorO",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TSWebAuthnError",
+        "printedName": "TSWebAuthnError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "canceled",
+            "printedName": "canceled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSWebAuthnError.Type) -> TSAuthenticationSDK.TSWebAuthnError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSWebAuthnError",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                    "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSWebAuthnError",
+                        "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                        "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO8canceledyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSWebAuthnErrorO8canceledyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidResponse",
+            "printedName": "invalidResponse",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSWebAuthnError.Type) -> TSAuthenticationSDK.TSWebAuthnError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSWebAuthnError",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                    "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSWebAuthnError",
+                        "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                        "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO15invalidResponseyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSWebAuthnErrorO15invalidResponseyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "notHandled",
+            "printedName": "notHandled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSWebAuthnError.Type) -> TSAuthenticationSDK.TSWebAuthnError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSWebAuthnError",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                    "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSWebAuthnError",
+                        "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                        "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO10notHandledyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSWebAuthnErrorO10notHandledyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "failed",
+            "printedName": "failed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSWebAuthnError.Type) -> TSAuthenticationSDK.TSWebAuthnError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSWebAuthnError",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                    "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSWebAuthnError",
+                        "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                        "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO6failedyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSWebAuthnErrorO6failedyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "notInteractive",
+            "printedName": "notInteractive",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSWebAuthnError.Type) -> TSAuthenticationSDK.TSWebAuthnError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSWebAuthnError",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                    "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSWebAuthnError",
+                        "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                        "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO14notInteractiveyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSWebAuthnErrorO14notInteractiveyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidDomain",
+            "printedName": "invalidDomain",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSWebAuthnError.Type) -> TSAuthenticationSDK.TSWebAuthnError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSWebAuthnError",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                    "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSWebAuthnError",
+                        "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                        "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO13invalidDomainyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSWebAuthnErrorO13invalidDomainyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidWebAuthnSession",
+            "printedName": "invalidWebAuthnSession",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSWebAuthnError.Type) -> TSAuthenticationSDK.TSWebAuthnError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSWebAuthnError",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                    "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSWebAuthnError",
+                        "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                        "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO010invalidWebD7SessionyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSWebAuthnErrorO010invalidWebD7SessionyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userNotFound",
+            "printedName": "userNotFound",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSWebAuthnError.Type) -> TSAuthenticationSDK.TSWebAuthnError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSWebAuthnError",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                    "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSWebAuthnError",
+                        "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                        "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO12userNotFoundyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSWebAuthnErrorO12userNotFoundyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "internal",
+            "printedName": "internal",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSWebAuthnError.Type) -> (Swift.Error?) -> TSAuthenticationSDK.TSWebAuthnError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Error?) -> TSAuthenticationSDK.TSWebAuthnError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSWebAuthnError",
+                        "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                        "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSWebAuthnError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSWebAuthnError",
+                        "printedName": "TSAuthenticationSDK.TSWebAuthnError",
+                        "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO8internalyACs0E0_pSgcACmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSWebAuthnErrorO8internalyACs0E0_pSgcACmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:19TSAuthenticationSDK15TSWebAuthnErrorO",
+        "mangledName": "$s19TSAuthenticationSDK15TSWebAuthnErrorO",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TSTOTPError",
+        "printedName": "TSTOTPError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "nativeBiometricsNotAvailable",
+            "printedName": "nativeBiometricsNotAvailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSTOTPError",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError",
+                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO28nativeBiometricsNotAvailableyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO28nativeBiometricsNotAvailableyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "incorrectURIFormat",
+            "printedName": "incorrectURIFormat",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSTOTPError",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError",
+                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO18incorrectURIFormatyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO18incorrectURIFormatyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "notRegistered",
+            "printedName": "notRegistered",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSTOTPError",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError",
+                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO13notRegisteredyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO13notRegisteredyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidSecret",
+            "printedName": "invalidSecret",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSTOTPError",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError",
+                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO13invalidSecretyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO13invalidSecretyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidAlgorithm",
+            "printedName": "invalidAlgorithm",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSTOTPError",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError",
+                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO16invalidAlgorithmyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO16invalidAlgorithmyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidPeriod",
+            "printedName": "invalidPeriod",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSTOTPError",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError",
+                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO13invalidPeriodyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO13invalidPeriodyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidDigits",
+            "printedName": "invalidDigits",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSTOTPError",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError",
+                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO13invalidDigitsyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO13invalidDigitsyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "internal",
+            "printedName": "internal",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> (Swift.Error?) -> TSAuthenticationSDK.TSTOTPError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Error?) -> TSAuthenticationSDK.TSTOTPError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO8internalyACs5Error_pSgcACmF",
+            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO8internalyACs5Error_pSgcACmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TSTOTPError",
+                "printedName": "TSAuthenticationSDK.TSTOTPError",
+                "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TSTOTPError",
+                "printedName": "TSAuthenticationSDK.TSTOTPError",
+                "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "TSAuthenticationSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO",
+        "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TSNativeBiometricsError",
+        "printedName": "TSNativeBiometricsError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "nativeBiometricsNotAvailable",
+            "printedName": "nativeBiometricsNotAvailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError.Type) -> TSAuthenticationSDK.TSNativeBiometricsError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSNativeBiometricsError",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                    "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSNativeBiometricsError",
+                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO06nativeD12NotAvailableyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO06nativeD12NotAvailableyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "notRegistered",
+            "printedName": "notRegistered",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError.Type) -> TSAuthenticationSDK.TSNativeBiometricsError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSNativeBiometricsError",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                    "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSNativeBiometricsError",
+                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO13notRegisteredyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO13notRegisteredyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "internal",
+            "printedName": "internal",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError.Type) -> (Swift.Error?) -> TSAuthenticationSDK.TSNativeBiometricsError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Error?) -> TSAuthenticationSDK.TSNativeBiometricsError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSNativeBiometricsError",
+                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSNativeBiometricsError",
+                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO8internalyACs0E0_pSgcACmF",
+            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO8internalyACs0E0_pSgcACmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TSNativeBiometricsError",
+                "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TSNativeBiometricsError",
+                "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "TSAuthenticationSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO",
+        "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -5186,100 +5217,23 @@
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1608,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1679,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1756,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1827,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1898,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1999,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2060,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2101,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3403,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3474,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3535,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3576,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "StringLiteral",
-      "offset": 4839,
+      "offset": 1154,
       "length": 15,
       "value": "\"TSAuthenticationSDK.TSConfiguration\""
     },
     {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/TSAuthenticationSDK.swift",
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "StringLiteral",
-      "offset": 5970,
+      "offset": 2245,
+      "length": 18,
+      "value": "\"TransmitSecurity\""
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 2413,
       "length": 34,
       "value": "\"https:\/\/api.transmitsecurity.io\/\""
     },
@@ -5468,28 +5422,28 @@
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 3596,
+      "offset": 3607,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 5238,
+      "offset": 5274,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 6269,
+      "offset": 6305,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 6386,
+      "offset": 6433,
       "length": 5,
       "value": "false"
     },
@@ -5503,14 +5457,14 @@
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "StringLiteral",
-      "offset": 8784,
+      "offset": 8858,
       "length": 12,
       "value": "\"public-key\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "StringLiteral",
-      "offset": 10648,
+      "offset": 10733,
       "length": 12,
       "value": "\"public-key\""
     },
@@ -5662,6 +5616,146 @@
       "value": "\"TSAuthenticationSDK.TSWebauthnStartRegistrationRequest\""
     },
     {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1391,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1476,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1553,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1624,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1687,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1774,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1835,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1876,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4128,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4199,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4276,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4347,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4418,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4519,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4580,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4621,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5486,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5557,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5618,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/Errors\/TSAuthenticationSDKErrors.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5659,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/NativeBiometrics\/NativeBiometricsAuthenticator.swift",
       "kind": "StringLiteral",
       "offset": 456,
@@ -5721,7 +5815,7 @@
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
       "offset": 1422,
-      "length": 28,
+      "length": 27,
       "value": "\"\""
     },
     {
@@ -5729,40 +5823,40 @@
       "kind": "StringLiteral",
       "offset": 1433,
       "length": 1,
-      "value": "\"\/\""
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 1449,
+      "offset": 1448,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 1518,
+      "offset": 1517,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 1703,
+      "offset": 1702,
       "length": 26,
       "value": "\"set-device-binding-token\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 1883,
+      "offset": 1882,
       "length": 56,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/TSWebAuthnRequestAPIs.swift",
       "kind": "StringLiteral",
-      "offset": 1927,
+      "offset": 1926,
       "length": 2,
       "value": "\" is missing\""
     },
@@ -5818,21 +5912,21 @@
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2279,
+      "offset": 2287,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2314,
+      "offset": 2322,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationController.swift",
       "kind": "StringLiteral",
-      "offset": 7043,
+      "offset": 7051,
       "length": 3,
       "value": "\"\/\""
     },
@@ -6546,42 +6640,42 @@
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/NativeBiometrics\/NativeBiometricsManager.swift",
       "kind": "StringLiteral",
-      "offset": 2147,
+      "offset": 2168,
       "length": 65,
       "value": "\"Authenticate with native biometrics failed with error: \""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/NativeBiometrics\/NativeBiometricsManager.swift",
       "kind": "StringLiteral",
-      "offset": 2211,
+      "offset": 2232,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/NativeBiometrics\/NativeBiometricsManager.swift",
       "kind": "StringLiteral",
-      "offset": 2388,
+      "offset": 2409,
       "length": 65,
       "value": "\"Authenticate with native biometrics failed with error: \""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/NativeBiometrics\/NativeBiometricsManager.swift",
       "kind": "StringLiteral",
-      "offset": 2452,
+      "offset": 2473,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/NativeBiometrics\/NativeBiometricsManager.swift",
       "kind": "StringLiteral",
-      "offset": 2545,
+      "offset": 2566,
       "length": 65,
       "value": "\"Authenticate with native biometrics failed with error: \""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/NativeBiometrics\/NativeBiometricsManager.swift",
       "kind": "StringLiteral",
-      "offset": 2609,
+      "offset": 2630,
       "length": 2,
       "value": "\"\""
     },
@@ -6616,56 +6710,56 @@
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 999,
+      "offset": 998,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 1046,
+      "offset": 1051,
       "length": 4,
       "value": "1001"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 1094,
+      "offset": 1099,
       "length": 4,
       "value": "1002"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 1149,
+      "offset": 1154,
       "length": 4,
       "value": "1003"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 1199,
+      "offset": 1204,
       "length": 4,
       "value": "1004"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 1245,
+      "offset": 1250,
       "length": 4,
       "value": "1005"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "StringLiteral",
-      "offset": 1468,
+      "offset": 1479,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationExtensions.swift",
       "kind": "StringLiteral",
-      "offset": 1607,
+      "offset": 1618,
       "length": 17,
       "value": "\"CFBundleVersion\""
     },
@@ -7162,42 +7256,42 @@
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/TOTP\/TOTPManager.swift",
       "kind": "StringLiteral",
-      "offset": 1669,
+      "offset": 1678,
       "length": 48,
       "value": "\"Generate TOTP code failed with error: \""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/TOTP\/TOTPManager.swift",
       "kind": "StringLiteral",
-      "offset": 1716,
+      "offset": 1725,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/TOTP\/TOTPManager.swift",
       "kind": "StringLiteral",
-      "offset": 1869,
+      "offset": 1878,
       "length": 48,
       "value": "\"Generate TOTP code failed with error: \""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/TOTP\/TOTPManager.swift",
       "kind": "StringLiteral",
-      "offset": 1916,
+      "offset": 1925,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/TOTP\/TOTPManager.swift",
       "kind": "StringLiteral",
-      "offset": 1997,
+      "offset": 2006,
       "length": 48,
       "value": "\"Generate TOTP code failed with error: \""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/TOTP\/TOTPManager.swift",
       "kind": "StringLiteral",
-      "offset": 2044,
+      "offset": 2053,
       "length": 2,
       "value": "\"\""
     },
