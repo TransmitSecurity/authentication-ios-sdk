@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/TSAuthenticationSDK-Swift.h</key>
 		<data>
-		bUO0AnamrfhvQS/NaehShl8b8w8=
+		MpuRU+DNBn8NsRuo/0CtfJKmB/E=
 		</data>
 		<key>Headers/TSAuthenticationSDK.h</key>
 		<data>
@@ -14,59 +14,63 @@
 		</data>
 		<key>Headers/TSAuthenticationSDK.swift</key>
 		<data>
-		/BlKDnd8T684+7EnJqqNRlBz3x4=
+		OVKNYHgcT5SH/O+vStd+UR+3z78=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0VyC1REfVhP7c5uRX63Kp5LZhYQ=
+		XgVFWBSzfssyI5Lv7Xx2soK2LXw=
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		cFIqPlSwUlEsSShP2hUwNyrIink=
+		qKFcsaZxmTZU+NIeKVMzt+eii1A=
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		mjsBZdcRx1ElPBqd2MSwQ/9fngU=
+		ckZSVC07i9R5rYN/lVVayEjsmTA=
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		a+6eC+D8o6N4Q++kXH7dfeFrtII=
+		pyp1fwatcX+hSUvNp+5VJGiR3cI=
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		mjsBZdcRx1ElPBqd2MSwQ/9fngU=
+		ckZSVC07i9R5rYN/lVVayEjsmTA=
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		8hxRjcTs9FCFm18Vq1SgolOtyS4=
+		ApLLNshmJECYXCzOj9xy9sO6DCo=
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		cFIqPlSwUlEsSShP2hUwNyrIink=
+		qKFcsaZxmTZU+NIeKVMzt+eii1A=
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Fun6MVx8QYwXgdBQztfchk7qYWk=
+		AnADGg88ir+WudiAB7zJrjINNj8=
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		I1ZxZMlyGiEmaFHweMiIiHJ1jGE=
+		M7n9RXXY3EgIXXF8JqgD+t2d/vk=
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Fun6MVx8QYwXgdBQztfchk7qYWk=
+		AnADGg88ir+WudiAB7zJrjINNj8=
 		</data>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pAhqDQrEMuz6uzGdGsYITMyJUmQ=
+		RBFE8r8FUmLLUjfeN+apFcXqkiU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		q51/OT4rc9IKeGuzQ0XhRuwCvhI=
+		cQwcOTKrCTwCWQcu/b8awst/Zok=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		yskOtcLJTB09p9W/fcfFdEmZPKM=
 		</data>
 		<key>version</key>
 		<data>
-		hpvVZ8I9asXOyZzrBtTwKH0sQTA=
+		QoUF5hl+LyNO2stNMhcjLWaT5mw=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -75,7 +79,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2Qb6Xgxi+50MdThkUjRbr2b6vYIJX21UA8NiGKA7sF8=
+			+0xhXpjpOozukPekRH/HsBhuk5s1Iw13Z3MREkbQmcU=
 			</data>
 		</dict>
 		<key>Headers/TSAuthenticationSDK.h</key>
@@ -89,91 +93,98 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ohJJ2LiIyzBSJ+I1CkwGbzCGmig5FCfs20RQGKMVkbo=
+			5mctTk4RawE4zGS1Fm9p27bDeHGO93sbLsr2tUa3Qkk=
 			</data>
 		</dict>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FcaiUDrYFZgjofb+rdA2ZNTrTDrCoZpNZW+e7H/c/64=
+			Z3GdlJ6hdbzvcVeHA2Bmf7lpjhaa8ppuM0wY7l/OyDw=
 			</data>
 		</dict>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RFtqvRBP1N5qzFMMDPt3eMA5xPjIVy52Ovc0qilsw8M=
+			8Xkp5RZdJq49FpTMVilQoTPNd0LRGbJDywy/+07vhDc=
 			</data>
 		</dict>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uA3jwsAY+yntDv+njkLmNvgGfNgdteKVKtfinmX9AFw=
+			tmxbz91C/IOviqiLLvqKB4l+cPCOwZEMgMJXWRnDZ7c=
 			</data>
 		</dict>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RFtqvRBP1N5qzFMMDPt3eMA5xPjIVy52Ovc0qilsw8M=
+			8Xkp5RZdJq49FpTMVilQoTPNd0LRGbJDywy/+07vhDc=
 			</data>
 		</dict>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vo+aC0CYQQw2rADvTk007/d4AYtZDZ/VjAiMtkKMzzc=
+			jk6O/Sad1Yo4lz0s09+zw2Vl8NLdt47YTTHVDGC4acA=
 			</data>
 		</dict>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FcaiUDrYFZgjofb+rdA2ZNTrTDrCoZpNZW+e7H/c/64=
+			Z3GdlJ6hdbzvcVeHA2Bmf7lpjhaa8ppuM0wY7l/OyDw=
 			</data>
 		</dict>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EXBZMvuPwAXecBkh+BONBVcFWHk0ux0hV8uMGa2JqMI=
+			uib5U0KcbkyeudxtEExEOfxxAtJm9vQ7uvonGEDeOlc=
 			</data>
 		</dict>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			um+Eh7VPW9l5ziGI6dImz55d+neEmigEEvwgVXSPwF4=
+			0002IDCbZM4qX3OK6hnKXtwd96MBjUqUYN5lLR/owPU=
 			</data>
 		</dict>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EXBZMvuPwAXecBkh+BONBVcFWHk0ux0hV8uMGa2JqMI=
+			uib5U0KcbkyeudxtEExEOfxxAtJm9vQ7uvonGEDeOlc=
 			</data>
 		</dict>
 		<key>Modules/TSAuthenticationSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7PhPMv/fNE8Ye+vUCW1WyBotYQhAuJsW/xj5zOCU3oo=
+			G5pO0FDFojMnm+MfQ0aDZa7LIXATJMWeHHRHYlFCvTQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			08S8wNbZfwMm7Z4dOmndd36V1a72TankoGSkDrmcWOM=
+			TQMd2/bQP6DRzBSKeiNaQ+siyJ4l5QWTDPSgkE+dGxs=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/LvCLe2Pb8QAMvePuGbd0653w1qLMd+boj6XQsKsaSA=
 			</data>
 		</dict>
 		<key>version</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AmLgnVB7qmWGA1Wvr2v5gnGgyP0/sF417jVVUtsnMcU=
+			tVHVzDIXwr2O3ZinmXAAyYMnI2W+XN7yK0Gi0IS1u8g=
 			</data>
 		</dict>
 	</dict>

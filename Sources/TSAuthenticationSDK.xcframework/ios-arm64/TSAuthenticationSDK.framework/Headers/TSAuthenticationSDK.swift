@@ -6,74 +6,29 @@
 //
 
 import UIKit
+import TSCoreSDK
 
 
-public typealias TSAuthenticationInitCompletion = ((TSAuthenticationInitResponse?, TSAuthenticationError?) -> ())?
-public typealias TSAuthenticationCompletion = ((Bool, TSAuthenticationError?) -> ())?
-public typealias TSAuthenticationResponseCompletion = ((TSAuthenticationResponse?, TSAuthenticationError?) -> ())?
+public typealias TSAuthenticationCompletion = (Result<TSAuthenticationResult, TSAuthenticationError>) -> ()
+public typealias TSRegistrationCompletion = (Result<TSRegistrationResult, TSAuthenticationError>) -> ()
+public typealias TSNativeBiometricsRegistrationCompletion = (Result<TSNativeBiometricsRegistrationResult, TSAuthenticationError>) -> ()
+public typealias TSNativeBiometricsAuthenticationCompletion = (Result<TSNativeBiometricsAuthenticationResult, TSAuthenticationError>) -> ()
+public typealias DeviceInfoCompletion = (Result<TSDeviceInfo, TSAuthenticationError>) -> Void
+public typealias TSTOTPRegistrationCompletion = (Result<TSTOTPRegistrationResult, TSAuthenticationError>) -> ()
+public typealias TSTOTPGenerateCodeCompletion = (Result<TSTOTPGenerateCodeResult, TSAuthenticationError>) -> ()
 
 
-public enum TSAuthenticationErrorCode : String, CaseIterable, Equatable, Hashable, Codable {
-   case notInitialized
-   case userNotFound
-   case userMismatch
-   case missingPrepareStep
-   case registrationFailed
-   case authenticationFailed
-   case invalidAuthSession
-   case internetConnection
-   case invalidConfig
-   case invalidSignTransactionData
-
-   //PassKeys error codes
-   case unknown
-   case canceled
-   case invalidResponse
-   case notHandled
-   case failed
-   case notInteractive
+public enum TSTOTPSecurityType: Codable {
+    case biometric
+    
+    case none
 }
 
-
-final public class TSAuthenticationError: NSObject {
-
-    /**
-     Error code representing what happened
-     */
-    public internal (set) var code: TSAuthenticationErrorCode!
-
-    /**
-     Error description
-     */
-    public internal (set) var message: String!
-
-    /**
-     A URI identifying a human-readable web page containing information about the error, if available.
-     */
-    public internal (set) var errorUri: String?
+public struct TSDeviceInfo: Codable {
+    public let publicKeyId: String
+    
+    public let publicKey: String
 }
-
-
-public protocol TSAuthenticationResponse: Codable {
-
-    /**
-     Authorization code. This can be used to obtain
-     the resulting ID Token and Access Token
-     This value is typically sent to the application backend where it is
-     exchanged for the sensitive Access Token.
-     */
-    var authCode: String! {get}
-}
-
-
-public protocol TSAuthenticationInitResponse: Codable {
-
-    /**
-     A crypto public key. Send it to the server to continue using it.
-     */
-    var publicKey: String! {get}
-}
-
 
 final public class TSConfiguration: NSObject {
 
@@ -81,89 +36,191 @@ final public class TSConfiguration: NSObject {
      An associated domain with the web credentials service type when making a registration or assertion request; otherwise, the request returns an error. See Supporting associated domains for more information.
      (https://developer.apple.com/documentation/xcode/supporting-associated-domains)
      */
-    public var domain: String!
+    public private(set) var domain: String
+    
+    public init(domain: String) {
+        self.domain = domain
+    }
 }
 
 
-protocol TSBaseAuthenticationSdkProtocol: TSWebAuthnSdkProtocol {
-    func initialize(baseUrl: String, clientId: String, configuration: TSConfiguration?, completion: TSAuthenticationInitCompletion)
-}
-
-final private class TSAuthenticationSDK: NSObject {
-
+protocol TSBaseAuthenticationSdkProtocol {
+    func initialize(baseUrl: String, clientId: String, configuration: TSConfiguration?)
+    
+    func getDeviceInfo(_ completion: @escaping DeviceInfoCompletion)
+    
+    static func isWebAuthnSupported() -> Bool
 }
 
 final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
 
+    
     public static let shared: TSAuthentication = TSAuthentication()
-
-
+    
+    private var controller: TSAuthenticationController?
+    
     private override init() {
         super.init()
     }
-
-
+    
+    private struct Constants {
+        struct Plist {
+            static let fileName = "TransmitSecurity"
+        }
+    }
+    
     /**
      Creates a new WebAuthn SDK instance with your client context.
      */
-    public func initialize(baseUrl: String, clientId: String, configuration: TSConfiguration? = nil, completion: TSAuthenticationInitCompletion = nil) {
-        TSAuthenticationImpl.shared.initialize(baseUrl: baseUrl, clientId: clientId, configuration: configuration, completion: completion)
+    public func initialize(baseUrl: String = "https://api.transmitsecurity.io/", clientId: String, configuration: TSConfiguration? = nil) {
+        guard controller == nil else { return }
+        
+        let controller = TSAuthenticationController()
+        
+        controller.initialize(baseUrl: baseUrl, clientId: clientId, configuration: configuration)
+        
+        self.controller = controller
     }
-
-
+    
     /**
-     Obtains the registration challenge from the Transmit Service, and stores the response locally to be used by `executeWebauthnRegistration`. This allows reducing latency when registration is requested. To provide the best experience, this should be called as soon as the username is known. If the registration does not occur in a cross-device flow, a secure context should be established using an authentication session which is obtained from a backend API call to the Transmit Service.
+     Creates a new WebAuthn SDK instance with your client context.
+     Credentials are configured from TransmitSecurity.plist file
      */
-    public func prepareWebauthnRegistration(username: String, authSessionId: String, completion: TSAuthenticationCompletion) {
-        TSAuthenticationImpl.shared.prepareWebauthnRegistration(username: username, authSessionId: authSessionId, completion: completion)
+    public func initializeSDK() throws {
+        guard controller == nil else { return }
+        
+        let controller = TSAuthenticationController()
+        
+        do {
+            let fileData = try TSFile.readFromAppPlist(named: Constants.Plist.fileName, as: PlistRoot.self)
+            var configuration : TSConfiguration? = nil
+            if let domain = fileData.credentials.domain {
+                configuration = TSConfiguration(domain: domain)
+            }
+            controller.initialize(baseUrl: fileData.credentials.baseUrl, clientId: fileData.credentials.clientId, configuration: configuration)
+            self.controller = controller
+        } catch {
+            throw TSAuthenticationError.initializationError
+        }
+     
     }
-
-
+    
     /**
-     Invokes a WebAuthn credential registration, including prompting the user for biometrics. This must be called only after calling `prepareWebauthnRegistration` to obtain the server challenge.
-
-     If registration is completed successfully, this call will return a promise that resolves to an authorization code, which can be used to obtain user tokens. If it fails, SdkRejection will be returned instead.
+     Invokes a WebAuthn credential registration, including prompting the user for biometrics.
+     Upon successful completion of the registration process, this function will return a callback containing a WebAuthnEncodedResult.
+     The WebAuthnEncodedResult should be used to make a completion request using your backend API which will communicate with Transmit's Service
      */
-    public func executeWebauthnRegistration(completion: TSAuthenticationResponseCompletion = nil) {
-        TSAuthenticationImpl.shared.executeWebauthnRegistration(completion: completion)
+    public func registerWebAuthn(username: String, displayName: String?, completion: TSRegistrationCompletion?) {
+        guard let controller else { completion?(.failure(.notInitialized)); return }
+        
+        controller.register(username: username, displayName: displayName, completion: completion)
     }
-
-
+    
     /**
-     Obtains the authentication challenge from the Transmit Service, and stores the response locally to be used by `executeWebauthnAuthentication`. This allows reducing latency when authentication is requested. To provide the best experience, this should be called as soon as possible.
+     Invokes a WebAuthn credential authentication, including prompting the user for biometrics.
+     If authentication is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
+     The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
+     */
+    public func authenticateWebAuthn(username: String, completion: TSAuthenticationCompletion? = nil) {
+        guard let controller else { completion?(.failure(.notInitialized)); return }
+        
+        controller.authenticate(username: username, completion: completion)
+    }
+    
+    /**
+     Invokes a WebAuthn credential sign transaction, including prompting the user for biometrics.
+     If transaction signing is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
+     The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
+     */
+    public func signWebauthnTransaction(username: String, completion: TSAuthenticationCompletion? = nil) {
+        guard let controller else { completion?(.failure(.notInitialized)); return }
+        
+        controller.authenticate(username: username, completion: completion)
+    }
+    
+    /**
+     Registers a user using the device's native biometric authentication system (e.g., Touch ID, Face ID).
+     */
+    public func registerNativeBiometrics(username: String, completion: @escaping TSNativeBiometricsRegistrationCompletion) {
+        guard let controller else { completion(.failure(.notInitialized)); return }
+        
+        Task {
+            await controller.registerNativeBiometrics(username: username, completion: completion)
+        }
+    }
+    
+    /**
+     Authenticates a user using the device's native biometric authentication system (e.g., Touch ID, Face ID).
+     */
+    public func authenticateNativeBiometrics(username: String, challenge: String, completion: @escaping TSNativeBiometricsAuthenticationCompletion) {
+        guard let controller else { completion(.failure(.notInitialized)); return }
+        
+        Task {
+            await controller.authenticateNativeBiometrics(username: username, challenge: challenge, completion: completion)
+        }
+    }
+    
+    /**
+    Registers a TOTP authenticatior.
 
-     This call must be invoked for a registered user. It is invoked on the last user that logged in or registered unless you specify a different user in the request (for example, when explicitly switching to a different user). If the target user is not registered or in case of any other failure, an error will be returned.
+    - Parameters:
+      - URI: A TOTP URI string a standardized way to represent the parameters needed for TOTP authentication. The URI contains essential information required for generating one-time passwords. The TOTP URI needs to follow this format: otpauth://totp/{issuer}:{label}?secret={base32-secret}&issuer={issuer}&algorithm={algorithm}&digits={digits}&period={period}.
+      - securityType: Specifies the method of protecting the stored TOTP secret. Options include `none` for no additional protection or `biometric` for securing the secret with biometric authentication, adding an extra layer of security.
+      - completion: The callback containing either error or completion result. Response object containing: ISSUER, LABEL, and UUID.
+        ISSUER: The issuer or organization's name (e.g., "MyApp").
+        LABEL:  The user account label (e.g., "johndoe@example.com", "John", "+972505555555").
+        UUID:   The unique identifier for which the registration data is stored, it should be provided for generation of TOTP code.
     */
-    public func prepareWebauthnAuthentication(username: String, completion: TSAuthenticationCompletion = nil) {
-        TSAuthenticationImpl.shared.prepareWebauthnAuthentication(username: username, completion: completion)
+    public func registerTOTP(URI: String, securityType: TSTOTPSecurityType, completion: @escaping TSTOTPRegistrationCompletion) {
+        guard let controller else { completion(.failure(.notInitialized)); return }
+        
+        controller.registerTOTP(URI: URI, securityType: securityType, completion: completion)
     }
-
-
+    
     /**
-     Invokes a WebAuthn authentication, including prompting the user for biometrics. This must be called only after calling `prepareWebauthnAuthentication` to obtain the server challenge.
+     Generates a Time-based One-Time Password (TOTP) code.
 
-     If authentication is completed successfully, this call will return a promise that resolves to an authorization code, which can be used to obtain user tokens. If it fails, an error will be returned instead.
-     */
-    public func executeWebauthnAuthentication(completion: TSAuthenticationResponseCompletion = nil) {
-        TSAuthenticationImpl.shared.executeWebauthnAuthentication(completion: completion)
-    }
+     This function implements the TOTP algorithm specified in RFC 6238 to produce a temporary, time-sensitive password based on a shared secret and the current time. The generated code is valid for a short period, usually 30 to 60 seconds, after which a new code will be generated.
 
-    /**
-     Obtains the transaction signing challenge from the Transmit Service, and stores the response locally to be used by `executeWebauthnSignTransaction`. This allows reducing latency when authentication is requested. To provide the best experience, this should be called as soon as possible.
-
-     This call must be invoked for a registered user. It is invoked on the last user that logged in or registered unless you specify a different user in the request (for example, when explicitly switching to a different user). If the target user is not registered or in case of any other failure, an error will be returned.
+     - Parameters:
+       - UUID: The unique identifier for which the registration data is stored.
+       - completion: The callback containing either error or result object contaiting generated TOTP code.
     */
-    public func prepareWebauthnSignTransaction(username: String, approvalData: [String : String], completion: TSAuthenticationCompletion = nil) {
-        TSAuthenticationImpl.shared.prepareWebauthnSignTransaction(username: username, approvalData: approvalData, completion: completion)
+    public func generateTOTPCode(UUID: String, completion: @escaping TSTOTPGenerateCodeCompletion) {
+        guard let controller else { completion(.failure(.notInitialized)); return }
+        
+        controller.generateTOTPCode(UUID: UUID, completion: completion)
     }
 
     /**
-     Invokes a WebAuthn transaction signing, including prompting the user for biometrics. This must be called only after calling `prepareWebauthnSignTransaction` to obtain the server challenge.
-
-     If authentication is completed successfully, this call will return a promise that resolves to an authorization code, which can be used to obtain user tokens. If it fails, an error will be returned instead.
+     Retrieves device-specific information, such as public key and its associated ID, which are unique to the application installed on the device.
      */
-    public func executeWebauthnSignTransaction(completion: TSAuthenticationResponseCompletion = nil) {
-        TSAuthenticationImpl.shared.executeWebauthnSignTransaction(completion: completion)
+    public func getDeviceInfo(_ completion: @escaping DeviceInfoCompletion) {
+        guard let controller else { completion(.failure(.notInitialized)); return }
+        
+        controller.getDeviceInfo(completion)
+    }
+    
+    /**
+     Checks if the WebAuthn feature is supported on the current iOS version.
+     @return
+     `true` if passkeys are supported, `false` otherwise.
+     */
+    public static func isWebAuthnSupported() -> Bool {
+        TSAuthenticationController.isWebAuthnSupported()
+    }
+}
+
+
+private extension TSAuthentication {
+    
+    private struct PlistRoot: Codable {
+        let credentials : Credentials
+    }
+
+    private struct Credentials: Codable {
+        let baseUrl, clientId : String
+        let domain : String?
     }
 
 }

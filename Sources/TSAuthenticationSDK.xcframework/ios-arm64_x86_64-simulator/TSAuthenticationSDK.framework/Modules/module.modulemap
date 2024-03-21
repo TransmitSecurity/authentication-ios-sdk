@@ -1,7 +1,7 @@
 framework module TSAuthenticationSDK {
   umbrella header "TSAuthenticationSDK.h"
-
   export *
+
   module * { export * }
 }
 
