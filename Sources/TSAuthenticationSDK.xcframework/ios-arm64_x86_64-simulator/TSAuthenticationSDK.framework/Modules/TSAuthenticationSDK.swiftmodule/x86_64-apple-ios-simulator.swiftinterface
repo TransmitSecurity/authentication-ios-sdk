@@ -148,44 +148,5 @@ extension TSAuthenticationSDK.TSAuthentication {
     get
   }
 }
-public struct TOTPCodeGenerator : Swift.Equatable {
-  public let factor: TSAuthenticationSDK.TOTPCodeGenerator.Factor
-  public let secret: Foundation.Data
-  public let algorithm: TSAuthenticationSDK.TOTPCodeGenerator.Algorithm
-  public let digits: Swift.Int
-  public init(factor: TSAuthenticationSDK.TOTPCodeGenerator.Factor, secret: Foundation.Data, algorithm: TSAuthenticationSDK.TOTPCodeGenerator.Algorithm, digits: Swift.Int) throws
-  public func password(at time: Foundation.Date) throws -> Swift.String
-  public func successor() -> TSAuthenticationSDK.TOTPCodeGenerator
-  public enum Factor : Swift.Equatable {
-    case counter(Swift.UInt64)
-    case timer(period: Foundation.TimeInterval)
-    public static func == (a: TSAuthenticationSDK.TOTPCodeGenerator.Factor, b: TSAuthenticationSDK.TOTPCodeGenerator.Factor) -> Swift.Bool
-  }
-  public enum Algorithm : Swift.String, Swift.Equatable, Swift.Codable {
-    case sha1
-    case sha256
-    case sha512
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum Error : Swift.Error {
-    case invalidTime
-    case invalidPeriod
-    case invalidDigits
-    public static func == (a: TSAuthenticationSDK.TOTPCodeGenerator.Error, b: TSAuthenticationSDK.TOTPCodeGenerator.Error) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public static func == (a: TSAuthenticationSDK.TOTPCodeGenerator, b: TSAuthenticationSDK.TOTPCodeGenerator) -> Swift.Bool
-}
 extension TSAuthenticationSDK.TSTOTPSecurityType : Swift.Equatable {}
 extension TSAuthenticationSDK.TSTOTPSecurityType : Swift.Hashable {}
-extension TSAuthenticationSDK.TOTPCodeGenerator.Error : Swift.Equatable {}
-extension TSAuthenticationSDK.TOTPCodeGenerator.Error : Swift.Hashable {}
-extension TSAuthenticationSDK.TOTPCodeGenerator.Algorithm : Swift.Hashable {}
-extension TSAuthenticationSDK.TOTPCodeGenerator.Algorithm : Swift.RawRepresentable {}

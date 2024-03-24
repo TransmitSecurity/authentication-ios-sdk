@@ -70,7 +70,7 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     }
     
     /**
-     Creates a new WebAuthn SDK instance with your client context.
+     Creates a new SDK instance with your client context.
      */
     public func initialize(baseUrl: String = "https://api.transmitsecurity.io/", clientId: String, configuration: TSConfiguration? = nil) {
         guard controller == nil else { return }
@@ -83,7 +83,7 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     }
     
     /**
-     Creates a new WebAuthn SDK instance with your client context.
+     Creates a new SDK instance with your client context.
      Credentials are configured from TransmitSecurity.plist file
      */
     public func initializeSDK() throws {
@@ -139,7 +139,7 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     }
     
     /**
-     Registers a user using the device's native biometric authentication system (e.g., Touch ID, Face ID).
+     Registers native biometrics (Touch ID or Face ID) on the device for user authentication.
      */
     public func registerNativeBiometrics(username: String, completion: @escaping TSNativeBiometricsRegistrationCompletion) {
         guard let controller else { completion(.failure(.notInitialized)); return }
@@ -150,7 +150,7 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     }
     
     /**
-     Authenticates a user using the device's native biometric authentication system (e.g., Touch ID, Face ID).
+     Authenticates a user using native biometrics (Touch ID or Face ID).
      */
     public func authenticateNativeBiometrics(username: String, challenge: String, completion: @escaping TSNativeBiometricsAuthenticationCompletion) {
         guard let controller else { completion(.failure(.notInitialized)); return }
