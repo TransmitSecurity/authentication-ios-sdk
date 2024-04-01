@@ -39,16 +39,9 @@ public struct TSDeviceInfo : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc final public class TSConfiguration : ObjectiveC.NSObject {
-  final public var domain: Swift.String {
-    get
-  }
-  public init(domain: Swift.String)
-  @objc deinit
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class TSAuthentication : ObjectiveC.NSObject {
   public static let shared: TSAuthenticationSDK.TSAuthentication
-  final public func initialize(baseUrl: Swift.String = "https://api.transmitsecurity.io/", clientId: Swift.String, configuration: TSAuthenticationSDK.TSConfiguration? = nil)
+  final public func initialize(baseUrl: Swift.String = "https://api.transmitsecurity.io/", clientId: Swift.String)
   final public func initializeSDK() throws
   final public func registerWebAuthn(username: Swift.String, displayName: Swift.String?, completion: TSAuthenticationSDK.TSRegistrationCompletion?)
   final public func authenticateWebAuthn(username: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)

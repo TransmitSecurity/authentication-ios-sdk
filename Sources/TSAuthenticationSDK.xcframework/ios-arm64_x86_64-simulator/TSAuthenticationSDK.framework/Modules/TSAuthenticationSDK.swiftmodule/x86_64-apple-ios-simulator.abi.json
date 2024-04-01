@@ -78,7 +78,10 @@
             "declKind": "EnumElement",
             "usr": "s:19TSAuthenticationSDK18TSTOTPSecurityTypeO9biometricyA2CmF",
             "mangledName": "$s19TSAuthenticationSDK18TSTOTPSecurityTypeO9biometricyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -115,7 +118,10 @@
             "declKind": "EnumElement",
             "usr": "s:19TSAuthenticationSDK18TSTOTPSecurityTypeO4noneyA2CmF",
             "mangledName": "$s19TSAuthenticationSDK18TSTOTPSecurityTypeO4noneyA2CmF",
-            "moduleName": "TSAuthenticationSDK"
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Function",
@@ -474,179 +480,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "TSConfiguration",
-        "printedName": "TSConfiguration",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "domain",
-            "printedName": "domain",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:19TSAuthenticationSDK15TSConfigurationC6domainSSvp",
-            "mangledName": "$s19TSAuthenticationSDK15TSConfigurationC6domainSSvp",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "SetterAccess",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:19TSAuthenticationSDK15TSConfigurationC6domainSSvg",
-                "mangledName": "$s19TSAuthenticationSDK15TSConfigurationC6domainSSvg",
-                "moduleName": "TSAuthenticationSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(domain:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "TSConfiguration",
-                "printedName": "TSAuthenticationSDK.TSConfiguration",
-                "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSConfiguration"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:19TSAuthenticationSDK15TSConfigurationC6domainACSS_tcfc",
-            "mangledName": "$s19TSAuthenticationSDK15TSConfigurationC6domainACSS_tcfc",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "TSConfiguration",
-                "printedName": "TSAuthenticationSDK.TSConfiguration",
-                "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSConfiguration"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSConfiguration(im)init",
-            "mangledName": "$s19TSAuthenticationSDK15TSConfigurationCACycfc",
-            "moduleName": "TSAuthenticationSDK",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSConfiguration",
-        "mangledName": "$s19TSAuthenticationSDK15TSConfigurationC",
-        "moduleName": "TSAuthenticationSDK",
-        "declAttributes": [
-          "AccessControl",
-          "Final",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "TSAuthentication",
         "printedName": "TSAuthentication",
         "children": [
@@ -704,7 +537,7 @@
           {
             "kind": "Function",
             "name": "initialize",
-            "printedName": "initialize(baseUrl:clientId:configuration:)",
+            "printedName": "initialize(baseUrl:clientId:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -723,26 +556,11 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "TSAuthenticationSDK.TSConfiguration?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TSConfiguration",
-                    "printedName": "TSAuthenticationSDK.TSConfiguration",
-                    "usr": "c:@M@TSAuthenticationSDK@objc(cs)TSConfiguration"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:19TSAuthenticationSDK0A0C10initialize7baseUrl8clientId13configurationySS_SSAA15TSConfigurationCSgtF",
-            "mangledName": "$s19TSAuthenticationSDK0A0C10initialize7baseUrl8clientId13configurationySS_SSAA15TSConfigurationCSgtF",
+            "usr": "s:19TSAuthenticationSDK0A0C10initialize7baseUrl8clientIdySS_SStF",
+            "mangledName": "$s19TSAuthenticationSDK0A0C10initialize7baseUrl8clientIdySS_SStF",
             "moduleName": "TSAuthenticationSDK",
             "declAttributes": [
               "Final",
@@ -3814,7 +3632,8 @@
             "declAttributes": [
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -3878,7 +3697,8 @@
             "declAttributes": [
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -3934,7 +3754,8 @@
             "declAttributes": [
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -3998,7 +3819,8 @@
             "declAttributes": [
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -4195,21 +4017,14 @@
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "StringLiteral",
-      "offset": 1154,
-      "length": 15,
-      "value": "\"TSAuthenticationSDK.TSConfiguration\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 2245,
+      "offset": 1892,
       "length": 18,
       "value": "\"TransmitSecurity\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "StringLiteral",
-      "offset": 2404,
+      "offset": 2051,
       "length": 34,
       "value": "\"https:\/\/api.transmitsecurity.io\/\""
     },
@@ -4363,63 +4178,63 @@
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 603,
+      "offset": 833,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 1725,
+      "offset": 1850,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 1794,
+      "offset": 1919,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 2426,
+      "offset": 2551,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 3479,
+      "offset": 3604,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 3607,
+      "offset": 3732,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 5274,
+      "offset": 5398,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 6305,
+      "offset": 6429,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 6433,
+      "offset": 6557,
       "length": 5,
       "value": "false"
     },
@@ -4433,14 +4248,14 @@
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "StringLiteral",
-      "offset": 8858,
+      "offset": 8981,
       "length": 12,
       "value": "\"public-key\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "StringLiteral",
-      "offset": 10733,
+      "offset": 10856,
       "length": 12,
       "value": "\"public-key\""
     },
@@ -4888,21 +4703,21 @@
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2287,
+      "offset": 2101,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2322,
+      "offset": 2136,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationController.swift",
       "kind": "StringLiteral",
-      "offset": 7051,
+      "offset": 6707,
       "length": 3,
       "value": "\"\/\""
     },
