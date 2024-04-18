@@ -16,7 +16,7 @@ public typealias TSNativeBiometricsAuthenticationCompletion = (Result<TSNativeBi
 public typealias DeviceInfoCompletion = (Result<TSDeviceInfo, TSAuthenticationError>) -> Void
 public typealias TSTOTPRegistrationCompletion = (Result<TSTOTPRegistrationResult, TSAuthenticationError>) -> ()
 public typealias TSTOTPGenerateCodeCompletion = (Result<TSTOTPGenerateCodeResult, TSAuthenticationError>) -> ()
-
+public typealias TSApprovalCompletion = (Result<TSAuthenticationResult, TSAuthenticationError>) -> ()
 
 public enum TSTOTPSecurityType: Codable {
     /** 
@@ -123,6 +123,22 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
         guard let controller else { completion?(.failure(.notInitialized)); return }
         
         controller.authenticate(username: username, completion: completion)
+    }
+    
+    /**
+     Invokes a WebAuthn credential authentication, including prompting the user for biometrics, in order to verify a user's authorization for a specific action.
+     If authentication is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
+     The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
+     
+     - Parameters:
+        - username -  User identifier
+        - approvalData - Additional data related to the action being approved. This should be a dictionary, where the keys and values contain only digits, alphabet, and the characters: -._
+        - completion - The callback containing either error or completion result.
+     */
+    public func approvalWebAuthn(username: String, approvalData: [String: String], completion: TSApprovalCompletion? = nil) {
+        guard let controller else { completion?(.failure(.notInitialized)); return }
+        
+        controller.approval(username: username, approvalData: approvalData, completion: completion)
     }
     
     /**
