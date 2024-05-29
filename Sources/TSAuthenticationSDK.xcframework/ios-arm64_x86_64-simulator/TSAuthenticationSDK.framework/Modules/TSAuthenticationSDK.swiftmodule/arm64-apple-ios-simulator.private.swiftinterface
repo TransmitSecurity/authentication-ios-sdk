@@ -22,6 +22,7 @@ public typealias TSNativeBiometricsAuthenticationCompletion = (Swift.Result<TSAu
 public typealias DeviceInfoCompletion = (Swift.Result<TSAuthenticationSDK.TSDeviceInfo, TSAuthenticationSDK.TSAuthenticationError>) -> Swift.Void
 public typealias TSTOTPRegistrationCompletion = (Swift.Result<TSAuthenticationSDK.TSTOTPRegistrationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
 public typealias TSTOTPGenerateCodeCompletion = (Swift.Result<TSAuthenticationSDK.TSTOTPGenerateCodeResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
+public typealias TSApprovalCompletion = (Swift.Result<TSAuthenticationSDK.TSAuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
 public enum TSTOTPSecurityType : Swift.Codable {
   case biometric
   case none
@@ -39,20 +40,14 @@ public struct TSDeviceInfo : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc final public class TSConfiguration : ObjectiveC.NSObject {
-  final public var domain: Swift.String {
-    get
-  }
-  public init(domain: Swift.String)
-  @objc deinit
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class TSAuthentication : ObjectiveC.NSObject {
   public static let shared: TSAuthenticationSDK.TSAuthentication
-  final public func initialize(baseUrl: Swift.String = "https://api.transmitsecurity.io/", clientId: Swift.String, configuration: TSAuthenticationSDK.TSConfiguration? = nil)
+  final public func initialize(baseUrl: Swift.String = "https://api.transmitsecurity.io/", clientId: Swift.String)
   final public func initializeSDK() throws
   final public func registerWebAuthn(username: Swift.String, displayName: Swift.String?, completion: TSAuthenticationSDK.TSRegistrationCompletion?)
   final public func authenticateWebAuthn(username: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)
   final public func signWebauthnTransaction(username: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)
+  final public func approvalWebAuthn(username: Swift.String, approvalData: [Swift.String : Swift.String], completion: TSAuthenticationSDK.TSApprovalCompletion? = nil)
   final public func registerNativeBiometrics(username: Swift.String, completion: @escaping TSAuthenticationSDK.TSNativeBiometricsRegistrationCompletion)
   final public func authenticateNativeBiometrics(username: Swift.String, challenge: Swift.String, completion: @escaping TSAuthenticationSDK.TSNativeBiometricsAuthenticationCompletion)
   final public func registerTOTP(URI: Swift.String, securityType: TSAuthenticationSDK.TSTOTPSecurityType, completion: @escaping TSAuthenticationSDK.TSTOTPRegistrationCompletion)
@@ -77,10 +72,10 @@ extension TSAuthenticationSDK.TSAuthenticationError : Swift.Equatable {
 }
 public enum TSWebAuthnError {
   case canceled
-  case invalidResponse
-  case notHandled
-  case failed
-  case notInteractive
+  case invalidResponse(AuthenticationServices.ASAuthorizationError?)
+  case notHandled(AuthenticationServices.ASAuthorizationError?)
+  case failed(AuthenticationServices.ASAuthorizationError?)
+  case notInteractive(AuthenticationServices.ASAuthorizationError?)
   case invalidDomain
   case invalidWebAuthnSession
   case userNotFound

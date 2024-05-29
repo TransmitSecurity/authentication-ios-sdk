@@ -310,13 +310,6 @@ SWIFT_CLASS("_TtC19TSAuthenticationSDK16TSAuthentication")
 
 
 
-SWIFT_CLASS("_TtC19TSAuthenticationSDK15TSConfiguration")
-@interface TSConfiguration : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 
 
 #endif
@@ -637,13 +630,6 @@ SWIFT_CLASS("_TtC19TSAuthenticationSDK16TSAuthentication")
 @end
 
 
-
-
-SWIFT_CLASS("_TtC19TSAuthenticationSDK15TSConfiguration")
-@interface TSConfiguration : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
 
 
 

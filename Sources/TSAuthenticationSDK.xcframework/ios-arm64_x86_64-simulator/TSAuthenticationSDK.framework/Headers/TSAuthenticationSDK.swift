@@ -16,11 +16,16 @@ public typealias TSNativeBiometricsAuthenticationCompletion = (Result<TSNativeBi
 public typealias DeviceInfoCompletion = (Result<TSDeviceInfo, TSAuthenticationError>) -> Void
 public typealias TSTOTPRegistrationCompletion = (Result<TSTOTPRegistrationResult, TSAuthenticationError>) -> ()
 public typealias TSTOTPGenerateCodeCompletion = (Result<TSTOTPGenerateCodeResult, TSAuthenticationError>) -> ()
-
+public typealias TSApprovalCompletion = (Result<TSAuthenticationResult, TSAuthenticationError>) -> ()
 
 public enum TSTOTPSecurityType: Codable {
+    /** 
+     Securing the secret with biometric authentication, adding an extra layer of security.
+     */
     case biometric
-    
+    /**
+     No additional protection for secret
+     */
     case none
 }
 
@@ -30,22 +35,8 @@ public struct TSDeviceInfo: Codable {
     public let publicKey: String
 }
 
-final public class TSConfiguration: NSObject {
-
-    /**
-     An associated domain with the web credentials service type when making a registration or assertion request; otherwise, the request returns an error. See Supporting associated domains for more information.
-     (https://developer.apple.com/documentation/xcode/supporting-associated-domains)
-     */
-    public private(set) var domain: String
-    
-    public init(domain: String) {
-        self.domain = domain
-    }
-}
-
-
 protocol TSBaseAuthenticationSdkProtocol {
-    func initialize(baseUrl: String, clientId: String, configuration: TSConfiguration?)
+    func initialize(baseUrl: String, clientId: String)
     
     func getDeviceInfo(_ completion: @escaping DeviceInfoCompletion)
     
@@ -72,12 +63,12 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     /**
      Creates a new SDK instance with your client context.
      */
-    public func initialize(baseUrl: String = "https://api.transmitsecurity.io/", clientId: String, configuration: TSConfiguration? = nil) {
+    public func initialize(baseUrl: String = "https://api.transmitsecurity.io/", clientId: String) {
         guard controller == nil else { return }
         
         let controller = TSAuthenticationController()
         
-        controller.initialize(baseUrl: baseUrl, clientId: clientId, configuration: configuration)
+        controller.initialize(baseUrl: baseUrl, clientId: clientId)
         
         self.controller = controller
     }
@@ -93,11 +84,7 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
         
         do {
             let fileData = try TSFile.readFromAppPlist(named: Constants.Plist.fileName, as: PlistRoot.self)
-            var configuration : TSConfiguration? = nil
-            if let domain = fileData.credentials.domain {
-                configuration = TSConfiguration(domain: domain)
-            }
-            controller.initialize(baseUrl: fileData.credentials.baseUrl, clientId: fileData.credentials.clientId, configuration: configuration)
+            controller.initialize(baseUrl: fileData.credentials.baseUrl, clientId: fileData.credentials.clientId)
             self.controller = controller
         } catch {
             throw TSAuthenticationError.initializationError
@@ -139,6 +126,22 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     }
     
     /**
+     Invokes a WebAuthn credential authentication, including prompting the user for biometrics, in order to verify a user's authorization for a specific action.
+     If authentication is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
+     The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
+     
+     - Parameters:
+        - username -  User identifier
+        - approvalData - Additional data related to the action being approved. This should be a dictionary, where the keys and values contain only digits, alphabet, and the characters: -._
+        - completion - The callback containing either error or completion result.
+     */
+    public func approvalWebAuthn(username: String, approvalData: [String: String], completion: TSApprovalCompletion? = nil) {
+        guard let controller else { completion?(.failure(.notInitialized)); return }
+        
+        controller.approval(username: username, approvalData: approvalData, completion: completion)
+    }
+    
+    /**
      Registers native biometrics (Touch ID or Face ID) on the device for user authentication.
      */
     public func registerNativeBiometrics(username: String, completion: @escaping TSNativeBiometricsRegistrationCompletion) {
@@ -161,15 +164,12 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     }
     
     /**
-    Registers a TOTP authenticatior.
+    Registers a TOTP code generator.
 
     - Parameters:
-      - URI: A TOTP URI string a standardized way to represent the parameters needed for TOTP authentication. The URI contains essential information required for generating one-time passwords. The TOTP URI needs to follow this format: otpauth://totp/{issuer}:{label}?secret={base32-secret}&issuer={issuer}&algorithm={algorithm}&digits={digits}&period={period}.
-      - securityType: Specifies the method of protecting the stored TOTP secret. Options include `none` for no additional protection or `biometric` for securing the secret with biometric authentication, adding an extra layer of security.
-      - completion: The callback containing either error or completion result. Response object containing: ISSUER, LABEL, and UUID.
-        ISSUER: The issuer or organization's name (e.g., "MyApp").
-        LABEL:  The user account label (e.g., "johndoe@example.com", "John", "+972505555555").
-        UUID:   The unique identifier for which the registration data is stored, it should be provided for generation of TOTP code.
+      - URI: A TOTP URI string a standardized way to represent the parameters needed for TOTP authentication.
+      - securityType: Specifies the method of protecting the stored TOTP secret.
+      - completion: The callback containing either error or completion result.
     */
     public func registerTOTP(URI: String, securityType: TSTOTPSecurityType, completion: @escaping TSTOTPRegistrationCompletion) {
         guard let controller else { completion(.failure(.notInitialized)); return }
@@ -179,8 +179,6 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     
     /**
      Generates a Time-based One-Time Password (TOTP) code.
-
-     This function implements the TOTP algorithm specified in RFC 6238 to produce a temporary, time-sensitive password based on a shared secret and the current time. The generated code is valid for a short period, usually 30 to 60 seconds, after which a new code will be generated.
 
      - Parameters:
        - UUID: The unique identifier for which the registration data is stored.
