@@ -13,10 +13,22 @@ public typealias TSAuthenticationCompletion = (Result<TSAuthenticationResult, TS
 public typealias TSRegistrationCompletion = (Result<TSRegistrationResult, TSAuthenticationError>) -> ()
 public typealias TSNativeBiometricsRegistrationCompletion = (Result<TSNativeBiometricsRegistrationResult, TSAuthenticationError>) -> ()
 public typealias TSNativeBiometricsAuthenticationCompletion = (Result<TSNativeBiometricsAuthenticationResult, TSAuthenticationError>) -> ()
+public typealias TSNativeBiometricsUnregisterCompletion = (Result<TSNativeBiometricsUnregisterResult, TSAuthenticationError>) -> ()
 public typealias DeviceInfoCompletion = (Result<TSDeviceInfo, TSAuthenticationError>) -> Void
 public typealias TSTOTPRegistrationCompletion = (Result<TSTOTPRegistrationResult, TSAuthenticationError>) -> ()
 public typealias TSTOTPGenerateCodeCompletion = (Result<TSTOTPGenerateCodeResult, TSAuthenticationError>) -> ()
 public typealias TSApprovalCompletion = (Result<TSAuthenticationResult, TSAuthenticationError>) -> ()
+
+/**
+ Additional configuration for SDK initialization.
+ */
+public struct TSAuthenticationConfiguration {
+    let configurationFileName: String
+    
+    public init(configurationFileName: String) {
+        self.configurationFileName = configurationFileName
+    }
+}
 
 public enum TSTOTPSecurityType: Codable {
     /** 
@@ -36,14 +48,14 @@ public struct TSDeviceInfo: Codable {
 }
 
 protocol TSBaseAuthenticationSdkProtocol {
-    func initialize(baseUrl: String, clientId: String)
+    func initialize(baseUrl: String, clientId: String, domain: String?)
     
     func getDeviceInfo(_ completion: @escaping DeviceInfoCompletion)
     
     static func isWebAuthnSupported() -> Bool
 }
 
-final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
+final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, TSLogConfigurable {
 
     
     public static let shared: TSAuthentication = TSAuthentication()
@@ -63,12 +75,14 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     /**
      Creates a new SDK instance with your client context.
      */
-    public func initialize(baseUrl: String = "https://api.transmitsecurity.io/", clientId: String) {
+    public func initialize(baseUrl: String = "https://api.transmitsecurity.io/", clientId: String, domain: String? = nil) {
         guard controller == nil else { return }
         
         let controller = TSAuthenticationController()
         
-        controller.initialize(baseUrl: baseUrl, clientId: clientId)
+        controller.initialize(baseUrl: baseUrl,
+                              clientId: clientId,
+                              domain: domain)
         
         self.controller = controller
     }
@@ -77,14 +91,16 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
      Creates a new SDK instance with your client context.
      Credentials are configured from TransmitSecurity.plist file
      */
-    public func initializeSDK() throws {
+    public func initializeSDK(configuration: TSAuthenticationConfiguration? = nil) throws {
         guard controller == nil else { return }
         
         let controller = TSAuthenticationController()
-        
+        let configFileName = configuration?.configurationFileName ?? Constants.Plist.fileName
         do {
-            let fileData = try TSFile.readFromAppPlist(named: Constants.Plist.fileName, as: PlistRoot.self)
-            controller.initialize(baseUrl: fileData.credentials.baseUrl, clientId: fileData.credentials.clientId)
+            let fileData = try TSFile.readFromAppPlist(named: configFileName, as: PlistRoot.self)
+            controller.initialize(baseUrl: fileData.credentials.baseUrl,
+                                  clientId: fileData.credentials.clientId,
+                                  domain: fileData.credentials.domain)
             self.controller = controller
         } catch {
             throw TSAuthenticationError.initializationError
@@ -164,6 +180,18 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
     }
     
     /**
+    Unregister native biometrics entry for a given user
+     */
+    public func unregistersNativeBiometrics(username: String, completion: @escaping TSNativeBiometricsUnregisterCompletion) {
+        guard let controller else { completion(.failure(.notInitialized)); return }
+        
+        Task {
+            await controller.unregisterNativeBiometrics(username: username, completion: completion)
+        }
+    }
+    
+    
+    /**
     Registers a TOTP code generator.
 
     - Parameters:
@@ -206,6 +234,15 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol {
      */
     public static func isWebAuthnSupported() -> Bool {
         TSAuthenticationController.isWebAuthnSupported()
+    }
+    
+    /**
+     Checks if the user has enrolled biometric authentication (Touch ID or Face ID) on their device.
+     @return
+     `true` if biometric authentication is enrolled, `false` otherwise.
+     */
+    public static func isNativeBiometricsEnrolled() -> Bool {
+        TSAuthenticationController.isNativeBiometricsEnrolled()
     }
 }
 
