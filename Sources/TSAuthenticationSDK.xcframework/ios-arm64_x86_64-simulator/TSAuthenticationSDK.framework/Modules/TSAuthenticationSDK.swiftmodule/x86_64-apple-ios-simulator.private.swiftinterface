@@ -23,6 +23,16 @@ public typealias DeviceInfoCompletion = (Swift.Result<TSAuthenticationSDK.TSDevi
 public typealias TSTOTPRegistrationCompletion = (Swift.Result<TSAuthenticationSDK.TSTOTPRegistrationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
 public typealias TSTOTPGenerateCodeCompletion = (Swift.Result<TSAuthenticationSDK.TSTOTPGenerateCodeResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
 public typealias TSApprovalCompletion = (Swift.Result<TSAuthenticationSDK.TSAuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
+public struct WebAuthnApis : Swift.Codable {
+  public init(startAuthentication: Swift.String, startRegistration: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TSAuthenticationInitOptions : Swift.Codable {
+  public init(webAuthnApiPaths: TSAuthenticationSDK.WebAuthnApis)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct TSAuthenticationConfiguration {
   public init(configurationFileName: Swift.String)
 }
@@ -45,7 +55,7 @@ public struct TSDeviceInfo : Swift.Codable {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class TSAuthentication : ObjectiveC.NSObject, TSCoreSDK.TSLogConfigurable {
   public static let shared: TSAuthenticationSDK.TSAuthentication
-  final public func initialize(baseUrl: Swift.String = "https://api.transmitsecurity.io/", clientId: Swift.String, domain: Swift.String? = nil)
+  final public func initialize(baseUrl: Swift.String = "https://api.transmitsecurity.io/", clientId: Swift.String, domain: Swift.String? = nil, initOptions: TSAuthenticationSDK.TSAuthenticationInitOptions? = nil)
   final public func initializeSDK(configuration: TSAuthenticationSDK.TSAuthenticationConfiguration? = nil) throws
   final public func registerWebAuthn(username: Swift.String, displayName: Swift.String?, completion: TSAuthenticationSDK.TSRegistrationCompletion?)
   final public func authenticateWebAuthn(username: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)

@@ -40,6 +40,230 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "WebAuthnApis",
+        "printedName": "WebAuthnApis",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(startAuthentication:startRegistration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WebAuthnApis",
+                "printedName": "TSAuthenticationSDK.WebAuthnApis",
+                "usr": "s:19TSAuthenticationSDK12WebAuthnApisV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19TSAuthenticationSDK12WebAuthnApisV19startAuthentication0F12RegistrationACSS_SStcfc",
+            "mangledName": "$s19TSAuthenticationSDK12WebAuthnApisV19startAuthentication0F12RegistrationACSS_SStcfc",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WebAuthnApis",
+                "printedName": "TSAuthenticationSDK.WebAuthnApis",
+                "usr": "s:19TSAuthenticationSDK12WebAuthnApisV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19TSAuthenticationSDK12WebAuthnApisV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s19TSAuthenticationSDK12WebAuthnApisV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "TSAuthenticationSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK12WebAuthnApisV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s19TSAuthenticationSDK12WebAuthnApisV6encode2toys7Encoder_p_tKF",
+            "moduleName": "TSAuthenticationSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:19TSAuthenticationSDK12WebAuthnApisV",
+        "mangledName": "$s19TSAuthenticationSDK12WebAuthnApisV",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TSAuthenticationInitOptions",
+        "printedName": "TSAuthenticationInitOptions",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(webAuthnApiPaths:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TSAuthenticationInitOptions",
+                "printedName": "TSAuthenticationSDK.TSAuthenticationInitOptions",
+                "usr": "s:19TSAuthenticationSDK0A11InitOptionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WebAuthnApis",
+                "printedName": "TSAuthenticationSDK.WebAuthnApis",
+                "usr": "s:19TSAuthenticationSDK12WebAuthnApisV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19TSAuthenticationSDK0A11InitOptionsV16webAuthnApiPathsAcA03WebF4ApisV_tcfc",
+            "mangledName": "$s19TSAuthenticationSDK0A11InitOptionsV16webAuthnApiPathsAcA03WebF4ApisV_tcfc",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TSAuthenticationInitOptions",
+                "printedName": "TSAuthenticationSDK.TSAuthenticationInitOptions",
+                "usr": "s:19TSAuthenticationSDK0A11InitOptionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19TSAuthenticationSDK0A11InitOptionsV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s19TSAuthenticationSDK0A11InitOptionsV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "TSAuthenticationSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK0A11InitOptionsV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s19TSAuthenticationSDK0A11InitOptionsV6encode2toys7Encoder_p_tKF",
+            "moduleName": "TSAuthenticationSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:19TSAuthenticationSDK0A11InitOptionsV",
+        "mangledName": "$s19TSAuthenticationSDK0A11InitOptionsV",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "TSAuthenticationConfiguration",
         "printedName": "TSAuthenticationConfiguration",
         "children": [
@@ -579,7 +803,7 @@
           {
             "kind": "Function",
             "name": "initialize",
-            "printedName": "initialize(baseUrl:clientId:domain:)",
+            "printedName": "initialize(baseUrl:clientId:domain:initOptions:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -613,11 +837,26 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TSAuthenticationSDK.TSAuthenticationInitOptions?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSAuthenticationInitOptions",
+                    "printedName": "TSAuthenticationSDK.TSAuthenticationInitOptions",
+                    "usr": "s:19TSAuthenticationSDK0A11InitOptionsV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:19TSAuthenticationSDK0A0C10initialize7baseUrl8clientId6domainySS_S2SSgtF",
-            "mangledName": "$s19TSAuthenticationSDK0A0C10initialize7baseUrl8clientId6domainySS_S2SSgtF",
+            "usr": "s:19TSAuthenticationSDK0A0C10initialize7baseUrl8clientId6domain11initOptionsySS_S2SSgAA0a4InitJ0VSgtF",
+            "mangledName": "$s19TSAuthenticationSDK0A0C10initialize7baseUrl8clientId6domain11initOptionsySS_S2SSgAA0a4InitJ0VSgtF",
             "moduleName": "TSAuthenticationSDK",
             "declAttributes": [
               "Final",
@@ -4413,112 +4652,126 @@
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "StringLiteral",
-      "offset": 2425,
+      "offset": 3207,
       "length": 18,
       "value": "\"TransmitSecurity\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "StringLiteral",
-      "offset": 2584,
+      "offset": 3366,
       "length": 34,
       "value": "\"https:\/\/api.transmitsecurity.io\/\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 823,
+      "offset": 1048,
+      "length": 37,
+      "value": "\"v1\/auth\/webauthn\/authenticate\/start\""
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 1125,
+      "length": 33,
+      "value": "\"v1\/auth\/webauthn\/register\/start\""
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 1224,
       "length": 10,
       "value": "\"username\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 854,
+      "offset": 1255,
       "length": 11,
       "value": "\"client_id\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 889,
+      "offset": 1290,
       "length": 14,
       "value": "\"display_name\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 930,
+      "offset": 1331,
       "length": 12,
       "value": "\"User-Agent\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 968,
+      "offset": 1369,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1013,
+      "offset": 1414,
       "length": 15,
       "value": "\"approval_data\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 823,
+      "offset": 1224,
       "length": 10,
       "value": "\"username\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 854,
+      "offset": 1255,
       "length": 11,
       "value": "\"client_id\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 889,
+      "offset": 1290,
       "length": 14,
       "value": "\"display_name\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 930,
+      "offset": 1331,
       "length": 12,
       "value": "\"User-Agent\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 968,
+      "offset": 1369,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1013,
+      "offset": 1414,
       "length": 15,
       "value": "\"approval_data\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1091,
+      "offset": 1492,
       "length": 11,
       "value": "\"userAgent\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1091,
+      "offset": 1492,
       "length": 11,
       "value": "\"userAgent\""
     },
@@ -4735,9 +4988,16 @@
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationController.swift",
       "kind": "StringLiteral",
-      "offset": 251,
-      "length": 9,
-      "value": "\"cis\/v1\/\""
+      "offset": 250,
+      "length": 6,
+      "value": "\"cis\/\""
+    },
+    {
+      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationController.swift",
+      "kind": "Array",
+      "offset": 308,
+      "length": 351,
+      "value": "[\"https:\/\/api.idsec-dev.com\/\", \"https:\/\/api.idsec-stg.com\/\", \"https:\/\/api.transmitsecurity.io\/\", \"https:\/\/api.eu.transmitsecurity.io\/\", \"https:\/\/api.ca.transmitsecurity.io\/\", \"https:\/\/api.au.transmitsecurity.io\/\", \"https:\/\/api.sbx.transmitsecurity.io\/\"]"
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/Requests\/TSWebauthnStartAuthenticationRequest.swift",
