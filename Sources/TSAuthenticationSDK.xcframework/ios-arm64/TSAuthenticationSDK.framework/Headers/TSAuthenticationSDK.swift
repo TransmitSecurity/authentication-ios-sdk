@@ -19,6 +19,29 @@ public typealias TSTOTPRegistrationCompletion = (Result<TSTOTPRegistrationResult
 public typealias TSTOTPGenerateCodeCompletion = (Result<TSTOTPGenerateCodeResult, TSAuthenticationError>) -> ()
 public typealias TSApprovalCompletion = (Result<TSAuthenticationResult, TSAuthenticationError>) -> ()
 
+/// Alternate paths used by the SDK to route API calls to your proxy server.
+public struct WebAuthnApis: Codable {
+    
+    let startAuthentication: String
+    
+    let startRegistration: String
+    
+    public init(startAuthentication: String, startRegistration: String) {
+        self.startAuthentication = startAuthentication
+        self.startRegistration = startRegistration
+    }
+}
+
+/// Initialization options for WebAuthn.
+public struct TSAuthenticationInitOptions: Codable {
+    /// Override endpoints when using a proxy server in case the proxy server implements its own paths.
+    let webAuthnApiPaths: WebAuthnApis
+    
+    public init(webAuthnApiPaths: WebAuthnApis) {
+        self.webAuthnApiPaths = webAuthnApiPaths
+    }
+}
+
 /**
  Additional configuration for SDK initialization.
  */
@@ -48,7 +71,7 @@ public struct TSDeviceInfo: Codable {
 }
 
 protocol TSBaseAuthenticationSdkProtocol {
-    func initialize(baseUrl: String, clientId: String, domain: String?)
+    func initialize(baseUrl: String, clientId: String, domain: String?, initOptions: TSAuthenticationInitOptions?)
     
     func getDeviceInfo(_ completion: @escaping DeviceInfoCompletion)
     
@@ -75,18 +98,20 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     /**
      Creates a new SDK instance with your client context.
      */
-    public func initialize(baseUrl: String = "https://api.transmitsecurity.io/", clientId: String, domain: String? = nil) {
+    public func initialize(baseUrl: String = "https://api.transmitsecurity.io/", clientId: String, domain: String? = nil, initOptions: TSAuthenticationInitOptions? = nil) {
         guard controller == nil else { return }
         
         let controller = TSAuthenticationController()
         
         controller.initialize(baseUrl: baseUrl,
                               clientId: clientId,
-                              domain: domain)
+                              domain: domain,
+                              initOptions: initOptions)
         
         self.controller = controller
     }
     
+        
     /**
      Creates a new SDK instance with your client context.
      Credentials are configured from TransmitSecurity.plist file
@@ -100,7 +125,8 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
             let fileData = try TSFile.readFromAppPlist(named: configFileName, as: PlistRoot.self)
             controller.initialize(baseUrl: fileData.credentials.baseUrl,
                                   clientId: fileData.credentials.clientId,
-                                  domain: fileData.credentials.domain)
+                                  domain: fileData.credentials.domain,
+                                  initOptions: fileData.initOptions)
             self.controller = controller
         } catch {
             throw TSAuthenticationError.initializationError
@@ -115,7 +141,7 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
      */
     public func registerWebAuthn(username: String, displayName: String?, completion: TSRegistrationCompletion?) {
         guard let controller else { completion?(.failure(.notInitialized)); return }
-        
+        // 1. webauthn-registration: start registration
         controller.register(username: username, displayName: displayName, completion: completion)
     }
     
@@ -251,10 +277,12 @@ private extension TSAuthentication {
     
     private struct PlistRoot: Codable {
         let credentials : Credentials
+        let initOptions: TSAuthenticationInitOptions?
     }
 
     private struct Credentials: Codable {
-        let baseUrl, clientId : String
+        let baseUrl: String
+        let clientId : String
         let domain : String?
     }
 
