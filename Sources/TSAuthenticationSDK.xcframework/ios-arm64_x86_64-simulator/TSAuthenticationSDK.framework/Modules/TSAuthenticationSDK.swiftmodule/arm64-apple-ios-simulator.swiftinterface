@@ -66,6 +66,7 @@ public struct TSDeviceInfo : Swift.Codable {
   final public func unregistersNativeBiometrics(username: Swift.String, completion: @escaping TSAuthenticationSDK.TSNativeBiometricsUnregisterCompletion)
   final public func registerTOTP(URI: Swift.String, securityType: TSAuthenticationSDK.TSTOTPSecurityType, completion: @escaping TSAuthenticationSDK.TSTOTPRegistrationCompletion)
   final public func generateTOTPCode(UUID: Swift.String, completion: @escaping TSAuthenticationSDK.TSTOTPGenerateCodeCompletion)
+  final public func generateTOTPCodeWithChallenge(UUID: Swift.String, challenge: Swift.String, completion: @escaping TSAuthenticationSDK.TSTOTPGenerateCodeCompletion)
   final public func getDeviceInfo(_ completion: @escaping TSAuthenticationSDK.DeviceInfoCompletion)
   public static func isWebAuthnSupported() -> Swift.Bool
   public static func isNativeBiometricsEnrolled() -> Swift.Bool

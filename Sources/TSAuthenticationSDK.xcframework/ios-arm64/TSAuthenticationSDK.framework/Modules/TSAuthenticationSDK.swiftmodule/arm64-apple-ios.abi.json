@@ -1526,6 +1526,72 @@
           },
           {
             "kind": "Function",
+            "name": "generateTOTPCodeWithChallenge",
+            "printedName": "generateTOTPCodeWithChallenge(UUID:challenge:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<TSAuthenticationSDK.TSTOTPGenerateCodeResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<TSAuthenticationSDK.TSTOTPGenerateCodeResult, TSAuthenticationSDK.TSAuthenticationError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPGenerateCodeResult",
+                        "printedName": "TSAuthenticationSDK.TSTOTPGenerateCodeResult",
+                        "usr": "s:19TSAuthenticationSDK24TSTOTPGenerateCodeResultC"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSAuthenticationError",
+                        "printedName": "TSAuthenticationSDK.TSAuthenticationError",
+                        "usr": "s:19TSAuthenticationSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK0A0C29generateTOTPCodeWithChallenge4UUID9challenge10completionySS_SSys6ResultOyAA018TSTOTPGenerateCodeJ0CAA0A5ErrorOGctF",
+            "mangledName": "$s19TSAuthenticationSDK0A0C29generateTOTPCodeWithChallenge4UUID9challenge10completionySS_SSys6ResultOyAA018TSTOTPGenerateCodeJ0CAA0A5ErrorOGctF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getDeviceInfo",
             "printedName": "getDeviceInfo(_:)",
             "children": [
@@ -3935,6 +4001,13 @@
         "kind": "Import",
         "name": "TSCoreSDK",
         "printedName": "TSCoreSDK",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
         "declKind": "Import",
         "moduleName": "TSAuthenticationSDK"
       },

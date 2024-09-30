@@ -243,6 +243,20 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         
         controller.generateTOTPCode(UUID: UUID, completion: completion)
     }
+    
+    /**
+     Generates a Time-based One-Time Password (TOTP) code.
+
+     - Parameters:
+       - UUID: The unique identifier for which the registration data is stored.
+       - challenge: An additional value used to enhance security in the TOTP generation process.
+       - completion: The callback containing either error or result object contaiting generated TOTP code.
+    */
+    public func generateTOTPCodeWithChallenge(UUID: String, challenge: String, completion: @escaping TSTOTPGenerateCodeCompletion) {
+        guard let controller else { completion(.failure(.notInitialized)); return }
+        
+        controller.generateTOTPCodeWithChallenge(UUID: UUID, challenge: challenge, completion: completion)
+    }
 
     /**
      Retrieves device-specific information, such as public key and its associated ID, which are unique to the application installed on the device.
