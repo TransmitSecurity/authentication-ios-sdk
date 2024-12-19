@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "TSAuthenticationSDK",
+    "printedName": "TSAuthenticationSDK",
     "children": [
       {
         "kind": "Import",
@@ -139,6 +139,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -248,6 +262,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -302,6 +330,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -547,6 +591,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -728,6 +786,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -1842,6 +1914,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -2502,6 +2588,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
@@ -3001,6 +3101,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -3396,6 +3512,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
@@ -3610,6 +3740,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
@@ -3703,7 +3847,23 @@
           "Final",
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -3879,7 +4039,23 @@
           "Final",
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -4151,7 +4327,23 @@
           "Final",
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -4215,7 +4407,23 @@
           "Final",
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -4327,7 +4535,23 @@
           "Final",
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -4522,7 +4746,23 @@
           "Final",
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -4587,7 +4827,23 @@
           "Final",
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -4795,55 +5051,6 @@
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1224,
-      "length": 10,
-      "value": "\"username\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 1255,
-      "length": 11,
-      "value": "\"client_id\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 1290,
-      "length": 14,
-      "value": "\"display_name\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 1331,
-      "length": 12,
-      "value": "\"User-Agent\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 1369,
-      "length": 15,
-      "value": "\"Authorization\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 1414,
-      "length": 15,
-      "value": "\"approval_data\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 1492,
-      "length": 11,
-      "value": "\"userAgent\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/TSWebAuthnConstant.swift",
-      "kind": "StringLiteral",
       "offset": 1492,
       "length": 11,
       "value": "\"userAgent\""
@@ -4870,41 +5077,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
-      "kind": "StringLiteral",
-      "offset": 352,
-      "length": 21,
-      "value": "\"TSAuthenticationSDK.WebAuthnAuthenticator\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 348,
-      "length": 4,
-      "value": "\"id\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 374,
-      "length": 7,
-      "value": "\"rawId\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 402,
-      "length": 6,
-      "value": "\"type\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 433,
-      "length": 10,
-      "value": "\"response\""
-    },
-    {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Models\/TSWebAuthnRequestData.swift",
       "kind": "StringLiteral",
       "offset": 348,
@@ -4966,76 +5138,6 @@
       "offset": 925,
       "length": 19,
       "value": "\"attestationObject\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 746,
-      "length": 16,
-      "value": "\"clientDataJSON\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 796,
-      "length": 19,
-      "value": "\"authenticatorData\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 842,
-      "length": 12,
-      "value": "\"userHandle\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 880,
-      "length": 11,
-      "value": "\"signature\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Models\/TSWebAuthnRequestData.swift",
-      "kind": "StringLiteral",
-      "offset": 925,
-      "length": 19,
-      "value": "\"attestationObject\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/TSWebAuthnManager.swift",
-      "kind": "StringLiteral",
-      "offset": 508,
-      "length": 17,
-      "value": "\"TSAuthenticationSDK.TSWebAuthnManager\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/Requests\/TSWebauthnStartRegistrationRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 164,
-      "length": 34,
-      "value": "\"TSAuthenticationSDK.TSWebauthnStartRegistrationRequest\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/Requests\/TSWebauthnStartRegistrationRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 164,
-      "length": 34,
-      "value": "\"TSAuthenticationSDK.TSWebauthnStartRegistrationRequest\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/Requests\/TSWebauthnApprovalRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 138,
-      "length": 25,
-      "value": "\"TSAuthenticationSDK.TSWebauthnApprovalRequest\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/Requests\/TSWebauthnApprovalRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 138,
-      "length": 25,
-      "value": "\"TSAuthenticationSDK.TSWebauthnApprovalRequest\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/TSWebAuthnRequestAPIs.swift",
@@ -5071,27 +5173,6 @@
       "offset": 308,
       "length": 351,
       "value": "[\"https:\/\/api.idsec-dev.com\/\", \"https:\/\/api.idsec-stg.com\/\", \"https:\/\/api.transmitsecurity.io\/\", \"https:\/\/api.eu.transmitsecurity.io\/\", \"https:\/\/api.ca.transmitsecurity.io\/\", \"https:\/\/api.au.transmitsecurity.io\/\", \"https:\/\/api.sbx.transmitsecurity.io\/\"]"
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/Requests\/TSWebauthnStartAuthenticationRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 166,
-      "length": 36,
-      "value": "\"TSAuthenticationSDK.TSWebauthnStartAuthenticationRequest\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Network\/Requests\/TSWebauthnStartAuthenticationRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 166,
-      "length": 36,
-      "value": "\"TSAuthenticationSDK.TSWebauthnStartAuthenticationRequest\""
-    },
-    {
-      "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/TSPassKeysService.swift",
-      "kind": "StringLiteral",
-      "offset": 559,
-      "length": 17,
-      "value": "\"TSAuthenticationSDK.TSPassKeysService\""
     },
     {
       "filePath": "\/Users\/igorbabitski\/Documents\/Projects\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/Base32.swift",
