@@ -189,9 +189,7 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     public func registerNativeBiometrics(username: String, completion: @escaping TSNativeBiometricsRegistrationCompletion) {
         guard let controller else { completion(.failure(.notInitialized)); return }
         
-        Task {
-            await controller.registerNativeBiometrics(username: username, completion: completion)
-        }
+        controller.registerNativeBiometrics(username: username, completion: completion)
     }
     
     /**
@@ -200,9 +198,7 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     public func authenticateNativeBiometrics(username: String, challenge: String, completion: @escaping TSNativeBiometricsAuthenticationCompletion) {
         guard let controller else { completion(.failure(.notInitialized)); return }
         
-        Task {
-            await controller.authenticateNativeBiometrics(username: username, challenge: challenge, completion: completion)
-        }
+        controller.authenticateNativeBiometrics(username: username, challenge: challenge, completion: completion)
     }
     
     /**
@@ -211,9 +207,7 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     public func unregistersNativeBiometrics(username: String, completion: @escaping TSNativeBiometricsUnregisterCompletion) {
         guard let controller else { completion(.failure(.notInitialized)); return }
         
-        Task {
-            await controller.unregisterNativeBiometrics(username: username, completion: completion)
-        }
+        controller.unregisterNativeBiometrics(username: username, completion: completion)
     }
     
     
