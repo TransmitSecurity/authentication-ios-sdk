@@ -18,6 +18,7 @@ public typealias DeviceInfoCompletion = (Result<TSDeviceInfo, TSAuthenticationEr
 public typealias TSTOTPRegistrationCompletion = (Result<TSTOTPRegistrationResult, TSAuthenticationError>) -> ()
 public typealias TSTOTPGenerateCodeCompletion = (Result<TSTOTPGenerateCodeResult, TSAuthenticationError>) -> ()
 public typealias TSApprovalCompletion = (Result<TSAuthenticationResult, TSAuthenticationError>) -> ()
+public typealias TSNativeBiometricsApprovalCompletion = (Result<TSNativeBiometricsAuthenticationResult, TSAuthenticationError>) -> ()
 
 /// Alternate paths used by the SDK to route API calls to your proxy server.
 public struct WebAuthnApis: Codable {
@@ -177,7 +178,7 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         - approvalData - Additional data related to the action being approved. This should be a dictionary, where the keys and values contain only digits, alphabet, and the characters: -._
         - completion - The callback containing either error or completion result.
      */
-    public func approvalWebAuthn(username: String, approvalData: [String: String], completion: TSApprovalCompletion? = nil) {
+    public func approvalWebAuthn(approvalData: [String: String], username: String? = nil, completion: TSApprovalCompletion? = nil) {
         guard let controller else { completion?(.failure(.notInitialized)); return }
         
         controller.approval(username: username, approvalData: approvalData, completion: completion)
@@ -191,10 +192,15 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         
         controller.registerNativeBiometrics(username: username, completion: completion)
     }
-    
+        
     /**
-     Authenticates a user using native biometrics (Touch ID or Face ID).
-     */
+    Authenticates a user using native biometrics (Touch ID or Face ID).
+
+    - Parameters:
+      - username: User identifier.
+      - challenge: The cryptographic challenge or payload to be signed.
+      - completion: The callback containing either error or completion result.
+    */
     public func authenticateNativeBiometrics(username: String, challenge: String, completion: @escaping TSNativeBiometricsAuthenticationCompletion) {
         guard let controller else { completion(.failure(.notInitialized)); return }
         
@@ -202,7 +208,10 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     }
     
     /**
-    Unregister native biometrics entry for a given user
+    Unregister native biometrics entry for a given user.
+     - Parameters:
+       - username: User identifier.
+       - completion: The callback containing either error or completion result.
      */
     public func unregistersNativeBiometrics(username: String, completion: @escaping TSNativeBiometricsUnregisterCompletion) {
         guard let controller else { completion(.failure(.notInitialized)); return }
@@ -210,6 +219,18 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         controller.unregisterNativeBiometrics(username: username, completion: completion)
     }
     
+    /**
+     Approves a user transaction using native biometrics (Touch ID or Face ID).
+     - Parameters:
+       - username: User identifier.
+       - challenge: The cryptographic challenge or payload to be signed.
+       - completion: The callback containing either error or completion result.
+     */
+    public func approvalNativeBiometrics(username: String, challenge: String, completion: @escaping TSNativeBiometricsApprovalCompletion) {
+        guard let controller else { completion(.failure(.notInitialized)); return }
+        
+        controller.approvalNativeBiometrics(username: username, challenge: challenge, completion: completion)
+    }
     
     /**
     Registers a TOTP code generator.
