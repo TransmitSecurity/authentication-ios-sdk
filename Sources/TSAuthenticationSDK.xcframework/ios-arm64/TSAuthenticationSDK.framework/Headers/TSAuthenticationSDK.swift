@@ -18,6 +18,7 @@ public typealias DeviceInfoCompletion = (Result<TSDeviceInfo, TSAuthenticationEr
 public typealias TSTOTPRegistrationCompletion = (Result<TSTOTPRegistrationResult, TSAuthenticationError>) -> ()
 public typealias TSTOTPGenerateCodeCompletion = (Result<TSTOTPGenerateCodeResult, TSAuthenticationError>) -> ()
 public typealias TSApprovalCompletion = (Result<TSAuthenticationResult, TSAuthenticationError>) -> ()
+public typealias TSNativeBiometricsApprovalCompletion = (Result<TSNativeBiometricsAuthenticationResult, TSAuthenticationError>) -> ()
 
 /// Alternate paths used by the SDK to route API calls to your proxy server.
 public struct WebAuthnApis: Codable {
@@ -150,10 +151,10 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
      If authentication is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
      The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
      */
-    public func authenticateWebAuthn(username: String, completion: TSAuthenticationCompletion? = nil) {
+    public func authenticateWebAuthn(username: String, options: TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationCompletion? = nil) {
         guard let controller else { completion?(.failure(.notInitialized)); return }
         
-        controller.authenticate(username: username, completion: completion)
+        controller.authenticate(username: username, options: options, completion: completion)
     }
     
     /**
@@ -161,10 +162,10 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
      If transaction signing is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
      The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
      */
-    public func signWebauthnTransaction(username: String, completion: TSAuthenticationCompletion? = nil) {
+    public func signWebauthnTransaction(username: String, options: TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationCompletion? = nil) {
         guard let controller else { completion?(.failure(.notInitialized)); return }
         
-        controller.authenticate(username: username, completion: completion)
+        controller.authenticate(username: username, options: options, completion: completion)
     }
     
     /**
@@ -177,10 +178,10 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         - approvalData - Additional data related to the action being approved. This should be a dictionary, where the keys and values contain only digits, alphabet, and the characters: -._
         - completion - The callback containing either error or completion result.
      */
-    public func approvalWebAuthn(username: String, approvalData: [String: String], completion: TSApprovalCompletion? = nil) {
+    public func approvalWebAuthn(approvalData: [String: String], username: String? = nil, options: TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSApprovalCompletion? = nil) {
         guard let controller else { completion?(.failure(.notInitialized)); return }
         
-        controller.approval(username: username, approvalData: approvalData, completion: completion)
+        controller.approval(username: username, approvalData: approvalData, options: options, completion: completion)
     }
     
     /**
@@ -191,10 +192,15 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         
         controller.registerNativeBiometrics(username: username, completion: completion)
     }
-    
+        
     /**
-     Authenticates a user using native biometrics (Touch ID or Face ID).
-     */
+    Authenticates a user using native biometrics (Touch ID or Face ID).
+
+    - Parameters:
+      - username: User identifier.
+      - challenge: The cryptographic challenge or payload to be signed.
+      - completion: The callback containing either error or completion result.
+    */
     public func authenticateNativeBiometrics(username: String, challenge: String, completion: @escaping TSNativeBiometricsAuthenticationCompletion) {
         guard let controller else { completion(.failure(.notInitialized)); return }
         
@@ -202,7 +208,10 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     }
     
     /**
-    Unregister native biometrics entry for a given user
+    Unregister native biometrics entry for a given user.
+     - Parameters:
+       - username: User identifier.
+       - completion: The callback containing either error or completion result.
      */
     public func unregistersNativeBiometrics(username: String, completion: @escaping TSNativeBiometricsUnregisterCompletion) {
         guard let controller else { completion(.failure(.notInitialized)); return }
@@ -210,6 +219,18 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         controller.unregisterNativeBiometrics(username: username, completion: completion)
     }
     
+    /**
+     Approves a user transaction using native biometrics (Touch ID or Face ID).
+     - Parameters:
+       - username: User identifier.
+       - challenge: The cryptographic challenge or payload to be signed.
+       - completion: The callback containing either error or completion result.
+     */
+    public func approvalNativeBiometrics(username: String, challenge: String, completion: @escaping TSNativeBiometricsApprovalCompletion) {
+        guard let controller else { completion(.failure(.notInitialized)); return }
+        
+        controller.approvalNativeBiometrics(username: username, challenge: challenge, completion: completion)
+    }
     
     /**
     Registers a TOTP code generator.
@@ -294,4 +315,19 @@ private extension TSAuthentication {
         let domain : String?
     }
 
+}
+
+public extension TSAuthentication {
+    
+    /// Options for WebAuthn authentication.
+    struct WebAuthnAuthenticationOptions: OptionSet {
+        public let rawValue: Int
+        
+        public init(rawValue: Int) {
+            self.rawValue = rawValue
+        }
+        
+        /// SDK will attempt to authenticate using a local passkey credentials stored on the device.
+        public static let preferLocalCredantials = WebAuthnAuthenticationOptions(rawValue: 1 << 0)  // 0001
+    }
 }

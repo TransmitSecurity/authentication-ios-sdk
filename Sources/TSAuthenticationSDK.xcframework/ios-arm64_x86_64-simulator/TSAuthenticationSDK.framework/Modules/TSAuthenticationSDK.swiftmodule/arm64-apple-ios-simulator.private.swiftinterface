@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name TSAuthenticationSDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AuthenticationServices
@@ -24,6 +24,7 @@ public typealias DeviceInfoCompletion = (Swift.Result<TSAuthenticationSDK.TSDevi
 public typealias TSTOTPRegistrationCompletion = (Swift.Result<TSAuthenticationSDK.TSTOTPRegistrationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
 public typealias TSTOTPGenerateCodeCompletion = (Swift.Result<TSAuthenticationSDK.TSTOTPGenerateCodeResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
 public typealias TSApprovalCompletion = (Swift.Result<TSAuthenticationSDK.TSAuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
+public typealias TSNativeBiometricsApprovalCompletion = (Swift.Result<TSAuthenticationSDK.TSNativeBiometricsAuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
 public struct WebAuthnApis : Swift.Codable {
   public init(startAuthentication: Swift.String, startRegistration: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
@@ -59,12 +60,13 @@ public struct TSDeviceInfo : Swift.Codable {
   final public func initialize(baseUrl: Swift.String = "https://api.transmitsecurity.io/", clientId: Swift.String, domain: Swift.String? = nil, initOptions: TSAuthenticationSDK.TSAuthenticationInitOptions? = nil)
   final public func initializeSDK(configuration: TSAuthenticationSDK.TSAuthenticationConfiguration? = nil) throws
   final public func registerWebAuthn(username: Swift.String, displayName: Swift.String?, completion: TSAuthenticationSDK.TSRegistrationCompletion?)
-  final public func authenticateWebAuthn(username: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)
-  final public func signWebauthnTransaction(username: Swift.String, completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)
-  final public func approvalWebAuthn(username: Swift.String, approvalData: [Swift.String : Swift.String], completion: TSAuthenticationSDK.TSApprovalCompletion? = nil)
+  final public func authenticateWebAuthn(username: Swift.String, options: TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)
+  final public func signWebauthnTransaction(username: Swift.String, options: TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)
+  final public func approvalWebAuthn(approvalData: [Swift.String : Swift.String], username: Swift.String? = nil, options: TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationSDK.TSApprovalCompletion? = nil)
   final public func registerNativeBiometrics(username: Swift.String, completion: @escaping TSAuthenticationSDK.TSNativeBiometricsRegistrationCompletion)
   final public func authenticateNativeBiometrics(username: Swift.String, challenge: Swift.String, completion: @escaping TSAuthenticationSDK.TSNativeBiometricsAuthenticationCompletion)
   final public func unregistersNativeBiometrics(username: Swift.String, completion: @escaping TSAuthenticationSDK.TSNativeBiometricsUnregisterCompletion)
+  final public func approvalNativeBiometrics(username: Swift.String, challenge: Swift.String, completion: @escaping TSAuthenticationSDK.TSNativeBiometricsApprovalCompletion)
   final public func registerTOTP(URI: Swift.String, securityType: TSAuthenticationSDK.TSTOTPSecurityType, completion: @escaping TSAuthenticationSDK.TSTOTPRegistrationCompletion)
   final public func generateTOTPCode(UUID: Swift.String, completion: @escaping TSAuthenticationSDK.TSTOTPGenerateCodeCompletion)
   final public func generateTOTPCodeWithChallenge(UUID: Swift.String, challenge: Swift.String, completion: @escaping TSAuthenticationSDK.TSTOTPGenerateCodeCompletion)
@@ -72,6 +74,16 @@ public struct TSDeviceInfo : Swift.Codable {
   public static func isWebAuthnSupported() -> Swift.Bool
   public static func isNativeBiometricsEnrolled() -> Swift.Bool
   @objc deinit
+}
+extension TSAuthenticationSDK.TSAuthentication {
+  public struct WebAuthnAuthenticationOptions : Swift.OptionSet {
+    public let rawValue: Swift.Int
+    public init(rawValue: Swift.Int)
+    public static let preferLocalCredantials: TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions
+    public typealias ArrayLiteralElement = TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions
+    public typealias Element = TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions
+    public typealias RawValue = Swift.Int
+  }
 }
 public enum TSAuthenticationError : Swift.Error {
   case notInitialized
