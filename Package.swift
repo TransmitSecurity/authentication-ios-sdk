@@ -15,7 +15,7 @@ let package = Package(
             targets: ["TSAuthenticationSDK", "TSAuthenticationSDK-Dependencies"])
     ],
     dependencies: [
-        .package(url: "https://github.com/TransmitSecurity/core-ios-sdk.git", from: "1.0.25")
+        .package(url: "https://github.com/TransmitSecurity/core-ios-sdk.git", from: "1.0.29")
     ],
     targets: [
         .binaryTarget(
