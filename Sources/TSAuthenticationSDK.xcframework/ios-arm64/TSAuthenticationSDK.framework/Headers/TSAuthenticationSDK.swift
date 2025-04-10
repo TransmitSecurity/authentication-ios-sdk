@@ -19,6 +19,7 @@ public typealias TSTOTPRegistrationCompletion = (Result<TSTOTPRegistrationResult
 public typealias TSTOTPGenerateCodeCompletion = (Result<TSTOTPGenerateCodeResult, TSAuthenticationError>) -> ()
 public typealias TSApprovalCompletion = (Result<TSAuthenticationResult, TSAuthenticationError>) -> ()
 public typealias TSNativeBiometricsApprovalCompletion = (Result<TSNativeBiometricsAuthenticationResult, TSAuthenticationError>) -> ()
+public typealias TSSignChallengeCompletion = (Result<TSSignChallengeResult, TSAuthenticationError>) -> Void
 
 /// Alternate paths used by the SDK to route API calls to your proxy server.
 public struct WebAuthnApis: Codable {
@@ -147,6 +148,17 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     }
     
     /**
+     Initiates the client-side WebAuthn credential registration process using parameters provided by the backend.
+     - Parameter webAuthnRegistrationData: The JSON response object received from your backend containing the necessary data to initiate the WebAuthn registration on the client device.
+     - Parameter completion: An optional closure that is called asynchronously upon the completion (either success or failure) of the WebAuthn registration attempt.
+     */
+    public func registerWebAuthn(_ webAuthnRegistrationData: TSWebAuthnRegistrationData, completion: TSRegistrationCompletion?) {
+        guard let controller else { completion?(.failure(.notInitialized)); return }
+        // 1. webauthn-registration: start registration
+        controller.register(webAuthnRegistrationData, completion: completion)
+    }
+    
+    /**
      Invokes a WebAuthn credential authentication, including prompting the user for biometrics.
      If authentication is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
      The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
@@ -158,7 +170,18 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     }
     
     /**
-     Invokes a WebAuthn credential sign transaction, including prompting the user for biometrics.
+     Invokes a WebAuthn credential authentication, including prompting the user for biometrics.
+     - Parameter webAuthnAuthenticationData: The JSON response object received from your backend containing the necessary data to initiate the WebAuthn authentication on the client device.
+     - Parameter completion: A closure that is called asynchronously upon the completion (success or failure) of the WebAuthn authentication attempt.
+     */
+    public func authenticateWebAuthn(_ webAuthnAuthenticationData: TSWebAuthnAuthenticationData, options: TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationCompletion? = nil) {
+        guard let controller else { completion?(.failure(.notInitialized)); return }
+        
+        controller.authenticate(webAuthnAuthenticationData, options: options, completion: completion)
+    }
+    
+    /**
+     Invokes a WebAuthn credential signing transaction, including prompting the user for biometrics.
      If transaction signing is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
      The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
      */
@@ -166,6 +189,17 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         guard let controller else { completion?(.failure(.notInitialized)); return }
         
         controller.authenticate(username: username, options: options, completion: completion)
+    }
+    
+    /**
+     Initiates a WebAuthn credential signing transaction, typically prompting the user for biometrics or a security key.
+     - Parameter webAuthnAuthenticationData: The JSON response object received from your backend containing the necessary data to initiate the WebAuthn authentication on the client device.
+     - Parameter completion: A closure called asynchronously upon completion (success or failure) of the WebAuthn signing attempt.
+     */
+    public func signWebauthnTransaction(_ webAuthnAuthenticationData: TSWebAuthnAuthenticationData, options: TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationCompletion? = nil) {
+        guard let controller else { completion?(.failure(.notInitialized)); return }
+        
+        controller.authenticate(webAuthnAuthenticationData, options: options)
     }
     
     /**
@@ -182,6 +216,20 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         guard let controller else { completion?(.failure(.notInitialized)); return }
         
         controller.approval(username: username, approvalData: approvalData, options: options, completion: completion)
+    }
+    
+    /**
+     Invokes a WebAuthn credential authentication, including prompting the user for biometrics, in order to verify a user's authorization for a specific action.
+     If authentication is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
+     The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
+     
+     - Parameter webAuthnAuthenticationData: The JSON response object received from your backend containing the necessary data to initiate the WebAuthn approval on the client device.
+     - Parameter completion: A closure that is called asynchronously upon the completion (success or failure) of the WebAuthn approval attempt.
+     */
+    public func approvalWebAuthn(_ webAuthnAuthenticationData: TSWebAuthnAuthenticationData, options: TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSApprovalCompletion? = nil) {
+        guard let controller else { completion?(.failure(.notInitialized)); return }
+        
+        controller.approval(webAuthnAuthenticationData, options: options, completion: completion)
     }
     
     /**
@@ -280,6 +328,15 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         guard let controller else { completion(.failure(.notInitialized)); return }
         
         controller.getDeviceInfo(completion)
+    }
+    
+    /**
+     Signs the `challenge` string with the device key.
+     - Parameter challenge: The string to sign.
+     - Parameter completion: The callback containing either error or result object contaiting signed challenge.
+     */
+    public func signWithDeviceKey(challenge: String, completion: @escaping TSSignChallengeCompletion) {
+        controller?.signChallenge(challenge, completion: completion)
     }
     
     /**

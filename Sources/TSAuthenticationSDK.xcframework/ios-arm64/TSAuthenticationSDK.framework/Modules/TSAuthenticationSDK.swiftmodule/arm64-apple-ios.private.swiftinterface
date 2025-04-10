@@ -25,6 +25,7 @@ public typealias TSTOTPRegistrationCompletion = (Swift.Result<TSAuthenticationSD
 public typealias TSTOTPGenerateCodeCompletion = (Swift.Result<TSAuthenticationSDK.TSTOTPGenerateCodeResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
 public typealias TSApprovalCompletion = (Swift.Result<TSAuthenticationSDK.TSAuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
 public typealias TSNativeBiometricsApprovalCompletion = (Swift.Result<TSAuthenticationSDK.TSNativeBiometricsAuthenticationResult, TSAuthenticationSDK.TSAuthenticationError>) -> ()
+public typealias TSSignChallengeCompletion = (Swift.Result<TSAuthenticationSDK.TSSignChallengeResult, TSAuthenticationSDK.TSAuthenticationError>) -> Swift.Void
 public struct WebAuthnApis : Swift.Codable {
   public init(startAuthentication: Swift.String, startRegistration: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
@@ -60,9 +61,13 @@ public struct TSDeviceInfo : Swift.Codable {
   final public func initialize(baseUrl: Swift.String = "https://api.transmitsecurity.io/", clientId: Swift.String, domain: Swift.String? = nil, initOptions: TSAuthenticationSDK.TSAuthenticationInitOptions? = nil)
   final public func initializeSDK(configuration: TSAuthenticationSDK.TSAuthenticationConfiguration? = nil) throws
   final public func registerWebAuthn(username: Swift.String, displayName: Swift.String?, completion: TSAuthenticationSDK.TSRegistrationCompletion?)
+  final public func registerWebAuthn(_ webAuthnRegistrationData: TSAuthenticationSDK.TSWebAuthnRegistrationData, completion: TSAuthenticationSDK.TSRegistrationCompletion?)
   final public func authenticateWebAuthn(username: Swift.String, options: TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)
+  final public func authenticateWebAuthn(_ webAuthnAuthenticationData: TSAuthenticationSDK.TSWebAuthnAuthenticationData, options: TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)
   final public func signWebauthnTransaction(username: Swift.String, options: TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)
+  final public func signWebauthnTransaction(_ webAuthnAuthenticationData: TSAuthenticationSDK.TSWebAuthnAuthenticationData, options: TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationSDK.TSAuthenticationCompletion? = nil)
   final public func approvalWebAuthn(approvalData: [Swift.String : Swift.String], username: Swift.String? = nil, options: TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationSDK.TSApprovalCompletion? = nil)
+  final public func approvalWebAuthn(_ webAuthnAuthenticationData: TSAuthenticationSDK.TSWebAuthnAuthenticationData, options: TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationSDK.TSApprovalCompletion? = nil)
   final public func registerNativeBiometrics(username: Swift.String, completion: @escaping TSAuthenticationSDK.TSNativeBiometricsRegistrationCompletion)
   final public func authenticateNativeBiometrics(username: Swift.String, challenge: Swift.String, completion: @escaping TSAuthenticationSDK.TSNativeBiometricsAuthenticationCompletion)
   final public func unregistersNativeBiometrics(username: Swift.String, completion: @escaping TSAuthenticationSDK.TSNativeBiometricsUnregisterCompletion)
@@ -71,6 +76,7 @@ public struct TSDeviceInfo : Swift.Codable {
   final public func generateTOTPCode(UUID: Swift.String, completion: @escaping TSAuthenticationSDK.TSTOTPGenerateCodeCompletion)
   final public func generateTOTPCodeWithChallenge(UUID: Swift.String, challenge: Swift.String, completion: @escaping TSAuthenticationSDK.TSTOTPGenerateCodeCompletion)
   final public func getDeviceInfo(_ completion: @escaping TSAuthenticationSDK.DeviceInfoCompletion)
+  final public func signWithDeviceKey(challenge: Swift.String, completion: @escaping TSAuthenticationSDK.TSSignChallengeCompletion)
   public static func isWebAuthnSupported() -> Swift.Bool
   public static func isNativeBiometricsEnrolled() -> Swift.Bool
   @objc deinit
@@ -84,6 +90,18 @@ extension TSAuthenticationSDK.TSAuthentication {
     public typealias Element = TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions
     public typealias RawValue = Swift.Int
   }
+}
+@objc public class TSWebAuthnAuthenticationCredentialRequestOptionsData : ObjectiveC.NSObject, Swift.Codable {
+  public init(challenge: Swift.String? = nil, allowCredentials: [TSAuthenticationSDK.TSWebAuthnAllowCredentialsData]? = nil, userVerification: Swift.String? = nil, rpId: Swift.String? = nil, user: TSAuthenticationSDK.TSWebAuthnUserData? = nil)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class TSWebAuthnAllowCredentialsData : ObjectiveC.NSObject, Swift.Codable {
+  public init(id: Swift.String? = nil, name: Swift.String? = nil, displayName: Swift.String? = nil)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public enum TSAuthenticationError : Swift.Error {
   case notInitialized
@@ -143,6 +161,25 @@ extension TSAuthenticationSDK.TSNativeBiometricsError : Swift.Equatable {
   final public let attestation: Swift.String?
   @objc deinit
 }
+public struct TSWebAuthnRegistrationData : Swift.Decodable {
+  public var username: Swift.String? {
+    get
+  }
+  public var sessionId: Swift.String? {
+    get
+  }
+  public init(webauthnSessionId: Swift.String, credentialCreationOptions: TSAuthenticationSDK.TSWebAuthnCredentialRequestOptionsData, responseHeaders: [Swift.String : Swift.String]? = nil)
+  public init(_ webAuthnRegistrationJSONData: Foundation.Data) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TSWebAuthnAuthenticationData : Swift.Decodable {
+  public var username: Swift.String? {
+    get
+  }
+  public init(webauthnSessionId: Swift.String, credentialRequestOptions: TSAuthenticationSDK.TSWebAuthnAuthenticationCredentialRequestOptionsData, responseHeaders: [Swift.String : Swift.String]? = nil)
+  public init(_ webAuthnRegistrationJSONData: Foundation.Data) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 @_hasMissingDesignatedInitializers final public class TSAuthenticationResult {
   final public var result: Swift.String {
     get
@@ -168,6 +205,10 @@ extension TSAuthenticationSDK.TSNativeBiometricsError : Swift.Equatable {
   final public let code: Swift.String
   @objc deinit
 }
+@_hasMissingDesignatedInitializers final public class TSSignChallengeResult {
+  final public let signature: Swift.String
+  @objc deinit
+}
 extension TSAuthenticationSDK.TSAuthentication {
   final public var version: Swift.String? {
     get
@@ -175,6 +216,36 @@ extension TSAuthenticationSDK.TSAuthentication {
   final public var buildNumber: Swift.String? {
     get
   }
+}
+@objc public class TSWebAuthnRPData : ObjectiveC.NSObject, Swift.Codable {
+  public init(id: Swift.String? = nil, name: Swift.String? = nil)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class TSWebAuthnCredentialRequestOptionsData : ObjectiveC.NSObject, Swift.Codable {
+  public init(challenge: Swift.String? = nil, pubKeyCredParams: [TSAuthenticationSDK.TSWebAuthnPubKeyCredParamsData]? = nil, attestation: Swift.String? = nil, excludeCredentials: [Swift.String]? = nil, authenticatorSelection: TSAuthenticationSDK.TSWebAuthnAuthenticatorSelectionData? = nil, timeout: Swift.Int? = nil, user: TSAuthenticationSDK.TSWebAuthnUserData? = nil, rp: TSAuthenticationSDK.TSWebAuthnRPData)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class TSWebAuthnPubKeyCredParamsData : ObjectiveC.NSObject, Swift.Codable {
+  public init(type: Swift.String? = nil, alg: Swift.Int? = nil)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class TSWebAuthnAuthenticatorSelectionData : ObjectiveC.NSObject, Swift.Codable {
+  public init(authenticatorAttachment: Swift.String? = nil, requireResidentKey: Swift.Bool? = nil, userVerification: Swift.String? = nil)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class TSWebAuthnUserData : ObjectiveC.NSObject, Swift.Codable {
+  public init(id: Swift.String? = nil, name: Swift.String? = nil, displayName: Swift.String? = nil)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 extension TSAuthenticationSDK.TSTOTPSecurityType : Swift.Equatable {}
 extension TSAuthenticationSDK.TSTOTPSecurityType : Swift.Hashable {}

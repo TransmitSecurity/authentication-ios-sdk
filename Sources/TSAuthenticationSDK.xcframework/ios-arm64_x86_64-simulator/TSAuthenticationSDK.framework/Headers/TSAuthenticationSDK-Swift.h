@@ -315,6 +315,55 @@ SWIFT_CLASS("_TtC19TSAuthenticationSDK16TSAuthentication")
 
 
 
+SWIFT_CLASS("_TtC19TSAuthenticationSDK30TSWebAuthnAllowCredentialsData")
+@interface TSWebAuthnAllowCredentialsData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC19TSAuthenticationSDK52TSWebAuthnAuthenticationCredentialRequestOptionsData")
+@interface TSWebAuthnAuthenticationCredentialRequestOptionsData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC19TSAuthenticationSDK36TSWebAuthnAuthenticatorSelectionData")
+@interface TSWebAuthnAuthenticatorSelectionData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC19TSAuthenticationSDK38TSWebAuthnCredentialRequestOptionsData")
+@interface TSWebAuthnCredentialRequestOptionsData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC19TSAuthenticationSDK30TSWebAuthnPubKeyCredParamsData")
+@interface TSWebAuthnPubKeyCredParamsData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC19TSAuthenticationSDK16TSWebAuthnRPData")
+@interface TSWebAuthnRPData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC19TSAuthenticationSDK18TSWebAuthnUserData")
+@interface TSWebAuthnUserData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 
 
 #endif
@@ -640,6 +689,55 @@ SWIFT_CLASS("_TtC19TSAuthenticationSDK16TSAuthentication")
 
 
 
+
+
+SWIFT_CLASS("_TtC19TSAuthenticationSDK30TSWebAuthnAllowCredentialsData")
+@interface TSWebAuthnAllowCredentialsData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC19TSAuthenticationSDK52TSWebAuthnAuthenticationCredentialRequestOptionsData")
+@interface TSWebAuthnAuthenticationCredentialRequestOptionsData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC19TSAuthenticationSDK36TSWebAuthnAuthenticatorSelectionData")
+@interface TSWebAuthnAuthenticatorSelectionData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC19TSAuthenticationSDK38TSWebAuthnCredentialRequestOptionsData")
+@interface TSWebAuthnCredentialRequestOptionsData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC19TSAuthenticationSDK30TSWebAuthnPubKeyCredParamsData")
+@interface TSWebAuthnPubKeyCredParamsData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC19TSAuthenticationSDK16TSWebAuthnRPData")
+@interface TSWebAuthnRPData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC19TSAuthenticationSDK18TSWebAuthnUserData")
+@interface TSWebAuthnUserData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 
 
