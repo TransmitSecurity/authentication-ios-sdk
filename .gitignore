@@ -92,7 +92,7 @@ iOSInjectionProject/
 .gradle
 
 # Ignore Gradle build output directory
-# XCFramework build artifacts (NEW SECTION)
+
 **/Build/
 **/Intermediates.noindex/
 **/DerivedSources/
@@ -103,5 +103,7 @@ iOSInjectionProject/
 **/.build/
 **/build/
 
-# CI/CD artifacts (NEW SECTION)
+# CI/CD artifacts
 *.zip
+**/*-docs-website/
+**/Docs/
