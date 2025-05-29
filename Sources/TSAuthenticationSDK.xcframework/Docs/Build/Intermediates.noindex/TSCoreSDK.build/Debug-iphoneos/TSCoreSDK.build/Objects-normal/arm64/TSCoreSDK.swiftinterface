@@ -1,0 +1,750 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name TSCoreSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import Combine
+import CommonCrypto
+import CoreData
+import CryptoKit
+import Foundation
+import LocalAuthentication
+import Network
+import Security
+import Swift
+import SystemConfiguration
+@_exported import TSCoreSDK
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+@_hasMissingDesignatedInitializers public class TSUserDefauls {
+  public static let shared: TSCoreSDK.TSUserDefauls
+  public func set(moduleInfo: any TSCoreSDK.ITSModuleInfo, value: Any?, forKey key: Swift.String) throws
+  public func getInt(moduleInfo: any TSCoreSDK.ITSModuleInfo, key: Swift.String, defaultValue: Swift.Int?) -> Swift.Int?
+  public func getFloat(moduleInfo: any TSCoreSDK.ITSModuleInfo, key: Swift.String, defaultValue: Swift.Float?) -> Swift.Float?
+  public func getDouble(moduleInfo: any TSCoreSDK.ITSModuleInfo, key: Swift.String, defaultValue: Swift.Double?) -> Swift.Double?
+  public func getString(moduleInfo: any TSCoreSDK.ITSModuleInfo, key: Swift.String, defaultValue: Swift.String?) -> Swift.String?
+  public func getStringArray(moduleInfo: any TSCoreSDK.ITSModuleInfo, key: Swift.String, defaultValue: [Swift.String]?) -> [Swift.String]?
+  public func getData(moduleInfo: any TSCoreSDK.ITSModuleInfo, key: Swift.String, defaultValue: Foundation.Data?) -> Foundation.Data?
+  public func getObject(moduleInfo: any TSCoreSDK.ITSModuleInfo, key: Swift.String, defaultValue: Any?) -> Any?
+  public func clearKey(moduleInfo: any TSCoreSDK.ITSModuleInfo, key: Swift.String)
+  public func clearUserDetails(moduleInfo: any TSCoreSDK.ITSModuleInfo)
+  @objc deinit
+}
+public struct TSJSONCodingKeys : Swift.CodingKey {
+  public var stringValue: Swift.String
+  public init(stringValue: Swift.String)
+  public var intValue: Swift.Int?
+  public init?(intValue: Swift.Int)
+}
+extension Swift.KeyedDecodingContainer {
+  public func ts_decode(_ type: Swift.Dictionary<Swift.String, Any>.Type, forKey key: K) throws -> Swift.Dictionary<Swift.String, Any>
+  public func ts_decode(_ type: Swift.Array<Any>.Type, forKey key: K) throws -> Swift.Array<Any>
+  public func ts_decode(_ type: Swift.Dictionary<Swift.String, Any>.Type) throws -> Swift.Dictionary<Swift.String, Any>
+  public func ts_decode(_ type: any Any.Type, forKey key: K) throws -> Any
+}
+extension Swift.UnkeyedDecodingContainer {
+  public mutating func ts_decode(_ type: Swift.Array<Any>.Type) throws -> Swift.Array<Any>
+  public mutating func ts_decode(_ type: any Any.Type) throws -> Any
+  public mutating func ts_decode(_ type: Swift.Dictionary<Swift.String, Any>.Type) throws -> Swift.Dictionary<Swift.String, Any>
+}
+extension Swift.KeyedEncodingContainerProtocol where Self.Key == TSCoreSDK.TSJSONCodingKeys {
+  public mutating func ts_encode(_ value: Swift.Dictionary<Swift.String, Any>) throws
+}
+extension Swift.KeyedEncodingContainerProtocol {
+  public mutating func ts_encode(_ value: Swift.Dictionary<Swift.String, Any>?, forKey key: Self.Key) throws
+  public mutating func ts_encode(_ value: Swift.Array<Any>?, forKey key: Self.Key) throws
+  public mutating func ts_encode(_ value: Any?, forKey key: Self.Key) throws
+}
+extension Swift.UnkeyedEncodingContainer {
+  public mutating func ts_encode(_ value: Swift.Array<Any>) throws
+  public mutating func ts_encode(_ value: Any) throws
+  public mutating func ts_encode(_ value: Swift.Dictionary<Swift.String, Any>) throws
+}
+extension Swift.Encodable {
+  public func ts_toDictionary(_ encoder: Foundation.JSONEncoder = JSONEncoder()) -> [Swift.String : Any]?
+}
+@objc @_inheritsConvenienceInitializers public class TSCore : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol ITSModuleInfo {
+  func subSystemName() -> Swift.String
+  func isLoggerEnabled() -> Swift.Bool
+  func endpointIgnoreList() -> [Swift.String]?
+  func tenantID() -> Swift.String
+  func version() -> Swift.String
+}
+final public class TSEC {
+  public struct Configuration {
+    public init()
+  }
+  public init(configuration: TSCoreSDK.TSEC.Configuration = .init())
+  final public func createVolatileRawECCryptoKeysData(seed: Foundation.Data, keySize: TSCoreSDK.TSVolatileECKeySize) async throws -> TSCoreSDK.TSCryptoKeysData
+  final public func createVolatileECKeyPair(withSeed seed: Foundation.Data, keySize: TSCoreSDK.TSVolatileECKeySize) async throws -> any TSCoreSDK.TSECCVolatileKeyPair
+  @objc deinit
+}
+public struct TSCryptoKeysData {
+  public let kp: any TSCoreSDK.TSECCVolatileKeyPair
+  public let keyId: Swift.String
+  public let keyType: Swift.String
+}
+extension Swift.String {
+  public func base64urlToBase64() -> Swift.String
+  public func base64ToBase64url() -> Swift.String
+  public func ts_asciiToHex() -> Swift.String
+}
+@_hasMissingDesignatedInitializers public class TSKeychain {
+  public enum KeychainError : Swift.Error, Swift.CustomStringConvertible {
+    case unknownError
+    case itemAddFailed(Darwin.OSStatus)
+    case itemAccessControl((any Swift.Error)?)
+    case itemDeleteFailed(Darwin.OSStatus)
+    case itemCopyFailed(Darwin.OSStatus)
+    case incorrectDataFormat
+    case itemNotFound
+    public var description: Swift.String {
+      get
+    }
+  }
+  public static let shared: TSCoreSDK.TSKeychain
+  public func set(_ value: Swift.String, forKey key: Swift.String, withAccess access: TSCoreSDK.KeychainSwiftAccessOptions? = .accessibleWhenUnlockedThisDeviceOnly, isBiometricProtected: Swift.Bool = false) throws
+  public func set(_ value: Foundation.Data, forKey key: Swift.String, withAccess access: TSCoreSDK.KeychainSwiftAccessOptions? = .accessibleWhenUnlockedThisDeviceOnly, isBiometricProtected: Swift.Bool = false) throws
+  public func set(_ value: Swift.Bool, forKey key: Swift.String, withAccess access: TSCoreSDK.KeychainSwiftAccessOptions? = .accessibleWhenUnlockedThisDeviceOnly) throws
+  public func get(_ key: Swift.String, context: LocalAuthentication.LAContext? = nil) throws -> Swift.String
+  public func getData(_ key: Swift.String, asReference: Swift.Bool = false, context: LocalAuthentication.LAContext? = nil) throws -> Foundation.Data
+  public func getBool(_ key: Swift.String) throws -> Swift.Bool
+  @discardableResult
+  public func delete(_ key: Swift.String) -> Swift.Bool
+  @discardableResult
+  public func clear() -> Swift.Bool
+  @objc deinit
+}
+public enum KeychainSwiftAccessOptions {
+  case accessibleWhenUnlocked
+  case accessibleWhenUnlockedThisDeviceOnly
+  case accessibleAfterFirstUnlock
+  case accessibleAfterFirstUnlockThisDeviceOnly
+  case accessibleWhenPasscodeSetThisDeviceOnly
+  public static func == (a: TSCoreSDK.KeychainSwiftAccessOptions, b: TSCoreSDK.KeychainSwiftAccessOptions) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Swift.Encodable {
+  public var ts_dictionary: [Swift.String : Any]? {
+    get
+  }
+}
+public enum TSRequestErrorCode : Swift.Error, Swift.Equatable {
+  case noInternet
+  case invalidResponse
+  case decodingError
+  case encodingError
+  case encriptionError
+  case invalidURL
+  case noResponse
+  case unauthorized
+  case unexpectedStatusCode
+  case unknown
+  case forbiddenUrl
+  case requestError(errorCode: Swift.Int)
+  public static func == (a: TSCoreSDK.TSRequestErrorCode, b: TSCoreSDK.TSRequestErrorCode) -> Swift.Bool
+}
+public class TSRequestError : Swift.Error, Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  final public let errorCode: TSCoreSDK.TSRequestErrorCode
+  final public let errorMessage: Swift.String?
+  public var rawResponse: Foundation.Data?
+  public init(errorCode: TSCoreSDK.TSRequestErrorCode, errorMessage: Swift.String? = nil)
+  @objc deinit
+}
+public enum TSRetriableErrorHandler : Swift.Error {
+  case urlError(Foundation.URLError)
+  case httpError(Foundation.HTTPURLResponse)
+}
+public struct TSConstants {
+}
+extension TSCoreSDK.TSConstants {
+  public struct Keys {
+    public static let terminateByUser: Swift.String
+    public static let clientId: Swift.String
+    public static let moduleName: Swift.String
+    public static let initializationParamsQuery: Swift.String
+    public static let TSCORE_REQUEST_DURATION_HEADER: Swift.String
+    public static let X_TS_PROCESSING_TIME_MS: Swift.String
+  }
+}
+public struct TSLocalAuthContext {
+  public init(interactionNotAllowed: Swift.Bool = false)
+}
+public enum TSCryptoException : Swift.Error, Swift.CustomStringConvertible {
+  case unknownError
+  case keyRepresentationFailed((any Swift.Error)?)
+  case keyGenerationFailed((any Swift.Error)?)
+  case keySignFailed((any Swift.Error)?)
+  case keyAccessControl((any Swift.Error)?)
+  case evaluatePolicyFailed((any Swift.Error)?)
+  case keyDeleteFailed(Darwin.OSStatus)
+  case keyNotFound
+  case keyCopyFailed(Darwin.OSStatus)
+  case unableToSignDataAlgorithmNotSupported
+  case unableConvertKeyToData
+  case unableToConvertMessageToData
+  case errorSigingData
+  public var description: Swift.String {
+    get
+  }
+}
+public enum TSCryptoBindingKeyType : Swift.String {
+  case rsa
+  case ec
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol TSCryptoBindingParameters : AnyObject {
+  var keyType: CoreFoundation.CFString { get set }
+  var keySize: Swift.Int { get set }
+  var signAlgorithm: Security.SecKeyAlgorithm { get set }
+  var encryptAlgorithm: Security.SecKeyAlgorithm { get set }
+  var storeInSecureEnclave: Swift.Bool { get set }
+  func convertPublicKeyToPEMFormat(_ key: Foundation.Data) -> Swift.String
+}
+extension TSCoreSDK.TSCryptoBindingParameters {
+  public func convertPublicKeyToPEMFormat(_ key: Foundation.Data) -> Swift.String
+}
+public protocol TSCryptoBindingProtocol : AnyObject {
+  func provideKeys(forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?) async throws -> TSCoreSDK.TSPublicKeyData
+  func provideKeysWithFallback(forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> TSCoreSDK.TSPublicKeyData
+  func getKeys(forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?) async throws -> TSCoreSDK.TSPublicKeyData
+  func getKeysWithFallback(forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> TSCoreSDK.TSPublicKeyData
+  func provideApplicationKeys() async throws -> TSCoreSDK.TSPublicKeyData
+  func provideApplicationKeysWithFallback(fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> TSCoreSDK.TSPublicKeyData
+  func sign(_ message: Swift.String, forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?) async throws -> Foundation.Data
+  func signWithFallback(_ message: Swift.String, forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> Foundation.Data
+  func signBase64String(of message: Swift.String, forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?) async throws -> Swift.String
+  func signBase64StringWithFallback(of message: Swift.String, forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> Swift.String
+  func signWithApplicationKey(_ message: Swift.String) async throws -> Foundation.Data
+  func signWithApplicationKeyWithFallback(_ message: Swift.String, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> Foundation.Data
+  func signWithApplicationKeyBase64String(_ message: Swift.String) async throws -> Swift.String
+  func signWithApplicationKeyBase64StringWithFallback(_ message: Swift.String, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> Swift.String
+  func deleteKeys(forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?) async throws -> Swift.String
+  func deleteKeysWithFallback(forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> Swift.String
+  func deleteApplicationKeys() async throws
+  func deleteApplicationKeysWithFallback(fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws
+}
+public struct TSPublicKeyData {
+  public var keyIdentifier: Swift.String
+  public var publicKey: Swift.String
+  public var keyType: Swift.String
+}
+public actor TSCryptoBinding<T> where T : TSCoreSDK.TSCryptoBindingParameters {
+  public init(service: T)
+  @objc deinit
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  @_semantics("defaultActor") nonisolated final public var unownedExecutor: _Concurrency.UnownedSerialExecutor {
+    get
+  }
+}
+extension TSCoreSDK.TSCryptoBinding : TSCoreSDK.TSCryptoBindingProtocol {
+  public func provideKeys(forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool = false, username: Swift.String? = nil, context: TSCoreSDK.TSLocalAuthContext? = nil) async throws -> TSCoreSDK.TSPublicKeyData
+  public func getKeys(forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool = false, username: Swift.String? = nil, context: TSCoreSDK.TSLocalAuthContext? = nil) async throws -> TSCoreSDK.TSPublicKeyData
+  public func provideApplicationKeys() async throws -> TSCoreSDK.TSPublicKeyData
+  public func sign(_ message: Swift.String, forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool = false, username: Swift.String? = nil, context: TSCoreSDK.TSLocalAuthContext? = nil) async throws -> Foundation.Data
+  public func signBase64String(of message: Swift.String, forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool = false, username: Swift.String? = nil, context: TSCoreSDK.TSLocalAuthContext? = nil) async throws -> Swift.String
+  public func signWithApplicationKey(_ message: Swift.String) async throws -> Foundation.Data
+  public func signWithApplicationKeyBase64String(_ message: Swift.String) async throws -> Swift.String
+  public func getPublicKeyOf_PEM_format(forTag tag: Swift.String, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?, context: LocalAuthentication.LAContext?) async throws -> Swift.String
+  public func deleteKeys(forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool = false, username: Swift.String? = nil, context: TSCoreSDK.TSLocalAuthContext? = nil) async throws -> Swift.String
+  public func deleteApplicationKeys() async throws
+}
+extension TSCoreSDK.TSCryptoBinding {
+  public func provideKeysWithFallback(forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> TSCoreSDK.TSPublicKeyData
+  public func getKeysWithFallback(forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> TSCoreSDK.TSPublicKeyData
+  public func provideApplicationKeysWithFallback(fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> TSCoreSDK.TSPublicKeyData
+  public func signWithFallback(_ message: Swift.String, forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> Foundation.Data
+  public func signBase64StringWithFallback(of message: Swift.String, forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> Swift.String
+  public func signWithApplicationKeyWithFallback(_ message: Swift.String, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> Foundation.Data
+  public func signWithApplicationKeyBase64StringWithFallback(_ message: Swift.String, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> Swift.String
+  public func deleteKeysWithFallback(forTag applicationTag: Swift.String, isBiometricProtected: Swift.Bool, username: Swift.String?, context: TSCoreSDK.TSLocalAuthContext?, fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws -> Swift.String
+  public func deleteApplicationKeysWithFallback(fallbackCryptoParams: (any TSCoreSDK.TSCryptoBindingParameters)?) async throws
+}
+@_hasMissingDesignatedInitializers public class TSLocalAuthentication {
+  public static func isNativeBiometricsAvailable() -> Swift.Bool
+  public static func isNativeBiometricsEnrolled() -> Swift.Bool
+  @objc deinit
+}
+public protocol TSRetriableRequest {
+  var retires: Swift.Int { get }
+  var delayInterval: Foundation.TimeInterval { get }
+}
+extension TSCoreSDK.TSRetriableRequest {
+  public var retires: Swift.Int {
+    get
+  }
+  public var delayInterval: Foundation.TimeInterval {
+    get
+  }
+}
+extension TSCoreSDK.TSCore {
+  public static let clientPlatform: Swift.String
+}
+public class TSCryptoSessionManager {
+  public var currentSession: (any TSCoreSDK.TSCryptoSessionProtocol)? {
+    get
+  }
+  public init(configuration: TSCoreSDK.TSCryptoSessionManagerConfiguration, serverProvider: TSCoreSDK.TSCryptoSessionServerProvider = .init(), aes: TSCoreSDK.TSAES = .init()) throws
+  public func createCryptoSession() async throws
+  @objc deinit
+}
+extension TSCoreSDK.TSCryptoSessionManager {
+  @_hasMissingDesignatedInitializers public class ServerResponseData : Swift.Codable {
+    required public init(from decoder: any Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+    @objc deinit
+  }
+  public struct ClientRequestData : Swift.Codable {
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct EncryptedClientRequestData : Swift.Codable {
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+public struct TSCryptoSessionManagerConfiguration {
+  public let scheme: Swift.Int
+  public let baseUrl: Swift.String
+  public let clientId: Swift.String
+  public let aid: Swift.String
+  public let moduleInfo: any TSCoreSDK.ITSModuleInfo
+  public let flowId: Swift.String
+  public let did: Swift.String?
+  public let locale: Swift.String?
+  public let sessionId: Swift.String?
+  public init(scheme: Swift.Int, baseUrl: Swift.String, clientId: Swift.String, aid: Swift.String, moduleInfo: any TSCoreSDK.ITSModuleInfo, flowId: Swift.String, did: Swift.String?, locale: Swift.String?, sessionId: Swift.String? = nil)
+}
+@_hasMissingDesignatedInitializers public class TSResponseGenericHeader : Swift.Codable {
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
+}
+public typealias TSClientRequestData = TSCoreSDK.TSCryptoSessionManager.ClientRequestData
+public typealias TSEncryptedClientRequestData = TSCoreSDK.TSCryptoSessionManager.EncryptedClientRequestData
+public typealias TSServerResponseData = TSCoreSDK.TSCryptoSessionManager.ServerResponseData
+public protocol TSCryptoSessionProtocol {
+  func encrypt(_ data: TSCoreSDK.TSClientRequestData) throws -> TSCoreSDK.TSEncryptedClientRequestData
+  func decrypt(_ response: TSCoreSDK.TSServerResponseData) throws -> TSCoreSDK.TSServerResponseData
+}
+public struct TSCryptoSessionConfiguration {
+}
+public struct TSCryptoSession : TSCoreSDK.TSCryptoSessionProtocol {
+  public func encrypt(_ request: TSCoreSDK.TSClientRequestData) throws -> TSCoreSDK.TSEncryptedClientRequestData
+  public func decrypt(_ response: TSCoreSDK.TSServerResponseData) throws -> TSCoreSDK.TSServerResponseData
+}
+@objc @_inheritsConvenienceInitializers public class TSSecurityUtils : ObjectiveC.NSObject {
+  public static func randomBase64EncodedString(length: Swift.Int) -> Swift.String?
+  public static func challengeCode(verifier: Swift.String?) -> Swift.String?
+  public static func randomNumber(digits: Swift.Int) -> Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TSReachability {
+  public class var isNetworkAvailable: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+extension TSCoreSDK.Log {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<TSCoreSDK.Log>
+  @objc @NSManaged dynamic public var cn: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var mn: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var pn: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var s: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var ssn: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var t: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var timestamp: Foundation.Date {
+    @objc get
+    @objc set
+  }
+}
+public protocol TSResponse : Swift.Decodable, Swift.Encodable {
+  var responseHeaders: [Swift.String : Swift.String]? { get set }
+}
+@_hasMissingDesignatedInitializers public class TSNetworkManager {
+  @objc deinit
+}
+extension Swift.Dictionary {
+  public func ts_dictionaryAsJsonString() -> Swift.String?
+  public func ts_toData() -> Foundation.Data?
+}
+public struct NoReply : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public class TSNetworkService<Request, Response> where Request : TSCoreSDK.TSBaseNetworkRequest, Response : Swift.Decodable, Response : Swift.Encodable {
+  public init(request: Request)
+  public func send(moduleInfo: any TSCoreSDK.ITSModuleInfo, completion: @escaping (Swift.Result<Response, TSCoreSDK.TSRequestError>) -> Swift.Void)
+  @objc deinit
+}
+public enum TSLogLevel : Swift.Int, Swift.CaseIterable {
+  case verbose
+  case debug
+  case info
+  case warning
+  case error
+  case crytical
+  case off
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [TSCoreSDK.TSLogLevel]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [TSCoreSDK.TSLogLevel] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension TSCoreSDK.TSLogLevel {
+  public var symbol: Swift.String {
+    get
+  }
+  public var osLogType: os.OSLogType {
+    get
+  }
+}
+public enum TSpseudoRandomAlgorithm : Swift.Int32 {
+  case sha1
+  case sha224
+  case sha256
+  case sha384
+  case sha512
+  public init?(rawValue: Swift.Int32)
+  public typealias RawValue = Swift.Int32
+  public var rawValue: Swift.Int32 {
+    get
+  }
+}
+final public class TSAES {
+  public struct Configuration {
+    public init()
+  }
+  public init(configuration: TSCoreSDK.TSAES.Configuration = .init())
+  final public func encrypt(data: Foundation.Data, key: CryptoKit.SymmetricKey, iv: Foundation.Data, padding: Swift.Int) throws -> Foundation.Data
+  final public func decrypt(data: Foundation.Data, key: CryptoKit.SymmetricKey, iv: Foundation.Data, padding: Swift.Int) throws -> Foundation.Data
+  final public func generateIV(bytes: Swift.Int) -> Foundation.Data?
+  final public func pbkdfStretchSecretIntoAESKey(salt: Foundation.Data, secret: Foundation.Data, keySizeInBytes: Swift.Int, pbkdfIterationCount: Swift.Int, randomAlgorithm: TSCoreSDK.TSpseudoRandomAlgorithm) throws -> CryptoKit.SymmetricKey
+  @objc deinit
+}
+public struct AES256 {
+  public init(key: Foundation.Data, iv: Foundation.Data) throws
+  public func encrypt(_ digest: Foundation.Data) throws -> Foundation.Data
+}
+public protocol TSLogConfigurable {
+  static func setLogLevel(_ level: TSCoreSDK.TSLogLevel)
+}
+extension TSCoreSDK.TSLogConfigurable {
+  public static func setLogLevel(_ level: TSCoreSDK.TSLogLevel)
+  public static func logDestination(_ destination: TSCoreSDK.TSLoggerDestination)
+}
+public enum TSLoggerDestination {
+  case console
+  case file(url: Foundation.URL)
+}
+@_hasMissingDesignatedInitializers final public class TSLogger : TSCoreSDK.TSLogConfigurable {
+  @objc deinit
+}
+public class TSRSAService : TSCoreSDK.TSCryptoBindingParameters {
+  public var keyType: CoreFoundation.CFString
+  public var keySize: Swift.Int
+  public var signAlgorithm: Security.SecKeyAlgorithm
+  public var encryptAlgorithm: Security.SecKeyAlgorithm
+  public var storeInSecureEnclave: Swift.Bool
+  public init()
+  @objc deinit
+}
+extension TSCoreSDK.TSRSAService {
+  public func convertPublicKeyToPEMFormat(_ key: Foundation.Data) -> Swift.String
+  public func keyTypeString() -> TSCoreSDK.TSCryptoBindingKeyType
+}
+public protocol TSDataSource {
+  associatedtype DataSourceType
+  func addData(data: Self.DataSourceType, moduleInfo: any TSCoreSDK.ITSModuleInfo)
+  func addData(dataList: Swift.Array<Self.DataSourceType>, moduleInfo: any TSCoreSDK.ITSModuleInfo)
+  func fetchAndRemove(moduleInfo: any TSCoreSDK.ITSModuleInfo) -> [Self.DataSourceType]?
+  func size(moduleInfo: any TSCoreSDK.ITSModuleInfo) -> Swift.Int
+  func isEmpty(moduleInfo: any TSCoreSDK.ITSModuleInfo) -> Swift.Bool
+  func removeData(moduleInfo: (any TSCoreSDK.ITSModuleInfo)?)
+}
+@_hasMissingDesignatedInitializers public class TSFile {
+  public static func readFromAppPlist<T>(named: Swift.String, as type: T.Type) throws -> T where T : Swift.Decodable, T : Swift.Encodable
+  public static func readFromPlist<T>(named: Swift.String, bundle: Foundation.Bundle, as type: T.Type) throws -> T where T : Swift.Decodable, T : Swift.Encodable
+  @objc deinit
+}
+public class TSSDKError : Swift.Error {
+  final public let code: Swift.Int
+  final public let message: Swift.String
+  final public let details: [Swift.String : Any]?
+  public init(code: Swift.Int, message: Swift.String, details: [Swift.String : Any]? = nil)
+  public var description: Swift.String {
+    get
+  }
+  public static func withCustomMessage(_ error: TSCoreSDK.TSSDKError, message: Swift.String, details: [Swift.String : Any]? = nil) -> TSCoreSDK.TSSDKError
+  @objc deinit
+}
+public struct EnctyptedContainer {
+  public let keyAsBase64: Swift.String?
+  public let ivAsBase64: Swift.String?
+  public let combinedSealedBox: Swift.String
+}
+public class TSAESDataEncrypter {
+  public init(key: CryptoKit.SymmetricKey? = nil)
+  @objc deinit
+}
+extension TSCoreSDK.TSAESDataEncrypter {
+  public func encrypt(_ data: Foundation.Data) throws -> Foundation.Data?
+  public func decrypt(_ data: Foundation.Data) throws -> Foundation.Data?
+  public func encryptedContainer(_ data: Foundation.Data) throws -> TSCoreSDK.EnctyptedContainer?
+}
+@objc @_inheritsConvenienceInitializers public class Log : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+public enum TSVolatileECKeySize : Swift.Int {
+  case s256
+  case s384
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol TSECCVolatileKeyPair {
+  func rawECPublicKey() -> Foundation.Data
+  func rawECPublicKeyHex() -> Swift.String
+  func signedChallengeRaw(_ challenge: Foundation.Data) throws -> Foundation.Data
+  func signedDerChallengeDer(_ challenge: Foundation.Data) throws -> Foundation.Data
+  func verifySignature(_ signature: Foundation.Data, for challenge: Foundation.Data) throws -> Swift.Bool
+}
+public struct TSECVolatile256KeyPair : TSCoreSDK.TSECCVolatileKeyPair {
+  public func rawECPublicKey() -> Foundation.Data
+  public func rawECPublicKeyHex() -> Swift.String
+  public func signedChallengeRaw(_ challenge: Foundation.Data) throws -> Foundation.Data
+  public func signedDerChallengeDer(_ challenge: Foundation.Data) throws -> Foundation.Data
+  public func verifySignature(_ signature: Foundation.Data, for challenge: Foundation.Data) throws -> Swift.Bool
+}
+public struct TSECVolatile384KeyPair : TSCoreSDK.TSECCVolatileKeyPair {
+  public func rawECPublicKey() -> Foundation.Data
+  public func rawECPublicKeyHex() -> Swift.String
+  public func signChallenge(_ challenge: Foundation.Data) throws -> Foundation.Data
+  public func signedChallengeRaw(_ challenge: Foundation.Data) throws -> Foundation.Data
+  public func signedDerChallengeDer(_ challenge: Foundation.Data) throws -> Foundation.Data
+  public func verifySignature(_ signature: Foundation.Data, for challenge: Foundation.Data) throws -> Swift.Bool
+}
+public class TSDataSyncServerController<DataSource, DataSyncServer, TRIGGER_ACTION_EVENT> where DataSource : TSCoreSDK.TSDataSource, DataSyncServer : TSCoreSDK.TSDataSyncServer, TRIGGER_ACTION_EVENT == DataSyncServer.Response, DataSource.DataSourceType == DataSyncServer.TYPE {
+  public struct Configuration {
+    public init(dataSource: DataSource, serverProvider: DataSyncServer, dataBufferSize: Swift.Int, dataSyncInterval: Swift.Double)
+  }
+  public typealias TYPE = DataSource.DataSourceType
+  public init(configuration: TSCoreSDK.TSDataSyncServerController<DataSource, DataSyncServer, TRIGGER_ACTION_EVENT>.Configuration)
+  @objc deinit
+  public func changeParameters(bufferSize: Swift.Int, syncInterval: Swift.Double, moduleInfo: any TSCoreSDK.ITSModuleInfo)
+  public func addData(data: TSCoreSDK.TSDataSyncServerController<DataSource, DataSyncServer, TRIGGER_ACTION_EVENT>.TYPE, moduleInfo: any TSCoreSDK.ITSModuleInfo)
+  public func addData(dataList: [TSCoreSDK.TSDataSyncServerController<DataSource, DataSyncServer, TRIGGER_ACTION_EVENT>.TYPE], moduleInfo: any TSCoreSDK.ITSModuleInfo)
+  public func triggerData(data: [TSCoreSDK.TSDataSyncServerController<DataSource, DataSyncServer, TRIGGER_ACTION_EVENT>.TYPE]? = nil, moduleInfo: any TSCoreSDK.ITSModuleInfo, completion: @escaping ((Swift.Result<TRIGGER_ACTION_EVENT, TSCoreSDK.TSRequestErrorCode>) -> Swift.Void))
+}
+public class TSCryptoSessionServerProvider {
+  public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class TSLog {
+  public static func v(_ info: any TSCoreSDK.ITSModuleInfo, message: Swift.String, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  public static func d(_ info: any TSCoreSDK.ITSModuleInfo, message: Swift.String, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  public static func i(_ info: any TSCoreSDK.ITSModuleInfo, message: Swift.String, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  public static func w(_ info: any TSCoreSDK.ITSModuleInfo, message: Swift.String, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  public static func e(_ info: any TSCoreSDK.ITSModuleInfo, message: Swift.String, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  public static func c(_ info: any TSCoreSDK.ITSModuleInfo, message: Swift.String, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  public static func exception(_ info: any TSCoreSDK.ITSModuleInfo, message: Swift.String, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  public static func logToConsole(level: TSCoreSDK.TSLogLevel, info: (any TSCoreSDK.ITSModuleInfo)? = nil, message: Swift.String, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TSRSAConverter {
+  public static func createKey(mod_b64: Swift.String, exp_b64: Swift.String) -> Security.SecKey?
+  public static func createKey(pem: Swift.String) -> Security.SecKey?
+  @objc deinit
+}
+public class TS_AES {
+  public var key: CryptoKit.SymmetricKey!
+  public var nonce: CryptoKit.AES.GCM.Nonce!
+  public init()
+  public func encrypt(data: Foundation.Data) -> CryptoKit.AES.GCM.SealedBox?
+  public func decrypt(sealedBox: CryptoKit.AES.GCM.SealedBox) -> Swift.String
+  public func fullCiphertext(sealedBox: CryptoKit.AES.GCM.SealedBox) -> Swift.String
+  public func keyAsBase64() -> Swift.String?
+  public func ivAsBase64() -> Swift.String?
+  @objc deinit
+}
+extension CryptoKit.SymmetricKey {
+  public init?(base64EncodedString: Swift.String)
+  public func serialize() -> Swift.String
+  public func keyAsData() -> Foundation.Data
+}
+public enum TSStorageErrorCode : Swift.Error {
+  case dataNotFoundError
+  case internalError
+  public static func == (a: TSCoreSDK.TSStorageErrorCode, b: TSCoreSDK.TSStorageErrorCode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class TSStorageError : Swift.Error {
+  public init(errorCode: TSCoreSDK.TSStorageErrorCode, errorMessage: Swift.String? = nil)
+  @objc deinit
+}
+extension Foundation.Data {
+  public init?(ts_hex: Swift.String)
+  public var ts_hexString: Swift.String {
+    get
+  }
+  public func ts_decoded<T>(_ type: T.Type) -> T? where T : Swift.Decodable
+}
+extension TSCoreSDK.TSEncryptServerRequestDataProvider {
+  public enum Error : Swift.Error {
+    case publicKeyCreationFailed
+    case rsaEncryptionFailed((any Swift.Error)?)
+  }
+  public struct DataContainer {
+    public let keyAsBase64: Swift.String
+    public let dataAsBase64: Swift.String
+  }
+  public struct EncryptionPublicKey {
+    public init(modulus: Swift.String?, exponents: Swift.String?)
+  }
+}
+public protocol TSEncryptEventsProviderProtocol {
+  func encrypt(events: Foundation.Data, publicKey: TSCoreSDK.TSEncryptServerRequestDataProvider.EncryptionPublicKey) throws -> TSCoreSDK.TSEncryptServerRequestDataProvider.DataContainer
+}
+public class TSEncryptServerRequestDataProvider {
+  public init()
+  @objc deinit
+}
+extension TSCoreSDK.TSEncryptServerRequestDataProvider : TSCoreSDK.TSEncryptEventsProviderProtocol {
+  public func encrypt(events: Foundation.Data, publicKey: TSCoreSDK.TSEncryptServerRequestDataProvider.EncryptionPublicKey) throws -> TSCoreSDK.TSEncryptServerRequestDataProvider.DataContainer
+}
+public class ThreadSafeContainer<T> {
+  public var safeValue: T {
+    get
+    set
+  }
+  public init(value: T, accessQueue: Dispatch.DispatchQueue = .init(label: "TSCoreSDK.concurrency.threadSafeContainer", qos: .default, attributes: .concurrent))
+  @objc deinit
+}
+public class TSECService : TSCoreSDK.TSCryptoBindingParameters {
+  public var keyType: CoreFoundation.CFString
+  public var keySize: Swift.Int
+  public var signAlgorithm: Security.SecKeyAlgorithm
+  public var encryptAlgorithm: Security.SecKeyAlgorithm
+  public var storeInSecureEnclave: Swift.Bool
+  public init()
+  @objc deinit
+}
+extension TSCoreSDK.TSECService {
+  public func convertPublicKeyToPEMFormat(_ key: Foundation.Data) -> Swift.String
+  public func keyTypeString() -> TSCoreSDK.TSCryptoBindingKeyType
+}
+extension Foundation.CharacterSet {
+  public static let tsURLQueryAllowed: Foundation.CharacterSet
+}
+public enum TSHttpMethod : Swift.String {
+  case GET
+  case POST
+  case PUT
+  case PATCH
+  case DELETE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public typealias Parameters = [Swift.String : Swift.String]
+public class TSNetworkRequestConfiguration {
+  final public let cryptoSession: (any TSCoreSDK.TSCryptoSessionProtocol)?
+  public init(cryptoSession: (any TSCoreSDK.TSCryptoSessionProtocol)?)
+  @objc deinit
+}
+public protocol TSBaseNetworkRequest {
+  var configuration: TSCoreSDK.TSNetworkRequestConfiguration? { get }
+  var httpMethod: TSCoreSDK.TSHttpMethod { get }
+  func urlHost() -> Swift.String?
+  func httpBody() -> Foundation.Data?
+  func headers() -> [Swift.String : Swift.String]?
+  func queriesParameters() -> TSCoreSDK.Parameters?
+  func bodyHeaders() -> [Any]?
+  func isEncrypted() -> Swift.Bool
+  var keyDecodingStrategy: Foundation.JSONDecoder.KeyDecodingStrategy { get }
+}
+extension TSCoreSDK.TSBaseNetworkRequest {
+  public var configuration: TSCoreSDK.TSNetworkRequestConfiguration? {
+    get
+  }
+  public func bodyHeaders() -> [Any]?
+  public func isEncrypted() -> Swift.Bool
+  public var keyDecodingStrategy: Foundation.JSONDecoder.KeyDecodingStrategy {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+public protocol TSDataSyncServer {
+  associatedtype TYPE : Swift.Encodable
+  associatedtype Response : Swift.Decodable
+  func sendDataToServer(dataList: [Self.TYPE], moduleInfo: any TSCoreSDK.ITSModuleInfo, completion: @escaping ((Swift.Result<Self.Response, TSCoreSDK.TSRequestErrorCode>) -> Swift.Void)) throws
+}
+extension TSCoreSDK.KeychainSwiftAccessOptions : Swift.Equatable {}
+extension TSCoreSDK.KeychainSwiftAccessOptions : Swift.Hashable {}
+extension TSCoreSDK.TSCryptoBindingKeyType : Swift.Equatable {}
+extension TSCoreSDK.TSCryptoBindingKeyType : Swift.Hashable {}
+extension TSCoreSDK.TSCryptoBindingKeyType : Swift.RawRepresentable {}
+extension TSCoreSDK.TSLogLevel : Swift.Equatable {}
+extension TSCoreSDK.TSLogLevel : Swift.Hashable {}
+extension TSCoreSDK.TSLogLevel : Swift.RawRepresentable {}
+extension TSCoreSDK.TSpseudoRandomAlgorithm : Swift.Equatable {}
+extension TSCoreSDK.TSpseudoRandomAlgorithm : Swift.Hashable {}
+extension TSCoreSDK.TSpseudoRandomAlgorithm : Swift.RawRepresentable {}
+extension TSCoreSDK.TSVolatileECKeySize : Swift.Equatable {}
+extension TSCoreSDK.TSVolatileECKeySize : Swift.Hashable {}
+extension TSCoreSDK.TSVolatileECKeySize : Swift.RawRepresentable {}
+extension TSCoreSDK.TSStorageErrorCode : Swift.Equatable {}
+extension TSCoreSDK.TSStorageErrorCode : Swift.Hashable {}
+extension TSCoreSDK.TSHttpMethod : Swift.Equatable {}
+extension TSCoreSDK.TSHttpMethod : Swift.Hashable {}
+extension TSCoreSDK.TSHttpMethod : Swift.RawRepresentable {}

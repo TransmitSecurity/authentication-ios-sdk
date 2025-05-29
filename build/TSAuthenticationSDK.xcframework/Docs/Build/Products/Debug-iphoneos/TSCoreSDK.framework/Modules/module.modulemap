@@ -1,0 +1,11 @@
+framework module TSCoreSDK {
+  umbrella header "TSCoreSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module TSCoreSDK.Swift {
+  header "TSCoreSDK-Swift.h"
+  requires objc
+}

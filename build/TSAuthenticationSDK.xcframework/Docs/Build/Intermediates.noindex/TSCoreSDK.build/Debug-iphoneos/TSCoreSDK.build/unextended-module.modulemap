@@ -1,0 +1,10 @@
+framework module TSCoreSDK {
+  umbrella header "TSCoreSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module TSCoreSDK.__Swift {
+  exclude header "TSCoreSDK-Swift.h"
+}

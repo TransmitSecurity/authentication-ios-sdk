@@ -1,0 +1,23 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/ec2-user/actions-runner/_work/mobile-ios-authentication-sdk/mobile-ios-authentication-sdk/mobile-ios-authentication-sdk/docs/Build/Products/Debug-iphoneos/TSCoreSDK.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/ec2-user/actions-runner/_work/mobile-ios-authentication-sdk/mobile-ios-authentication-sdk/mobile-ios-authentication-sdk/docs/Build/Intermediates.noindex/TSCoreSDK.build/Debug-iphoneos/TSCoreSDK.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    'type': 'directory',
+    'name': "/Users/ec2-user/actions-runner/_work/mobile-ios-authentication-sdk/mobile-ios-authentication-sdk/mobile-ios-authentication-sdk/docs/Build/Products/Debug-iphoneos/TSCoreSDK.framework/Headers"
+    'contents': [{
+      'type': 'file',
+      'name': "TSCoreSDK-Swift.h",
+      'external-contents': "/Users/ec2-user/actions-runner/_work/mobile-ios-authentication-sdk/mobile-ios-authentication-sdk/mobile-ios-authentication-sdk/docs/Build/Intermediates.noindex/TSCoreSDK.build/Debug-iphoneos/TSCoreSDK.build/unextended-interface-header.h",
+    }]
+    }]
+}
