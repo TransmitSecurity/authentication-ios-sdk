@@ -1,4 +1,0 @@
-Target dependency graph (2 targets)
-Target 'TSAuthenticationSDK' in project 'TSAuthenticationSDK'
-➜ Implicit dependency on target 'TSCoreSDK' in project 'TSCoreSDK' via file 'TSCoreSDK.framework' in build phase 'Link Binary'
-Target 'TSCoreSDK' in project 'TSCoreSDK' (no dependencies)
