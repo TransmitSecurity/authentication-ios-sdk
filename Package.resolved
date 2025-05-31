@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "core-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TransmitSecurity/core-ios-sdk.git",
+      "state" : {
+        "revision" : "e3aa3b9161c70d48f61c5d9cd90ea81d28d75cf6",
+        "version" : "1.0.25"
+      }
+    }
+  ],
+  "version" : 2
+}
