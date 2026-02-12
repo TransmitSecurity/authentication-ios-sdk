@@ -19,6 +19,10 @@ public typealias TSTOTPRegistrationCompletion = (Result<TSTOTPRegistrationResult
 public typealias TSTOTPGenerateCodeCompletion = (Result<TSTOTPGenerateCodeResult, TSAuthenticationError>) -> ()
 public typealias TSApprovalCompletion = (Result<TSAuthenticationResult, TSAuthenticationError>) -> ()
 public typealias TSNativeBiometricsApprovalCompletion = (Result<TSNativeBiometricsAuthenticationResult, TSAuthenticationError>) -> ()
+public typealias TSSignChallengeCompletion = (Result<TSSignChallengeResult, TSAuthenticationError>) -> Void
+public typealias TSPinCodeRegistrationCompletion = (Result<TSPinCodeRegistrationResult, TSAuthenticationError>) -> ()
+public typealias TSPinCodeAuthenticationCompletion = (Result<TSPinCodeAuthenticationResult, TSAuthenticationError>) -> ()
+public typealias TSPinCodeUnregistrationCompletion = (Result<TSPinCodeUnregistrationResult, TSAuthenticationError>) -> ()
 
 /// Alternate paths used by the SDK to route API calls to your proxy server.
 public struct WebAuthnApis: Codable {
@@ -65,7 +69,7 @@ public enum TSTOTPSecurityType: Codable {
     case none
 }
 
-public struct TSDeviceInfo: Codable {
+public struct TSDeviceInfo: Codable, @unchecked Sendable {
     public let publicKeyId: String
     
     public let publicKey: String
@@ -79,9 +83,8 @@ protocol TSBaseAuthenticationSdkProtocol {
     static func isWebAuthnSupported() -> Bool
 }
 
-final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, TSLogConfigurable {
+final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, TSLogConfigurable, @unchecked Sendable {
 
-    
     public static let shared: TSAuthentication = TSAuthentication()
     
     private var controller: TSAuthenticationController?
@@ -147,6 +150,17 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     }
     
     /**
+     Initiates the client-side WebAuthn credential registration process using parameters provided by the backend.
+     - Parameter webAuthnRegistrationData: The JSON response object received from your backend containing the necessary data to initiate the WebAuthn registration on the client device.
+     - Parameter completion: An optional closure that is called asynchronously upon the completion (either success or failure) of the WebAuthn registration attempt.
+     */
+    public func registerWebAuthn(_ webAuthnRegistrationData: TSWebAuthnRegistrationData, completion: TSRegistrationCompletion?) {
+        guard let controller else { completion?(.failure(.notInitialized)); return }
+        // 1. webauthn-registration: start registration
+        controller.register(webAuthnRegistrationData, completion: completion)
+    }
+    
+    /**
      Invokes a WebAuthn credential authentication, including prompting the user for biometrics.
      If authentication is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
      The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
@@ -158,7 +172,18 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     }
     
     /**
-     Invokes a WebAuthn credential sign transaction, including prompting the user for biometrics.
+     Invokes a WebAuthn credential authentication, including prompting the user for biometrics.
+     - Parameter webAuthnAuthenticationData: The JSON response object received from your backend containing the necessary data to initiate the WebAuthn authentication on the client device.
+     - Parameter completion: A closure that is called asynchronously upon the completion (success or failure) of the WebAuthn authentication attempt.
+     */
+    public func authenticateWebAuthn(_ webAuthnAuthenticationData: TSWebAuthnAuthenticationData, options: TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationCompletion? = nil) {
+        guard let controller else { completion?(.failure(.notInitialized)); return }
+        
+        controller.authenticate(webAuthnAuthenticationData, options: options, completion: completion)
+    }
+    
+    /**
+     Invokes a WebAuthn credential signing transaction, including prompting the user for biometrics.
      If transaction signing is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
      The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
      */
@@ -166,6 +191,17 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         guard let controller else { completion?(.failure(.notInitialized)); return }
         
         controller.authenticate(username: username, options: options, completion: completion)
+    }
+    
+    /**
+     Initiates a WebAuthn credential signing transaction, typically prompting the user for biometrics or a security key.
+     - Parameter webAuthnAuthenticationData: The JSON response object received from your backend containing the necessary data to initiate the WebAuthn authentication on the client device.
+     - Parameter completion: A closure called asynchronously upon completion (success or failure) of the WebAuthn signing attempt.
+     */
+    public func signWebauthnTransaction(_ webAuthnAuthenticationData: TSWebAuthnAuthenticationData, options: TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSAuthenticationCompletion? = nil) {
+        guard let controller else { completion?(.failure(.notInitialized)); return }
+        
+        controller.authenticate(webAuthnAuthenticationData, options: options)
     }
     
     /**
@@ -182,6 +218,20 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         guard let controller else { completion?(.failure(.notInitialized)); return }
         
         controller.approval(username: username, approvalData: approvalData, options: options, completion: completion)
+    }
+    
+    /**
+     Invokes a WebAuthn credential authentication, including prompting the user for biometrics, in order to verify a user's authorization for a specific action.
+     If authentication is completed successfully, this function will return a callback containing a WebAuthnEncodedResult.
+     The WebAuthnEncodedResult should be used to make a completion request using your backend API which will commuincate with Transmit's Service
+     
+     - Parameter webAuthnAuthenticationData: The JSON response object received from your backend containing the necessary data to initiate the WebAuthn approval on the client device.
+     - Parameter completion: A closure that is called asynchronously upon the completion (success or failure) of the WebAuthn approval attempt.
+     */
+    public func approvalWebAuthn(_ webAuthnAuthenticationData: TSWebAuthnAuthenticationData, options: TSAuthentication.WebAuthnAuthenticationOptions = [], completion: TSApprovalCompletion? = nil) {
+        guard let controller else { completion?(.failure(.notInitialized)); return }
+        
+        controller.approval(webAuthnAuthenticationData, options: options, completion: completion)
     }
     
     /**
@@ -272,6 +322,157 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         
         controller.generateTOTPCodeWithChallenge(UUID: UUID, challenge: challenge, completion: completion)
     }
+    
+    /// Registers a new PIN code for the given user, calling the completion handler when done.
+    ///
+    /// - Parameters:
+    ///   - username:   The user’s identifier.
+    ///   - pinCode:    The PIN string to register.
+    ///   - completion: A callback invoked on the MainActor with either:
+    ///       • `.success(TSPinCodeRegistrationResult)` on success, or
+    ///       • `.failure(TSAuthenticationError)` on error.
+    public func registerPinCode(username: String, pinCode: String, completion: @escaping TSPinCodeRegistrationCompletion) {
+        let completionBox = UncheckedCompletionBox(completion)
+        
+        Task {  [completionBox] in
+            do {
+                let result = try await registerPinCode(username: username, pinCode: pinCode)
+                Task { @MainActor in
+                    completionBox.call(.success(result))
+                }
+            } catch let error as TSPinCodeError {
+                Task { @MainActor in
+                    completionBox.call(.failure(.pinCodeError(error)))
+                }
+            } catch {
+                Task { @MainActor in
+                    completionBox.call(.failure(.pinCodeError(.internal(error))))
+                }
+            }
+        }
+    }
+    
+    /// Async variant that actually performs the PIN registration.
+    ///
+    /// - Parameters:
+    ///   - username: The user’s identifier.
+    ///   - pinCode:  The PIN string to register.
+    /// - Returns: `TSPinCodeRegistrationResult` on success.
+    /// - Throws: `TSAuthenticationError` from the controller.
+    public func registerPinCode(username: String, pinCode: String) async throws -> TSPinCodeRegistrationResult {
+        guard let controller else { throw TSAuthenticationError.notInitialized }
+        
+        do {
+            return try await controller.registerPINCode(username: username, pinCode: pinCode)
+        } catch let error as TSPinCodeError {
+            TSLog.e("PIN code registration failed with error: \(error)")
+            throw TSAuthenticationError.pinCodeError(error)
+        } catch {
+            TSLog.e("PIN code registration failed with error: \(error)")
+            throw TSAuthenticationError.pinCodeError(.internal(error))
+        }
+    }
+    
+    /// Authenticates a user’s PIN against a server‐provided challenge, calling the completion handler when done.
+    ///
+    /// - Parameters:
+    ///   - username:   The user’s identifier.
+    ///   - pinCode:    The entered PIN string.
+    ///   - challenge:  A server‐provided challenge string to sign/verify.
+    ///   - completion: A callback invoked on the MainActor with either:
+    ///       • `.success(TSPinCodeAuthenticationResult)` on success, or
+    ///       • `.failure(TSAuthenticationError)` on error.
+    public func authenticatePinCode(username: String, pinCode: String, challenge: String, completion: @escaping TSPinCodeAuthenticationCompletion) {
+        
+        let completionBox = UncheckedCompletionBox(completion)
+        
+        Task {  [completionBox] in
+            do {
+                let result = try await authenticatePinCode(username: username, pinCode: pinCode, challenge: challenge)
+                Task { @MainActor in
+                    completionBox.call(.success(result))
+                }
+            } catch let error as TSPinCodeError {
+                Task { @MainActor in
+                    completionBox.call(.failure(.pinCodeError(error)))
+                }
+            } catch {
+                Task { @MainActor in
+                    completionBox.call(.failure(.pinCodeError(.internal(error))))
+                }
+            }
+        }
+    }
+    
+    
+    /// Async variant that actually performs the PIN authentication.
+    ///
+    /// - Parameters:
+    ///   - username:  The user’s identifier.
+    ///   - pinCode:   The entered PIN string.
+    ///   - challenge: The server‐provided challenge to prove possession of the PIN key.
+    /// - Returns: `TSPinCodeAuthenticationResult` on success.
+    /// - Throws: `TSAuthenticationError` from the controller.
+    public func authenticatePinCode(username: String, pinCode: String, challenge: String) async throws -> TSPinCodeAuthenticationResult {
+        guard let controller else { throw TSAuthenticationError.notInitialized }
+        do {
+            return try await controller.authenticatePinCode(username: username, pinCode: pinCode, challenge: challenge)
+        } catch let error as TSPinCodeError {
+            TSLog.e("PIN code authentication failed with error: \(error)")
+            throw TSAuthenticationError.pinCodeError(error)
+        } catch {
+            TSLog.e("PIN code authentication failed with error: \(error)")
+            throw TSAuthenticationError.pinCodeError(.internal(error))
+        }
+    }
+    
+    /// Unregister user's Pin Code authenticator.
+    ///
+    /// - Parameters:
+    ///   - username:   The user’s identifier.
+    ///   - completion: A callback invoked on the MainActor with either:
+    ///       • `.success(TSPinCodeUnregistrationResult)` on success, or
+    ///       • `.failure(TSAuthenticationError)` on error.
+    public func unregisterPinCode(username: String, completion: @escaping TSPinCodeUnregistrationCompletion) {
+        let completionBox = UncheckedCompletionBox(completion)
+
+        Task {  [completionBox] in
+            do {
+                let result = try await unregisterPinCode(username: username)
+                Task { @MainActor in
+                    completionBox.call(.success(result))
+                }
+            } catch let error as TSPinCodeError {
+                Task { @MainActor in
+                    completionBox.call(.failure(.pinCodeError(error)))
+                }
+            } catch {
+                Task { @MainActor in
+                    completionBox.call(.failure(.pinCodeError(.internal(error))))
+                }
+            }
+        }
+    }
+    
+    /// Unregister user's Pin Code authenticator.
+    ///
+    /// - Parameters:
+    ///   - username: The user’s identifier.
+    /// - Returns: `TSPinCodeUnregistrationResult` on success.
+    /// - Throws: `TSAuthenticationError` from the controller.
+    public func unregisterPinCode(username: String) async throws -> TSPinCodeUnregistrationResult {
+        guard let controller else { throw TSAuthenticationError.notInitialized }
+        
+        do {
+            return try await controller.unregisterPinCode(username: username)
+        } catch let error as TSPinCodeError {
+            TSLog.e("PIN code unregistration failed with error: \(error)")
+            throw TSAuthenticationError.pinCodeError(error)
+        } catch {
+            TSLog.e("PIN code unregistration failed with error: \(error)")
+            throw TSAuthenticationError.pinCodeError(.internal(error))
+        }
+    }
 
     /**
      Retrieves device-specific information, such as public key and its associated ID, which are unique to the application installed on the device.
@@ -280,6 +481,15 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
         guard let controller else { completion(.failure(.notInitialized)); return }
         
         controller.getDeviceInfo(completion)
+    }
+    
+    /**
+     Signs the `challenge` string with the device key.
+     - Parameter challenge: The string to sign.
+     - Parameter completion: The callback containing either error or result object contaiting signed challenge.
+     */
+    public func signWithDeviceKey(challenge: String, completion: @escaping TSSignChallengeCompletion) {
+        controller?.signChallenge(challenge, completion: completion)
     }
     
     /**
@@ -320,7 +530,7 @@ private extension TSAuthentication {
 public extension TSAuthentication {
     
     /// Options for WebAuthn authentication.
-    struct WebAuthnAuthenticationOptions: OptionSet {
+    struct WebAuthnAuthenticationOptions: OptionSet, @unchecked Sendable {
         public let rawValue: Int
         
         public init(rawValue: Int) {
