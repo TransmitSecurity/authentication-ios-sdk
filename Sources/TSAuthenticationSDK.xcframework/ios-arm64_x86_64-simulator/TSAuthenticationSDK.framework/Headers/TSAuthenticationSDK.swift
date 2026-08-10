@@ -59,7 +59,7 @@ public struct TSAuthenticationConfiguration {
 }
 
 public enum TSTOTPSecurityType: Codable {
-    /** 
+    /**
      Securing the secret with biometric authentication, adding an extra layer of security.
      */
     case biometric
@@ -67,9 +67,19 @@ public enum TSTOTPSecurityType: Codable {
      No additional protection for secret
      */
     case none
+    /**
+     Securing the secret with the device PIN or password.
+     The system passcode prompt is shown before generating a TOTP code.
+     */
+    case devicePin
+    /**
+     Securing the secret with either device PIN or biometric authentication.
+     The system authentication prompt (biometrics with passcode fallback) is shown before generating a TOTP code.
+     */
+    case devicePinOrBiometric
 }
 
-public struct TSDeviceInfo: Codable {
+public struct TSDeviceInfo: Codable, @unchecked Sendable {
     public let publicKeyId: String
     
     public let publicKey: String
@@ -83,9 +93,8 @@ protocol TSBaseAuthenticationSdkProtocol {
     static func isWebAuthnSupported() -> Bool
 }
 
-final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, TSLogConfigurable {
+final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, TSLogConfigurable, @unchecked Sendable {
 
-    
     public static let shared: TSAuthentication = TSAuthentication()
     
     private var controller: TSAuthenticationController?
@@ -333,14 +342,22 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     ///       • `.success(TSPinCodeRegistrationResult)` on success, or
     ///       • `.failure(TSAuthenticationError)` on error.
     public func registerPinCode(username: String, pinCode: String, completion: @escaping TSPinCodeRegistrationCompletion) {
-        Task { @MainActor in
+        let completionBox = UncheckedCompletionBox(completion)
+        
+        Task {  [completionBox] in
             do {
                 let result = try await registerPinCode(username: username, pinCode: pinCode)
-                completion(.success(result))
+                Task { @MainActor in
+                    completionBox.call(.success(result))
+                }
             } catch let error as TSPinCodeError {
-                completion(.failure(.pinCodeError(error)))
+                Task { @MainActor in
+                    completionBox.call(.failure(.pinCodeError(error)))
+                }
             } catch {
-                completion(.failure(.pinCodeError(.internal(error))))
+                Task { @MainActor in
+                    completionBox.call(.failure(.pinCodeError(.internal(error))))
+                }
             }
         }
     }
@@ -376,15 +393,46 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     ///       • `.success(TSPinCodeAuthenticationResult)` on success, or
     ///       • `.failure(TSAuthenticationError)` on error.
     public func authenticatePinCode(username: String, pinCode: String, challenge: String, completion: @escaping TSPinCodeAuthenticationCompletion) {
-        Task { @MainActor in
+        
+        let completionBox = UncheckedCompletionBox(completion)
+        
+        Task {  [completionBox] in
             do {
                 let result = try await authenticatePinCode(username: username, pinCode: pinCode, challenge: challenge)
-                completion(.success(result))
+                Task { @MainActor in
+                    completionBox.call(.success(result))
+                }
             } catch let error as TSPinCodeError {
-                completion(.failure(.pinCodeError(error)))
+                Task { @MainActor in
+                    completionBox.call(.failure(.pinCodeError(error)))
+                }
             } catch {
-                completion(.failure(.pinCodeError(.internal(error))))
+                Task { @MainActor in
+                    completionBox.call(.failure(.pinCodeError(.internal(error))))
+                }
             }
+        }
+    }
+    
+    
+    /// Async variant that actually performs the PIN authentication.
+    ///
+    /// - Parameters:
+    ///   - username:  The user’s identifier.
+    ///   - pinCode:   The entered PIN string.
+    ///   - challenge: The server‐provided challenge to prove possession of the PIN key.
+    /// - Returns: `TSPinCodeAuthenticationResult` on success.
+    /// - Throws: `TSAuthenticationError` from the controller.
+    public func authenticatePinCode(username: String, pinCode: String, challenge: String) async throws -> TSPinCodeAuthenticationResult {
+        guard let controller else { throw TSAuthenticationError.notInitialized }
+        do {
+            return try await controller.authenticatePinCode(username: username, pinCode: pinCode, challenge: challenge)
+        } catch let error as TSPinCodeError {
+            TSLog.e("PIN code authentication failed with error: \(error)")
+            throw TSAuthenticationError.pinCodeError(error)
+        } catch {
+            TSLog.e("PIN code authentication failed with error: \(error)")
+            throw TSAuthenticationError.pinCodeError(.internal(error))
         }
     }
     
@@ -396,14 +444,22 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     ///       • `.success(TSPinCodeUnregistrationResult)` on success, or
     ///       • `.failure(TSAuthenticationError)` on error.
     public func unregisterPinCode(username: String, completion: @escaping TSPinCodeUnregistrationCompletion) {
-        Task { @MainActor in
+        let completionBox = UncheckedCompletionBox(completion)
+
+        Task {  [completionBox] in
             do {
                 let result = try await unregisterPinCode(username: username)
-                completion(.success(result))
+                Task { @MainActor in
+                    completionBox.call(.success(result))
+                }
             } catch let error as TSPinCodeError {
-                completion(.failure(.pinCodeError(error)))
+                Task { @MainActor in
+                    completionBox.call(.failure(.pinCodeError(error)))
+                }
             } catch {
-                completion(.failure(.pinCodeError(.internal(error))))
+                Task { @MainActor in
+                    completionBox.call(.failure(.pinCodeError(.internal(error))))
+                }
             }
         }
     }
@@ -424,27 +480,6 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
             throw TSAuthenticationError.pinCodeError(error)
         } catch {
             TSLog.e("PIN code unregistration failed with error: \(error)")
-            throw TSAuthenticationError.pinCodeError(.internal(error))
-        }
-    }
-    
-    /// Async variant that actually performs the PIN authentication.
-    ///
-    /// - Parameters:
-    ///   - username:  The user’s identifier.
-    ///   - pinCode:   The entered PIN string.
-    ///   - challenge: The server‐provided challenge to prove possession of the PIN key.
-    /// - Returns: `TSPinCodeAuthenticationResult` on success.
-    /// - Throws: `TSAuthenticationError` from the controller.
-    public func authenticatePinCode(username: String, pinCode: String, challenge: String) async throws -> TSPinCodeAuthenticationResult {
-        guard let controller else { throw TSAuthenticationError.notInitialized }
-        do {
-            return try await controller.authenticatePinCode(username: username, pinCode: pinCode, challenge: challenge)
-        } catch let error as TSPinCodeError {
-            TSLog.e("PIN code authentication failed with error: \(error)")
-            throw TSAuthenticationError.pinCodeError(error)
-        } catch {
-            TSLog.e("PIN code authentication failed with error: \(error)")
             throw TSAuthenticationError.pinCodeError(.internal(error))
         }
     }
@@ -484,6 +519,32 @@ final public class TSAuthentication: NSObject, TSBaseAuthenticationSdkProtocol, 
     public static func isNativeBiometricsEnrolled() -> Bool {
         TSAuthenticationController.isNativeBiometricsEnrolled()
     }
+
+    /**
+     Returns the biometric type supported by this device.
+
+     The result reflects the hardware capability regardless of enrollment state.
+     Call ``nativeBiometricsStatus()`` to determine whether the user has actually enrolled.
+     @return
+     A `TSBiometricType` value: `.faceID`, `.touchID`, `.opticID`, or `.none`.
+     */
+    public static func nativeBiometricsType() -> TSBiometricType {
+        TSAuthenticationController.nativeBiometricsType()
+    }
+
+    /**
+     Returns the current enrollment and availability status of biometric authentication.
+
+     Possible values:
+     - `.available` — biometrics are enrolled and ready to use.
+     - `.notEnrolled` — hardware is present but the user has not set up biometrics.
+     - `.notAvailable` — no biometric hardware on this device.
+     - `.permissionDenied` — hardware exists but the app's biometric access was revoked in Settings.
+     - `.lockedOut` — too many failed attempts; passcode is required to re-enable biometrics.
+     */
+    public static func nativeBiometricsStatus() -> TSBiometricStatus {
+        TSAuthenticationController.nativeBiometricsStatus()
+    }
 }
 
 
@@ -505,7 +566,7 @@ private extension TSAuthentication {
 public extension TSAuthentication {
     
     /// Options for WebAuthn authentication.
-    struct WebAuthnAuthenticationOptions: OptionSet {
+    struct WebAuthnAuthenticationOptions: OptionSet, @unchecked Sendable {
         public let rawValue: Int
         
         public init(rawValue: Int) {

@@ -417,6 +417,86 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "devicePin",
+            "printedName": "devicePin",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPSecurityType.Type) -> TSAuthenticationSDK.TSTOTPSecurityType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSTOTPSecurityType",
+                    "printedName": "TSAuthenticationSDK.TSTOTPSecurityType",
+                    "usr": "s:19TSAuthenticationSDK18TSTOTPSecurityTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPSecurityType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPSecurityType",
+                        "printedName": "TSAuthenticationSDK.TSTOTPSecurityType",
+                        "usr": "s:19TSAuthenticationSDK18TSTOTPSecurityTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK18TSTOTPSecurityTypeO9devicePinyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK18TSTOTPSecurityTypeO9devicePinyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "devicePinOrBiometric",
+            "printedName": "devicePinOrBiometric",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPSecurityType.Type) -> TSAuthenticationSDK.TSTOTPSecurityType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSTOTPSecurityType",
+                    "printedName": "TSAuthenticationSDK.TSTOTPSecurityType",
+                    "usr": "s:19TSAuthenticationSDK18TSTOTPSecurityTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPSecurityType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPSecurityType",
+                        "printedName": "TSAuthenticationSDK.TSTOTPSecurityType",
+                        "usr": "s:19TSAuthenticationSDK18TSTOTPSecurityTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK18TSTOTPSecurityTypeO20devicePinOrBiometricyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK18TSTOTPSecurityTypeO20devicePinOrBiometricyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
             "kind": "Function",
             "name": "==",
             "printedName": "==(_:_:)",
@@ -796,6 +876,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -2213,6 +2300,48 @@
           },
           {
             "kind": "Function",
+            "name": "authenticatePinCode",
+            "printedName": "authenticatePinCode(username:pinCode:challenge:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TSPinCodeAuthenticationResult",
+                "printedName": "TSAuthenticationSDK.TSPinCodeAuthenticationResult",
+                "usr": "s:19TSAuthenticationSDK29TSPinCodeAuthenticationResultC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK0A0C19authenticatePinCode8username03pinE09challengeAA05TSPinE20AuthenticationResultCSS_S2StYaKF",
+            "mangledName": "$s19TSAuthenticationSDK0A0C19authenticatePinCode8username03pinE09challengeAA05TSPinE20AuthenticationResultCSS_S2StYaKF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "unregisterPinCode",
             "printedName": "unregisterPinCode(username:completion:)",
             "children": [
@@ -2292,48 +2421,6 @@
             "declKind": "Func",
             "usr": "s:19TSAuthenticationSDK0A0C17unregisterPinCode8usernameAA05TSPinE20UnregistrationResultCSS_tYaKF",
             "mangledName": "$s19TSAuthenticationSDK0A0C17unregisterPinCode8usernameAA05TSPinE20UnregistrationResultCSS_tYaKF",
-            "moduleName": "TSAuthenticationSDK",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "authenticatePinCode",
-            "printedName": "authenticatePinCode(username:pinCode:challenge:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "TSPinCodeAuthenticationResult",
-                "printedName": "TSAuthenticationSDK.TSPinCodeAuthenticationResult",
-                "usr": "s:19TSAuthenticationSDK29TSPinCodeAuthenticationResultC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:19TSAuthenticationSDK0A0C19authenticatePinCode8username03pinE09challengeAA05TSPinE20AuthenticationResultCSS_S2StYaKF",
-            "mangledName": "$s19TSAuthenticationSDK0A0C19authenticatePinCode8username03pinE09challengeAA05TSPinE20AuthenticationResultCSS_S2StYaKF",
             "moduleName": "TSAuthenticationSDK",
             "declAttributes": [
               "Final",
@@ -2496,6 +2583,54 @@
             "declKind": "Func",
             "usr": "s:19TSAuthenticationSDK0A0C26isNativeBiometricsEnrolledSbyFZ",
             "mangledName": "$s19TSAuthenticationSDK0A0C26isNativeBiometricsEnrolledSbyFZ",
+            "moduleName": "TSAuthenticationSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeBiometricsType",
+            "printedName": "nativeBiometricsType()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TSBiometricType",
+                "printedName": "TSAuthenticationSDK.TSBiometricType",
+                "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK0A0C20nativeBiometricsTypeAA011TSBiometricE0OyFZ",
+            "mangledName": "$s19TSAuthenticationSDK0A0C20nativeBiometricsTypeAA011TSBiometricE0OyFZ",
+            "moduleName": "TSAuthenticationSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeBiometricsStatus",
+            "printedName": "nativeBiometricsStatus()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TSBiometricStatus",
+                "printedName": "TSAuthenticationSDK.TSBiometricStatus",
+                "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK0A0C22nativeBiometricsStatusAA011TSBiometricE0OyFZ",
+            "mangledName": "$s19TSAuthenticationSDK0A0C22nativeBiometricsStatusAA011TSBiometricE0OyFZ",
             "moduleName": "TSAuthenticationSDK",
             "static": true,
             "declAttributes": [
@@ -2674,6 +2809,13 @@
                 ],
                 "usr": "s:s9OptionSetP",
                 "mangledName": "$ss9OptionSetP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
               },
               {
                 "kind": "Conformance",
@@ -2897,6 +3039,13 @@
             "printedName": "TSLogConfigurable",
             "usr": "s:9TSCoreSDK17TSLogConfigurableP",
             "mangledName": "$s9TSCoreSDK17TSLogConfigurableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -4712,6 +4861,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -5002,6 +5158,166 @@
           },
           {
             "kind": "Var",
+            "name": "devicePinNotAvailable",
+            "printedName": "devicePinNotAvailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSTOTPError",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError",
+                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO21devicePinNotAvailableyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO21devicePinNotAvailableyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "devicePinOrBiometricNotAvailable",
+            "printedName": "devicePinOrBiometricNotAvailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSTOTPError",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError",
+                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO32devicePinOrBiometricNotAvailableyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO32devicePinOrBiometricNotAvailableyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userCanceled",
+            "printedName": "userCanceled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSTOTPError",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError",
+                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO12userCanceledyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO12userCanceledyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "authenticationFailed",
+            "printedName": "authenticationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSTOTPError.Type) -> TSAuthenticationSDK.TSTOTPError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSTOTPError",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError",
+                    "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSTOTPError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSTOTPError",
+                        "printedName": "TSAuthenticationSDK.TSTOTPError",
+                        "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK11TSTOTPErrorO20authenticationFailedyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK11TSTOTPErrorO20authenticationFailedyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "internal",
             "printedName": "internal",
             "children": [
@@ -5190,6 +5506,46 @@
           },
           {
             "kind": "Var",
+            "name": "nativeBiometricsNotEnrolled",
+            "printedName": "nativeBiometricsNotEnrolled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError.Type) -> TSAuthenticationSDK.TSNativeBiometricsError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSNativeBiometricsError",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                    "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSNativeBiometricsError",
+                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO06nativeD11NotEnrolledyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO06nativeD11NotEnrolledyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "notRegistered",
             "printedName": "notRegistered",
             "children": [
@@ -5223,6 +5579,206 @@
             "declKind": "EnumElement",
             "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO13notRegisteredyA2CmF",
             "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO13notRegisteredyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "canceled",
+            "printedName": "canceled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError.Type) -> TSAuthenticationSDK.TSNativeBiometricsError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSNativeBiometricsError",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                    "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSNativeBiometricsError",
+                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO8canceledyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO8canceledyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userCanceled",
+            "printedName": "userCanceled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError.Type) -> TSAuthenticationSDK.TSNativeBiometricsError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSNativeBiometricsError",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                    "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSNativeBiometricsError",
+                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO12userCanceledyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO12userCanceledyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "failure",
+            "printedName": "failure",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError.Type) -> TSAuthenticationSDK.TSNativeBiometricsError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSNativeBiometricsError",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                    "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSNativeBiometricsError",
+                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO7failureyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO7failureyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "lockedOut",
+            "printedName": "lockedOut",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError.Type) -> TSAuthenticationSDK.TSNativeBiometricsError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSNativeBiometricsError",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                    "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSNativeBiometricsError",
+                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO9lockedOutyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO9lockedOutyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "permissionDenied",
+            "printedName": "permissionDenied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSNativeBiometricsError.Type) -> TSAuthenticationSDK.TSNativeBiometricsError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSNativeBiometricsError",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                    "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSNativeBiometricsError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSNativeBiometricsError",
+                        "printedName": "TSAuthenticationSDK.TSNativeBiometricsError",
+                        "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK23TSNativeBiometricsErrorO16permissionDeniedyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK23TSNativeBiometricsErrorO16permissionDeniedyA2CmF",
             "moduleName": "TSAuthenticationSDK",
             "declAttributes": [
               "RawDocComment"
@@ -5926,6 +6482,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -6058,6 +6621,16 @@
         "printedName": "CryptoKit",
         "declKind": "Import",
         "moduleName": "TSAuthenticationSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "LocalAuthentication",
+        "printedName": "LocalAuthentication",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -6372,6 +6945,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -6678,6 +7258,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -6871,6 +7458,13 @@
       },
       {
         "kind": "Import",
+        "name": "LocalAuthentication",
+        "printedName": "LocalAuthentication",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK"
+      },
+      {
+        "kind": "Import",
         "name": "TSCoreSDK",
         "printedName": "TSCoreSDK",
         "declKind": "Import",
@@ -7014,6 +7608,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -7094,6 +7695,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -7222,6 +7830,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -7433,6 +8048,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -7514,6 +8136,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -7786,6 +8415,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -7997,6 +8633,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -8125,6 +8768,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -8207,6 +8857,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -9623,6 +10280,658 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TSBiometricType",
+        "printedName": "TSBiometricType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "faceID",
+            "printedName": "faceID",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSBiometricType.Type) -> TSAuthenticationSDK.TSBiometricType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSBiometricType",
+                    "printedName": "TSAuthenticationSDK.TSBiometricType",
+                    "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSBiometricType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSBiometricType",
+                        "printedName": "TSAuthenticationSDK.TSBiometricType",
+                        "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO6faceIDyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSBiometricTypeO6faceIDyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "touchID",
+            "printedName": "touchID",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSBiometricType.Type) -> TSAuthenticationSDK.TSBiometricType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSBiometricType",
+                    "printedName": "TSAuthenticationSDK.TSBiometricType",
+                    "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSBiometricType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSBiometricType",
+                        "printedName": "TSAuthenticationSDK.TSBiometricType",
+                        "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO7touchIDyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSBiometricTypeO7touchIDyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "opticID",
+            "printedName": "opticID",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSBiometricType.Type) -> TSAuthenticationSDK.TSBiometricType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSBiometricType",
+                    "printedName": "TSAuthenticationSDK.TSBiometricType",
+                    "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSBiometricType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSBiometricType",
+                        "printedName": "TSAuthenticationSDK.TSBiometricType",
+                        "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO7opticIDyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSBiometricTypeO7opticIDyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSBiometricType.Type) -> TSAuthenticationSDK.TSBiometricType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSBiometricType",
+                    "printedName": "TSAuthenticationSDK.TSBiometricType",
+                    "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSBiometricType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSBiometricType",
+                        "printedName": "TSAuthenticationSDK.TSBiometricType",
+                        "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO4noneyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK15TSBiometricTypeO4noneyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TSBiometricType",
+                "printedName": "TSAuthenticationSDK.TSBiometricType",
+                "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TSBiometricType",
+                "printedName": "TSAuthenticationSDK.TSBiometricType",
+                "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s19TSAuthenticationSDK15TSBiometricTypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "TSAuthenticationSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO9hashValueSivp",
+            "mangledName": "$s19TSAuthenticationSDK15TSBiometricTypeO9hashValueSivp",
+            "moduleName": "TSAuthenticationSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO9hashValueSivg",
+                "mangledName": "$s19TSAuthenticationSDK15TSBiometricTypeO9hashValueSivg",
+                "moduleName": "TSAuthenticationSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s19TSAuthenticationSDK15TSBiometricTypeO4hash4intoys6HasherVz_tF",
+            "moduleName": "TSAuthenticationSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:19TSAuthenticationSDK15TSBiometricTypeO",
+        "mangledName": "$s19TSAuthenticationSDK15TSBiometricTypeO",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TSBiometricStatus",
+        "printedName": "TSBiometricStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "available",
+            "printedName": "available",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSBiometricStatus.Type) -> TSAuthenticationSDK.TSBiometricStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSBiometricStatus",
+                    "printedName": "TSAuthenticationSDK.TSBiometricStatus",
+                    "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSBiometricStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSBiometricStatus",
+                        "printedName": "TSAuthenticationSDK.TSBiometricStatus",
+                        "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO9availableyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK17TSBiometricStatusO9availableyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "notEnrolled",
+            "printedName": "notEnrolled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSBiometricStatus.Type) -> TSAuthenticationSDK.TSBiometricStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSBiometricStatus",
+                    "printedName": "TSAuthenticationSDK.TSBiometricStatus",
+                    "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSBiometricStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSBiometricStatus",
+                        "printedName": "TSAuthenticationSDK.TSBiometricStatus",
+                        "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO11notEnrolledyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK17TSBiometricStatusO11notEnrolledyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "notAvailable",
+            "printedName": "notAvailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSBiometricStatus.Type) -> TSAuthenticationSDK.TSBiometricStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSBiometricStatus",
+                    "printedName": "TSAuthenticationSDK.TSBiometricStatus",
+                    "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSBiometricStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSBiometricStatus",
+                        "printedName": "TSAuthenticationSDK.TSBiometricStatus",
+                        "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO12notAvailableyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK17TSBiometricStatusO12notAvailableyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "permissionDenied",
+            "printedName": "permissionDenied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSBiometricStatus.Type) -> TSAuthenticationSDK.TSBiometricStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSBiometricStatus",
+                    "printedName": "TSAuthenticationSDK.TSBiometricStatus",
+                    "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSBiometricStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSBiometricStatus",
+                        "printedName": "TSAuthenticationSDK.TSBiometricStatus",
+                        "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO16permissionDeniedyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK17TSBiometricStatusO16permissionDeniedyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "lockedOut",
+            "printedName": "lockedOut",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TSAuthenticationSDK.TSBiometricStatus.Type) -> TSAuthenticationSDK.TSBiometricStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TSBiometricStatus",
+                    "printedName": "TSAuthenticationSDK.TSBiometricStatus",
+                    "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TSAuthenticationSDK.TSBiometricStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TSBiometricStatus",
+                        "printedName": "TSAuthenticationSDK.TSBiometricStatus",
+                        "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO9lockedOutyA2CmF",
+            "mangledName": "$s19TSAuthenticationSDK17TSBiometricStatusO9lockedOutyA2CmF",
+            "moduleName": "TSAuthenticationSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TSBiometricStatus",
+                "printedName": "TSAuthenticationSDK.TSBiometricStatus",
+                "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TSBiometricStatus",
+                "printedName": "TSAuthenticationSDK.TSBiometricStatus",
+                "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s19TSAuthenticationSDK17TSBiometricStatusO2eeoiySbAC_ACtFZ",
+            "moduleName": "TSAuthenticationSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO9hashValueSivp",
+            "mangledName": "$s19TSAuthenticationSDK17TSBiometricStatusO9hashValueSivp",
+            "moduleName": "TSAuthenticationSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO9hashValueSivg",
+                "mangledName": "$s19TSAuthenticationSDK17TSBiometricStatusO9hashValueSivg",
+                "moduleName": "TSAuthenticationSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s19TSAuthenticationSDK17TSBiometricStatusO4hash4intoys6HasherVz_tF",
+            "moduleName": "TSAuthenticationSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:19TSAuthenticationSDK17TSBiometricStatusO",
+        "mangledName": "$s19TSAuthenticationSDK17TSBiometricStatusO",
+        "moduleName": "TSAuthenticationSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
       }
     ],
     "json_format_version": 8
@@ -9631,70 +10940,70 @@
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "StringLiteral",
-      "offset": 3811,
+      "offset": 4249,
       "length": 18,
       "value": "\"TransmitSecurity\""
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "StringLiteral",
-      "offset": 3970,
+      "offset": 4408,
       "length": 34,
       "value": "\"https:\/\/api.transmitsecurity.io\/\""
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "Array",
-      "offset": 7551,
+      "offset": 7989,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "Array",
-      "offset": 8409,
+      "offset": 8847,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "Array",
-      "offset": 9175,
+      "offset": 9613,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "Array",
-      "offset": 10042,
+      "offset": 10480,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "Array",
-      "offset": 11205,
+      "offset": 11643,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "Array",
-      "offset": 12404,
+      "offset": 12842,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 25071,
+      "offset": 27527,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/API\/TSAuthenticationSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 25076,
+      "offset": 27532,
       "length": 1,
       "value": "0"
     },
@@ -9764,21 +11073,21 @@
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Models\/TSAuthenticationSessionData.swift",
       "kind": "StringLiteral",
-      "offset": 217,
+      "offset": 238,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Models\/TSAuthenticationSessionData.swift",
       "kind": "StringLiteral",
-      "offset": 260,
+      "offset": 281,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/WebAuthn\/WebAuthnAuthenticator.swift",
       "kind": "BooleanLiteral",
-      "offset": 833,
+      "offset": 1002,
       "length": 5,
       "value": "false"
     },
@@ -9848,35 +11157,35 @@
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/LocalPIN\/AuthenticationDriverLocalPin.swift",
       "kind": "IntegerLiteral",
-      "offset": 346,
+      "offset": 388,
       "length": 2,
       "value": "32"
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/LocalPIN\/AuthenticationDriverLocalPin.swift",
       "kind": "IntegerLiteral",
-      "offset": 393,
+      "offset": 435,
       "length": 2,
       "value": "64"
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/LocalPIN\/AuthenticationDriverLocalPin.swift",
       "kind": "IntegerLiteral",
-      "offset": 437,
+      "offset": 479,
       "length": 2,
       "value": "32"
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/LocalPIN\/AuthenticationDriverLocalPin.swift",
       "kind": "IntegerLiteral",
-      "offset": 552,
+      "offset": 594,
       "length": 7,
       "value": "100000"
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/LocalPIN\/AuthenticationDriverLocalPin.swift",
       "kind": "IntegerLiteral",
-      "offset": 663,
+      "offset": 705,
       "length": 1,
       "value": "1"
     },
@@ -10394,44 +11703,51 @@
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationController.swift",
       "kind": "StringLiteral",
-      "offset": 250,
+      "offset": 271,
       "length": 6,
       "value": "\"cis\/\""
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Impl\/TSAuthenticationController.swift",
       "kind": "Array",
-      "offset": 308,
+      "offset": 329,
       "length": 351,
       "value": "[\"https:\/\/api.idsec-dev.com\/\", \"https:\/\/api.idsec-stg.com\/\", \"https:\/\/api.transmitsecurity.io\/\", \"https:\/\/api.eu.transmitsecurity.io\/\", \"https:\/\/api.ca.transmitsecurity.io\/\", \"https:\/\/api.au.transmitsecurity.io\/\", \"https:\/\/api.sbx.transmitsecurity.io\/\"]"
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Types\/TSAuthenticationTypes.swift",
       "kind": "StringLiteral",
-      "offset": 967,
+      "offset": 988,
       "length": 21,
       "value": "\"webauthn_session_id\""
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Types\/TSAuthenticationTypes.swift",
       "kind": "StringLiteral",
-      "offset": 1030,
+      "offset": 1051,
       "length": 29,
       "value": "\"credential_creation_options\""
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Types\/TSAuthenticationTypes.swift",
       "kind": "StringLiteral",
-      "offset": 3904,
+      "offset": 3946,
       "length": 21,
       "value": "\"webauthn_session_id\""
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Types\/TSAuthenticationTypes.swift",
       "kind": "StringLiteral",
-      "offset": 3966,
+      "offset": 4008,
       "length": 28,
       "value": "\"credential_request_options\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/TOTP\/TOTPAuthenticator.swift",
+      "kind": "StringLiteral",
+      "offset": 744,
+      "length": 7,
+      "value": "\"_type\""
     },
     {
       "filePath": "\/Users\/ec2-user\/actions-runner\/_work\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/mobile-ios-authentication-sdk\/TSAuthenticationSDK\/Authenticators\/Utils\/Base32.swift",

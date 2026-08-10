@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name TSAuthenticationSDK
+// swift-compiler-version: Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 6 -enforce-exclusivity=checked -O -module-name TSAuthenticationSDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AuthenticationServices
 import CryptoKit
@@ -45,6 +45,8 @@ public struct TSAuthenticationConfiguration {
 public enum TSTOTPSecurityType : Swift.Codable {
   case biometric
   case none
+  case devicePin
+  case devicePinOrBiometric
   public static func == (a: TSAuthenticationSDK.TSTOTPSecurityType, b: TSAuthenticationSDK.TSTOTPSecurityType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public func encode(to encoder: any Swift.Encoder) throws
@@ -53,13 +55,13 @@ public enum TSTOTPSecurityType : Swift.Codable {
   }
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct TSDeviceInfo : Swift.Codable {
+public struct TSDeviceInfo : Swift.Codable, @unchecked Swift.Sendable {
   public let publicKeyId: Swift.String
   public let publicKey: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class TSAuthentication : ObjectiveC.NSObject, TSCoreSDK.TSLogConfigurable {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class TSAuthentication : ObjectiveC.NSObject, TSCoreSDK.TSLogConfigurable, @unchecked Swift.Sendable {
   public static let shared: TSAuthenticationSDK.TSAuthentication
   final public func initialize(baseUrl: Swift.String = "https://api.transmitsecurity.io/", clientId: Swift.String, domain: Swift.String? = nil, initOptions: TSAuthenticationSDK.TSAuthenticationInitOptions? = nil)
   final public func initializeSDK(configuration: TSAuthenticationSDK.TSAuthenticationConfiguration? = nil) throws
@@ -81,17 +83,19 @@ public struct TSDeviceInfo : Swift.Codable {
   final public func registerPinCode(username: Swift.String, pinCode: Swift.String, completion: @escaping TSAuthenticationSDK.TSPinCodeRegistrationCompletion)
   final public func registerPinCode(username: Swift.String, pinCode: Swift.String) async throws -> TSAuthenticationSDK.TSPinCodeRegistrationResult
   final public func authenticatePinCode(username: Swift.String, pinCode: Swift.String, challenge: Swift.String, completion: @escaping TSAuthenticationSDK.TSPinCodeAuthenticationCompletion)
+  final public func authenticatePinCode(username: Swift.String, pinCode: Swift.String, challenge: Swift.String) async throws -> TSAuthenticationSDK.TSPinCodeAuthenticationResult
   final public func unregisterPinCode(username: Swift.String, completion: @escaping TSAuthenticationSDK.TSPinCodeUnregistrationCompletion)
   final public func unregisterPinCode(username: Swift.String) async throws -> TSAuthenticationSDK.TSPinCodeUnregistrationResult
-  final public func authenticatePinCode(username: Swift.String, pinCode: Swift.String, challenge: Swift.String) async throws -> TSAuthenticationSDK.TSPinCodeAuthenticationResult
   final public func getDeviceInfo(_ completion: @escaping TSAuthenticationSDK.DeviceInfoCompletion)
   final public func signWithDeviceKey(challenge: Swift.String, completion: @escaping TSAuthenticationSDK.TSSignChallengeCompletion)
   public static func isWebAuthnSupported() -> Swift.Bool
   public static func isNativeBiometricsEnrolled() -> Swift.Bool
+  public static func nativeBiometricsType() -> TSAuthenticationSDK.TSBiometricType
+  public static func nativeBiometricsStatus() -> TSAuthenticationSDK.TSBiometricStatus
   @objc deinit
 }
 extension TSAuthenticationSDK.TSAuthentication {
-  public struct WebAuthnAuthenticationOptions : Swift.OptionSet {
+  public struct WebAuthnAuthenticationOptions : Swift.OptionSet, @unchecked Swift.Sendable {
     public let rawValue: Swift.Int
     public init(rawValue: Swift.Int)
     public static let preferLocalCredantials: TSAuthenticationSDK.TSAuthentication.WebAuthnAuthenticationOptions
@@ -112,7 +116,7 @@ extension TSAuthenticationSDK.TSAuthentication {
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
-public enum TSAuthenticationError : Swift.Error {
+public enum TSAuthenticationError : Swift.Error, @unchecked Swift.Sendable {
   case notInitialized
   case unsupportedOSVersion
   case requestIsRunning
@@ -127,7 +131,7 @@ public enum TSAuthenticationError : Swift.Error {
 extension TSAuthenticationSDK.TSAuthenticationError : Swift.Equatable {
   public static func == (lhs: TSAuthenticationSDK.TSAuthenticationError, rhs: TSAuthenticationSDK.TSAuthenticationError) -> Swift.Bool
 }
-public enum TSWebAuthnError {
+public enum TSWebAuthnError : @unchecked Swift.Sendable {
   case canceled
   case invalidResponse(AuthenticationServices.ASAuthorizationError?)
   case notHandled(AuthenticationServices.ASAuthorizationError?)
@@ -146,6 +150,10 @@ public enum TSTOTPError : Swift.Error {
   case invalidAlgorithm
   case invalidPeriod
   case invalidDigits
+  case devicePinNotAvailable
+  case devicePinOrBiometricNotAvailable
+  case userCanceled
+  case authenticationFailed
   case `internal`((any Swift.Error)?)
 }
 extension TSAuthenticationSDK.TSTOTPError : Swift.Equatable {
@@ -153,7 +161,13 @@ extension TSAuthenticationSDK.TSTOTPError : Swift.Equatable {
 }
 public enum TSNativeBiometricsError : Swift.Error {
   case nativeBiometricsNotAvailable
+  case nativeBiometricsNotEnrolled
   case notRegistered
+  case canceled
+  case userCanceled
+  case failure
+  case lockedOut
+  case permissionDenied
   case `internal`((any Swift.Error)?)
 }
 extension TSAuthenticationSDK.TSNativeBiometricsError : Swift.Equatable {
@@ -173,14 +187,14 @@ extension TSAuthenticationSDK.TSPinCodeError : Swift.Equatable {
   }
   @objc deinit
 }
-@_hasMissingDesignatedInitializers final public class TSNativeBiometricsRegistrationResult {
+@_hasMissingDesignatedInitializers final public class TSNativeBiometricsRegistrationResult : @unchecked Swift.Sendable {
   final public let publicKey: Swift.String
   final public let publicKeyId: Swift.String
   final public let keyType: Swift.String
   final public let attestation: Swift.String?
   @objc deinit
 }
-public struct TSWebAuthnRegistrationData : Swift.Codable {
+public struct TSWebAuthnRegistrationData : Swift.Codable, @unchecked Swift.Sendable {
   public let webauthnSessionId: Swift.String
   public let credentialCreationOptions: TSAuthenticationSDK.TSWebAuthnCredentialRequestOptionsData
   public var username: Swift.String? {
@@ -191,7 +205,7 @@ public struct TSWebAuthnRegistrationData : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct TSWebAuthnAuthenticationData : Swift.Codable {
+public struct TSWebAuthnAuthenticationData : Swift.Codable, @unchecked Swift.Sendable {
   public let webauthnSessionId: Swift.String
   public let credentialRequestOptions: TSAuthenticationSDK.TSWebAuthnAuthenticationCredentialRequestOptionsData
   public var username: Swift.String? {
@@ -213,32 +227,32 @@ public protocol TSRegistrationContext {
   public func commit() throws
   @objc deinit
 }
-@_hasMissingDesignatedInitializers final public class TSAuthenticationResult {
+@_hasMissingDesignatedInitializers final public class TSAuthenticationResult : @unchecked Swift.Sendable {
   final public var result: Swift.String {
     get
   }
   @objc deinit
 }
-@_hasMissingDesignatedInitializers final public class TSNativeBiometricsUnregisterResult {
+@_hasMissingDesignatedInitializers final public class TSNativeBiometricsUnregisterResult : @unchecked Swift.Sendable {
   final public let publicKeyId: Swift.String
   @objc deinit
 }
-@_hasMissingDesignatedInitializers final public class TSNativeBiometricsAuthenticationResult {
+@_hasMissingDesignatedInitializers final public class TSNativeBiometricsAuthenticationResult : @unchecked Swift.Sendable {
   final public let publicKeyId: Swift.String
   final public let signature: Swift.String
   @objc deinit
 }
-@_hasMissingDesignatedInitializers final public class TSTOTPRegistrationResult {
+@_hasMissingDesignatedInitializers final public class TSTOTPRegistrationResult : @unchecked Swift.Sendable {
   final public let issuer: Swift.String?
   final public let label: Swift.String?
   final public let uuid: Swift.String
   @objc deinit
 }
-@_hasMissingDesignatedInitializers final public class TSTOTPGenerateCodeResult {
+@_hasMissingDesignatedInitializers final public class TSTOTPGenerateCodeResult : @unchecked Swift.Sendable {
   final public let code: Swift.String
   @objc deinit
 }
-@_hasMissingDesignatedInitializers final public class TSPinCodeRegistrationResult {
+@_hasMissingDesignatedInitializers final public class TSPinCodeRegistrationResult : @unchecked Swift.Sendable {
   final public let publicKey: Swift.String
   final public let publicKeyId: Swift.String
   final public let keyType: Swift.String
@@ -246,19 +260,19 @@ public protocol TSRegistrationContext {
   final public let registrationContext: TSAuthenticationSDK.TSPinCodeRegistrationContext
   @objc deinit
 }
-@_hasMissingDesignatedInitializers final public class TSPinCodeAuthenticationResult : Swift.Encodable {
+@_hasMissingDesignatedInitializers final public class TSPinCodeAuthenticationResult : Swift.Encodable, @unchecked Swift.Sendable {
   final public let publicKeyId: Swift.String
   final public let signature: Swift.String
   final public let challenge: Swift.String
   @objc deinit
   final public func encode(to encoder: any Swift.Encoder) throws
 }
-@_hasMissingDesignatedInitializers final public class TSPinCodeUnregistrationResult {
+@_hasMissingDesignatedInitializers final public class TSPinCodeUnregistrationResult : @unchecked Swift.Sendable {
   final public let publicKeyId: Swift.String
   final public let unregistrationContext: TSAuthenticationSDK.TSPinCodeUnregistrationContext
   @objc deinit
 }
-@_hasMissingDesignatedInitializers final public class TSSignChallengeResult {
+@_hasMissingDesignatedInitializers final public class TSSignChallengeResult : @unchecked Swift.Sendable {
   final public let signature: Swift.String
   @objc deinit
 }
@@ -300,5 +314,32 @@ extension TSAuthenticationSDK.TSAuthentication {
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
+public enum TSBiometricType {
+  case faceID
+  case touchID
+  case opticID
+  case none
+  public static func == (a: TSAuthenticationSDK.TSBiometricType, b: TSAuthenticationSDK.TSBiometricType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum TSBiometricStatus {
+  case available
+  case notEnrolled
+  case notAvailable
+  case permissionDenied
+  case lockedOut
+  public static func == (a: TSAuthenticationSDK.TSBiometricStatus, b: TSAuthenticationSDK.TSBiometricStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 extension TSAuthenticationSDK.TSTOTPSecurityType : Swift.Equatable {}
 extension TSAuthenticationSDK.TSTOTPSecurityType : Swift.Hashable {}
+extension TSAuthenticationSDK.TSBiometricType : Swift.Equatable {}
+extension TSAuthenticationSDK.TSBiometricType : Swift.Hashable {}
+extension TSAuthenticationSDK.TSBiometricStatus : Swift.Equatable {}
+extension TSAuthenticationSDK.TSBiometricStatus : Swift.Hashable {}
