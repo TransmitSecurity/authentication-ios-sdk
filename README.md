@@ -21,15 +21,21 @@ The SDK offers many advantages over the APIs, including:
 - Automatically handles tracking of cross-device flows, using simple event handlers
 
 
-## Requirements
+## System Requirements
 
-The requirements for passkey authentication include:
+- iOS 13.0+
+- Xcode 13.0+
 
-- iOS 15.0+ (or iOS 16.0+ for passkeys)
-- Xcode 13.0+ (or Xcode 14.0+ for passkeys)
-- Device with registered biometrics (e.g., FaceID or TouchID)
-- Device registered with the user's Apple ID
-- Device with iCloud KeyChain turned on
+### Passkey Authentication Requirements
+
+Passkey authentication requires:
+
+- iOS 16.0+
+- Xcode 14.0+
+- An Apple ID signed in on the device
+- iCloud Keychain enabled
+- Face ID, Touch ID, or another supported system user-verification method
+- An Associated Domain configured with the `webcredentials` service for the relying-party domain
 
 
 ## Prerequisites
